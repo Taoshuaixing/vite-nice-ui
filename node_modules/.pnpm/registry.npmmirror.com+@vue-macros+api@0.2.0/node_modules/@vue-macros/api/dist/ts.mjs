@@ -1,0 +1,36 @@
+import {
+  exportsSymbol,
+  getTSFile,
+  isTSDeclaration,
+  isTSExports,
+  mergeTSProperties,
+  resolveTSEntityName,
+  resolveTSExports,
+  resolveTSFileId,
+  resolveTSFileIdNode,
+  resolveTSProperties,
+  resolveTSReferencedType,
+  resolveTSScope,
+  resolveTypeElements,
+  setResolveTSFileIdImpl,
+  tsFileCache,
+  tsFileExportsCache
+} from "./chunk-2YHECPZT.mjs";
+export {
+  exportsSymbol,
+  getTSFile,
+  isTSDeclaration,
+  isTSExports,
+  mergeTSProperties,
+  resolveTSEntityName,
+  resolveTSExports,
+  resolveTSFileId,
+  resolveTSFileIdNode,
+  resolveTSProperties,
+  resolveTSReferencedType,
+  resolveTSScope,
+  resolveTypeElements,
+  setResolveTSFileIdImpl,
+  tsFileCache,
+  tsFileExportsCache
+};

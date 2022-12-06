@@ -1,0 +1,7 @@
+import * as unplugin from 'unplugin';
+import { Options } from './index.js';
+import '@rollup/pluginutils';
+
+declare const _default: (options?: Options | undefined) => unplugin.EsbuildPlugin;
+
+export { _default as default };

@@ -1,0 +1,57 @@
+{
+  "name": "@commitlint/cli",
+  "version": "13.1.0",
+  "description": "Lint your commit messages",
+  "files": [
+    "index.js",
+    "cli.js",
+    "lib"
+  ],
+  "bin": {
+    "commitlint": "./cli.js"
+  },
+  "scripts": {
+    "deps": "dep-check",
+    "pkg": "pkg-check"
+  },
+  "engines": {
+    "node": ">=v12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/conventional-changelog/commitlint.git"
+  },
+  "bugs": {
+    "url": "https://github.com/conventional-changelog/commitlint/issues"
+  },
+  "homepage": "https://github.com/conventional-changelog/commitlint#readme",
+  "keywords": [
+    "conventional-changelog",
+    "commitlint",
+    "cli"
+  ],
+  "author": {
+    "name": "Mario Nebl",
+    "email": "hello@herebecode.com"
+  },
+  "license": "MIT",
+  "devDependencies": {
+    "@commitlint/test": "^13.0.0",
+    "@commitlint/utils": "^13.0.0",
+    "@types/yargs": "^17.0.0",
+    "execa": "^5.0.0",
+    "fs-extra": "^10.0.0"
+  },
+  "dependencies": {
+    "@commitlint/format": "^13.1.0",
+    "@commitlint/lint": "^13.1.0",
+    "@commitlint/load": "^13.1.0",
+    "@commitlint/read": "^13.1.0",
+    "@commitlint/types": "^13.1.0",
+    "lodash": "^4.17.19",
+    "resolve-from": "5.0.0",
+    "resolve-global": "1.0.0",
+    "yargs": "^17.0.0"
+  },
+  "gitHead": "dfbb8c5e9481a5075458acad2e4666fd6b98f9a7"
+}

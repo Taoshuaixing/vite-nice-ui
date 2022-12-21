@@ -1,4 +1,3 @@
-import { getAsyncRoutes } from '@/api/routes';
 import { http } from '@/utils/http';
 
 type Result = {

@@ -1,0 +1,168 @@
+<template>
+  <div class="container">
+    <div class="main">
+      <b>Vue Nice UI</b>
+      <p>Nice UI 组件库</p>
+      <p><span>基于 Vue3 + TS + Vite 开发</span><span>V 0.0.1</span></p>
+      <div class="btn">
+        <a href="$router.replace('/niceui')">Get Started</a>
+        <a
+          href="https://github.com/Taoshuaixing/vue-nice-ui"
+          target="_blank"
+        >View on GitHub</a>
+        <a
+          href=""
+          target="_blank"
+        >View on NPM</a>
+      </div>
+    </div>
+    <div class="image">
+      <div class="image-bg"></div><img
+        class="image-src"
+        src="/src/assets/NiceUI.png"
+        alt="Vue Nice UI"
+      >
+    </div>
+  </div>
+  <div class="footer">
+    <p>Released under the MIT License.</p>
+    <p>Copyright © 2023-present The Muse Catcher</p>
+  </div>
+</template>
+
+<script setup lang='ts'>
+
+</script>
+
+<style lang='scss' scoped>
+.container {
+  width: 100%;
+  height: 90%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+
+  .main {
+    b {
+      font-weight: bold;
+      white-space: pre-wrap;
+      font-size: 100px;
+      background: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+      -webkit-background-clip: text;
+      background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    p {
+      font-weight: bold;
+      white-space: pre-wrap;
+      font-size: 55px;
+      color: rgba(60, 60, 67);
+
+      & span {
+        font-size: 30px;
+        color: #909090;
+        font-weight: normal;
+        background: #dfdfdf;
+        padding: 5px 10px;
+        border-radius: 10px;
+
+        &:last-child {
+          background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+          color: #fff;
+          padding: 0 10px;
+          border-radius: 10px;
+          font-size: 25px;
+          margin-left: 10px;
+        }
+      }
+    }
+
+
+    .btn {
+      margin-top: 50px;
+
+      a {
+        display: inline-block;
+        border: 1px solid transparent;
+        text-align: center;
+        font-weight: 600;
+        white-space: nowrap;
+        transition: color .25s, border-color .25s, background-color .25s;
+        border-radius: 20px;
+        padding: 0 20px;
+        line-height: 38px;
+        font-size: 14px;
+        color: #333;
+        background-color: #f6f6f7;
+        border-color: rgba(60, 60, 67, .29);
+        text-decoration: none;
+        margin-right: 20px;
+
+        &:hover {
+          background-color: #e3e3e5;
+        }
+
+        &:first-child {
+          border: none;
+          color: #fff;
+          background-color: #9708CC;
+        }
+
+        &:first-child:hover {
+          background-color: #8a08b9;
+        }
+      }
+    }
+  }
+
+  .image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    .image-bg {
+      position: absolute;
+      border-radius: 50%;
+      width: 600px;
+      height: 600px;
+      background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+      filter: blur(112px);
+      z-index: -1;
+    }
+
+    .image-src {
+      width: 60%;
+
+      & {
+        animation: moveUpDown 5s ease-in-out infinite;
+      }
+    }
+  }
+}
+
+@keyframes moveUpDown {
+  0% {
+    transform: translate(0px, 0px);
+  }
+
+  50% {
+    transform: translate(0px, -50px);
+  }
+
+  100% {
+    transform: translate(0px, 0px);
+  }
+
+}
+
+.footer {
+  position: absolute;
+  border-top: 1px solid #dcdcdc;
+  bottom: 0;
+  width: 100%;
+  padding: 20px;
+  text-align: center;
+  color: #7d7d7d;
+}
+</style>

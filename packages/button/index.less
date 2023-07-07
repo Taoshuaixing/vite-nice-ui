@@ -1,0 +1,90 @@
+@primary: #1677ff;
+@danger: #ff4d4f;
+
+.n-btn-wrap {
+	display: inline-block;
+
+	.n-btn {
+		display: inline-block;
+		color: rgba(0, 0, 0, 0.88);
+		background-color: #ffffff;
+		border: 1px solid #d9d9d9;
+		box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
+		transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
+		-webkit-user-select: none;
+		-moz-user-select: none;
+		-ms-user-select: none;
+		user-select: none;
+		cursor: pointer;
+	}
+
+	.small {
+		line-height: 22px;
+		padding: 0 7px;
+		font-size: 14px;
+	}
+
+	.middle {
+		line-height: 30px;
+		padding: 0 15px;
+		font-size: 14px;
+	}
+
+	.large {
+		line-height: 38px;
+		padding: 0 15px;
+		font-size: 16px;
+	}
+
+	.primary {
+		color: #fff;
+		background-color: @primary;
+		border-color: @primary;
+		text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+		box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+
+		&:hover {
+			background-color: fade(@primary, 80%);
+			border-color: fade(@primary, 80%);
+		}
+
+		&:active {
+			background-color: shade(@primary, 12%);
+			border-color: shade(@primary, 12%);
+		}
+	}
+
+	.default {
+		.fade();
+	}
+
+	.danger {
+		color: #fff;
+		background-color: @danger;
+		border-color: @danger;
+		text-shadow: 0 -1px 0 rgb(0 0 0 / 12%);
+		box-shadow: 0 2px 0 rgb(0 0 0 / 5%);
+
+		&:hover {
+			background-color: fade(@danger, 80%);
+			border-color: fade(@danger, 80%);
+		}
+
+		&:active {
+			background-color: shade(@danger, 12%);
+			border-color: shade(@danger, 12%);
+		}
+	}
+
+	.fade {
+		&:hover {
+			color: fade(@primary, 80%);
+			border-color: fade(@primary, 80%);
+		}
+
+		&:active {
+			color: shade(@primary, 12%);
+			border-color: shade(@primary, 12%);
+		}
+	}
+}

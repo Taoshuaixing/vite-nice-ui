@@ -22,11 +22,12 @@
         src="/src/assets/NiceUI.png"
         alt="Vue Nice UI"
       >
+      <div class="image-shadow"></div>
     </div>
   </div>
   <div class="footer">
     <p>Released under the MIT License.</p>
-    <p>Copyright © 2023-present The Muse Catcher</p>
+    <p>Copyright © 2023-present The TSXWEB</p>
   </div>
 </template>
 
@@ -37,7 +38,7 @@
 <style lang='scss' scoped>
 .container {
   width: 100%;
-  height: 90%;
+  height: 80%;
   display: flex;
   justify-content: space-around;
   align-items: center;
@@ -120,6 +121,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
 
     .image-bg {
       position: absolute;
@@ -138,6 +140,22 @@
         animation: moveUpDown 5s ease-in-out infinite;
       }
     }
+
+    // .image-shadow {
+    //   position: absolute;
+    //   border-radius: 50%;
+    //   width: 350px;
+    //   height: 60px;
+    //   background: #3c3c3c;
+    //   filter: blur(32px);
+    //   bottom: -20px;
+    //   z-index: -1;
+
+    //   & {
+    //     animation: shadowWidth 5s ease-in-out infinite;
+
+    //   }
+    // }
   }
 }
 
@@ -156,12 +174,29 @@
 
 }
 
+@keyframes shadowWidth {
+  0% {
+    width: 350px;
+  }
+
+  50% {
+    width: 250px;
+
+  }
+
+  100% {
+    width: 350px;
+
+  }
+
+}
+
 .footer {
   position: absolute;
   border-top: 1px solid #dcdcdc;
   bottom: 0;
   width: 100%;
-  padding: 20px;
+  padding: 20px 0;
   text-align: center;
   color: #7d7d7d;
 }

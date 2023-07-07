@@ -7,7 +7,7 @@
  * @LastEditTime: 2023-07-07 14:22:02
  */
 export default [
-	{ path: '/', name: '主页', component: () => import('@/views/index.vue') },
+	{ path: '/', name: '首页', component: () => import('@/views/index.vue') },
 	{
 		path: '/niceui',
 		name: '组件',

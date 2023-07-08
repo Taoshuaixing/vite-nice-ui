@@ -21,7 +21,7 @@ const install = (app: App): void => {
 };
 
 export { nButton };
-const VueNiceUI = {
+const ViteNiceUI = {
 	install,
 };
-export default VueNiceUI;
+export default ViteNiceUI;

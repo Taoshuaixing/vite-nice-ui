@@ -7,7 +7,7 @@
       <div class="btn">
         <a href="$router.replace('/niceui')">Get Started</a>
         <a
-          href="https://github.com/Taoshuaixing/vue-nice-ui"
+          href="https://github.com/Taoshuaixing/vite-nice-ui"
           target="_blank"
         >View on GitHub</a>
         <a

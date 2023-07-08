@@ -52,7 +52,7 @@ const state = reactive({
     {
       name: "问题反馈",
       path: "open",
-      url: "https://github.com/Taoshuaixing/vue-nice-ui/issues",
+      url: "https://github.com/Taoshuaixing/vite-nice-ui/issues",
     },
   ],
 });

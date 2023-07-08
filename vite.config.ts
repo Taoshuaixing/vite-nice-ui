@@ -1,8 +1,15 @@
+/*
+ * @Descripttion:
+ * @version:
+ * @Author: 陶帅星
+ * @Date: 2023-07-07 10:29:57
+ * @LastEditors: 陶帅星
+ * @LastEditTime: 2023-07-08 17:01:31
+ */
 import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
 
-// https://vitejs.dev/config/
 export default defineConfig({
 	plugins: [
 		Vue({
@@ -28,7 +35,7 @@ export default defineConfig({
 	build: {
 		lib: {
 			entry: './packages/index.js',
-			name: 'vue-nice-ui',
+			name: 'vite-nice-ui',
 		},
 		minify: 'terser', // Vite 2.6.x 以上需要配置 minify: "terser", terserOptions 才能生效
 		terserOptions: {

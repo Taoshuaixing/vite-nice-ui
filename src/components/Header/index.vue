@@ -57,7 +57,7 @@ const state = reactive({
   ],
 });
 const { tools } = state;
-const pageView = (item, index) => {
+const pageView = (item: any, index: any) => {
   tabIndex.value = index;
   sessionStorage.setItem("tabIndex", index);
   if (item.path == "open") {

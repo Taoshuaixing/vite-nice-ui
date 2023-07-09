@@ -32,7 +32,7 @@
     <main class="niceuirightView">
       <router-view></router-view>
     </main>
-    // <m-backtop target=".niceuirightView"></m-backtop>
+    // <n-backtop target=".niceuirightView"></n-backtop>
   </div>
 </template>
 

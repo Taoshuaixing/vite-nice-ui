@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-07-09 16:15:19
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-09 16:37:11
+ * @LastEditTime: 2023-07-09 22:21:48
 -->
 <script setup>
 import demo1 from './demo1.vue'
@@ -14,7 +14,7 @@ import demo4 from './demo4.vue'
 import demo5 from './demo5.vue'
 import demo6 from './demo6.vue'
 import Attributes from './Attributes.vue'
-import preview from '@/components/preview.vue'
+import preview from '@/components/preview/index.vue'
 </script>
 
 # Button 按钮

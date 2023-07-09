@@ -25,16 +25,16 @@
 
 <script setup>
 import { onMounted, ref, nextTick } from "vue";
-import Message from "../../packages/message/index";
+// import Message from "../../packages/message/index";
 const props = defineProps({
   compName: {
     type: String,
-    default: "",
+    default: "button",
     require: true,
   },
   demoName: {
     type: String,
-    default: "",
+    default: "demo1",
     require: true,
   },
 });

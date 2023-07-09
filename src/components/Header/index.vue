@@ -47,7 +47,7 @@ const state = reactive({
     },
     // {
     //   name: "更新日志",
-    //   path: "/mzlui/updatelog",
+    //   path: "/niceui/updatelog",
     // },
     {
       name: "问题反馈",

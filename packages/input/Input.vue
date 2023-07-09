@@ -98,7 +98,7 @@ let focusStyle = {
 }
 isStyle.value = focusStyle
 const focus = (e: any) => {
-  focusStyle['border-color'] = "#0e80eb"
+  focusStyle['border-color'] = "#9708CC"
   isStyle.value = {
     'width': !!slot.btn ? 'auto' : '100%',
     'float': !!slot.btn ? 'left' : 'auto',

@@ -4,17 +4,19 @@
  * @Author: 陶帅星
  * @Date: 2023-07-07 10:29:57
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-08 17:01:31
+ * @LastEditTime: 2023-07-09 18:50:10
  */
 import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
 import { resolve } from 'path';
+import Markdown from 'vite-plugin-md';
 
 export default defineConfig({
 	plugins: [
 		Vue({
 			include: [/\.vue$/, /\.md$/], // <--
 		}),
+		Markdown(),
 	],
 	resolve: {
 		alias: {

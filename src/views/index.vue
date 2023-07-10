@@ -16,13 +16,13 @@
         >View on NPM</a>
       </div>
     </div>
-    <div class="image">
-      <div class="image-bg"></div><img
-        class="image-src"
+    <div class="img">
+      <div class="img-bg"></div><img
+        class="img-src"
         src="/src/assets/NiceUI.png"
         alt="Vue Nice UI"
       >
-      <div class="image-shadow"></div>
+      <div class="img-shadow"></div>
     </div>
   </div>
   <div class="footer">
@@ -117,13 +117,13 @@
     }
   }
 
-  .image {
+  .img {
     display: flex;
     justify-content: center;
     align-items: center;
     position: relative;
 
-    .image-bg {
+    .img-bg {
       position: absolute;
       border-radius: 50%;
       width: 600px;
@@ -133,7 +133,7 @@
       z-index: -1;
     }
 
-    .image-src {
+    .img-src {
       width: 60%;
 
       & {
@@ -141,7 +141,7 @@
       }
     }
 
-    // .image-shadow {
+    // .img-shadow {
     //   position: absolute;
     //   border-radius: 50%;
     //   width: 350px;

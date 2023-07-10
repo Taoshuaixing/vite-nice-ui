@@ -47,14 +47,14 @@
 		#43cbff 10%,
 		#9708cc 100%
 	);
-	--vp-home-hero-image-filter: blur(40px);
+	// --vp-home-hero-image-filter: blur(40px);
 }
 
-@media (min-width: 640px) {
-	:root {
-		--vp-home-hero-image-filter: blur(56px);
-	}
-}
+// @media (min-width: 640px) {
+// 	:root {
+// 		--vp-home-hero-image-filter: blur(56px);
+// 	}
+// }
 
 @media (min-width: 960px) {
 	:root {
@@ -155,6 +155,8 @@ svg {
 }
 .image-src {
 	position: static !important;
+	max-width: 256px !important;
+	max-height: 256px !important;
 	animation: moveUpDown 5s ease-in-out infinite;
 }
 @keyframes moveUpDown {

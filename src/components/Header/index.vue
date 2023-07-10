@@ -27,10 +27,15 @@
 import { useRouter } from "vue-router";
 import { reactive, ref, onMounted } from "vue";
 const { push, currentRoute } = useRouter();
-const toHome = () => push("/");
+const toHome = () => {
+  push("/");
+  sessionStorage.setItem("tabIndex", '0')
+}
+console.log(push);
+
 const fullPath: any = ref(currentRoute.value.fullPath)
 const tabIndex: any = ref(
-  fullPath == "/niceui"
+  fullPath == "/niceui/started"
     ? 1
     : sessionStorage.getItem("tabIndex") || 0
 );
@@ -43,12 +48,8 @@ const state = reactive({
     },
     {
       name: "组件",
-      path: "/niceui",
+      path: "/niceui/started",
     },
-    // {
-    //   name: "更新日志",
-    //   path: "/niceui/updatelog",
-    // },
     {
       name: "问题反馈",
       path: "open",
@@ -75,7 +76,7 @@ onMounted(() => {
 });
 </script>
 
-<style scoped lang="scss">
+<style scoped lang="less">
 .header-block-box {
   width: 100%;
   height: 64px;

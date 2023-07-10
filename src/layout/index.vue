@@ -5,7 +5,7 @@
       <p>Nice UI 组件库</p>
       <p><span>基于 Vue3 + TS + Vite 开发</span><span>V 0.0.1</span></p>
       <div class="btn">
-        <a href="$router.replace('/niceui')">Get Started</a>
+        <a @click="toComponents">Get Started</a>
         <a
           href="https://github.com/Taoshuaixing/vite-nice-ui"
           target="_blank"
@@ -32,10 +32,17 @@
 </template>
 
 <script setup lang='ts'>
+import { useRouter } from "vue-router";
 
+const router = useRouter();
+const toComponents = () => {
+  router.push("/niceui");
+  sessionStorage.setItem("mIndex", "0-0");
+  sessionStorage.setItem("tabIndex", '1')
+};
 </script>
 
-<style lang='scss' scoped>
+<style lang='less' scoped>
 .container {
   width: 100%;
   height: 80%;
@@ -99,6 +106,7 @@
         border-color: rgba(60, 60, 67, .29);
         text-decoration: none;
         margin-right: 20px;
+        cursor: pointer;
 
         &:hover {
           background-color: #e3e3e5;

@@ -87,7 +87,6 @@ export default defineConfig({
 				},
 				{
 					text: '常规组件',
-
 					items: [
 						{
 							text: '布局 Layout',

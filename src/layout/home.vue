@@ -4,27 +4,27 @@
       <div class="list-box">
         <div
           class="item-list"
-          v-for="(item, index) in  MenuLangList "
+          v-for="(item, index) in MenuList"
           :key="index"
         >
           <p class="titls">
-            <span>{{ item["title"] }}</span>
+            <span>{{ item.text }}</span>
           </p>
           <li
-            v-for="( v, i ) in  item.list "
+            v-for="( v, i ) in  item.items "
             :key="i"
             :class="{ active: menuIndex == index + '-' + i }"
             @click="
               switchMenu({
-                parentTitle: item['title'],
-                title: v['title'],
+                parentTitle: item.text,
+                title: v.text,
                 index: index,
                 index1: i,
-                path: v['path'],
+                path: v.link,
               })
               "
           >
-            {{ v["title"] }}
+            {{ v.text }}
           </li>
         </div>
       </div>
@@ -32,53 +32,32 @@
     <main class="niceuirightView">
       <router-view></router-view>
     </main>
-    // <n-backtop target=".niceuirightView"></n-backtop>
+    <!--<n-backtop target=".niceuirightView"></n-backtop>-->
   </div>
 </template>
 
 <script setup lang="ts">
-import { reactive, ref, watchEffect } from "vue";
+import { ref } from "vue";
 import { useRouter } from "vue-router";
 import MenuList from "@/components/data/menuList.ts";
-import { useMainStore } from "@/store/index";
-const $store = useMainStore();
 const router = useRouter();
 const menuIndex = ref(sessionStorage.getItem("mIndex") || "0-0");
-let menuData: any = [];
-const state = reactive({
-  MenuLangList: [],
-  lang: $store.getLang,
-});
-// const activeIndex: any = ref(sessionStorage.getItem("index") || 0);
+
+const activeIndex: any = ref(sessionStorage.getItem("index") || 0);
+
 // 菜单切换
 const switchMenu = (obj: any): void => {
   if (router.currentRoute.value.path != obj.path) {
-    router.push(obj.path);
+    let lastSegment = obj.path.split('/').pop();
+    router.push('/niceui/' + lastSegment);
   }
   menuIndex.value = obj.index + "-" + obj.index1;
   sessionStorage.setItem("mIndex", obj.index + "-" + obj.index1);
 };
-watchEffect(() => {
-  MenuList.forEach((item, index) => {
-    let menuItem = {
-      title: $store.lang == "CN" ? item["title-cn"] : item["title-en"],
-      list: [],
-    };
-    menuData.push(menuItem);
-    item["list"].forEach((v): void => {
-      let menuItem = {
-        title: $store.lang == "CN" ? v["title-cn"] : v["title-en"],
-        path: v["path"],
-      };
-      menuData[index]["list"].push(menuItem);
-      state.MenuLangList = menuData;
-    });
-  });
-});
-const { MenuLangList }: any = state;
+
 </script>
 
-<style lang="scss" scoped>
+<style lang="less" scoped>
 .nice-ui-doc {
   display: flex;
   height: calc(100vh - 64px - 2vh);
@@ -107,6 +86,7 @@ const { MenuLangList }: any = state;
           padding-left: 34px;
           box-sizing: border-box;
           height: 30px;
+          margin-top: 30px;
 
           span {
             width: 100%;

@@ -9,10 +9,12 @@
 	],
 	"scripts": {
 		"dev": "vite",
-		"build": "vue-tsc && vite build",
+		"build": "run-p type-check build-only",
 		"preview": "vite preview",
 		"docs:dev": "vitepress dev docs --port 8888 --open",
-		"docs:build": "vitepress build docs"
+		"docs:build": "vitepress build docs",
+		"build-only": "vite build",
+		"type-check": "vue-tsc --noEmit"
 	},
 	"dependencies": {
 		"@vuepic/vue-datepicker": "^4.5.1",

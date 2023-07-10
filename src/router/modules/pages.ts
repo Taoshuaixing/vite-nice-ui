@@ -4,14 +4,14 @@
  * @Author: 陶帅星
  * @Date: 2023-07-07 14:20:26
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-10 18:08:15
+ * @LastEditTime: 2023-07-10 19:18:10
  */
 export default [
 	{ path: '/', name: '首页', component: () => import('@/layout/index.vue') },
 	{
 		path: '/niceui',
 		name: '组件',
-		component: () => import('@/layout/home.vue'),
+		component: () => import('@/layout/Home.vue'),
 		redirect: 'niceui/started',
 		children: [
 			{

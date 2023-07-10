@@ -39,7 +39,7 @@
 <script setup lang="ts">
 import { ref } from "vue";
 import { useRouter } from "vue-router";
-import MenuList from "@/components/data/menuList.ts";
+import MenuList from "@/components/data/menuList";
 const router = useRouter();
 const menuIndex = ref(sessionStorage.getItem("mIndex") || "0-0");
 

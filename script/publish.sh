@@ -5,7 +5,7 @@
  # @Author: 陶帅星
  # @Date: 2023-07-11 13:57:28
  # @LastEditors: 陶帅星
- # @LastEditTime: 2023-07-11 15:01:51
+ # @LastEditTime: 2023-07-11 16:09:20
 ### 
 
 # 确保脚本抛出遇到的错误
@@ -25,5 +25,5 @@ npm update vite-nice-ui
 
 # 提交版本更新代码到github
 git add .
-git cm -m "update $version"
+git commit -m "update $version"
 git push

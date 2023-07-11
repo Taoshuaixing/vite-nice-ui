@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-07-07 10:29:57
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-11 15:37:46
+ * @LastEditTime: 2023-07-11 16:51:46
  */
 import { defineConfig } from 'vite';
 import Vue from '@vitejs/plugin-vue';
@@ -64,6 +64,9 @@ export default defineConfig({
 				'vue-jest',
 				'commitizen',
 				'cz-conventional-changelog',
+				'vite-nice-ui',
+				'@types',
+				'@vueuse',
 			],
 			output: {
 				// 在 UMD 构建模式下为这些外部化的依赖提供一个全局变量

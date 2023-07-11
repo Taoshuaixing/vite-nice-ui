@@ -12,6 +12,12 @@ import App from './App.vue';
 import { createPinia } from 'pinia';
 import router from '@/router';
 import ViteNiceUI from '../packages';
+import { dispatchEventStroage } from '@/utils/sessionStorage';
 
 const app = createApp(App);
-app.use(router).use(createPinia()).use(ViteNiceUI).mount('#app');
+app
+	.use(router)
+	.use(createPinia())
+	.use(ViteNiceUI)
+	.use(dispatchEventStroage)
+	.mount('#app');

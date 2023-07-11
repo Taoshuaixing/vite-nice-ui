@@ -26,20 +26,8 @@
 <script setup lang="ts">
 import { useRouter } from "vue-router";
 import { reactive, ref, onMounted } from "vue";
+
 const { push, currentRoute } = useRouter();
-const toHome = () => {
-  push("/");
-  sessionStorage.setItem("tabIndex", '0')
-}
-console.log(push);
-
-const fullPath: any = ref(currentRoute.value.fullPath)
-const tabIndex: any = ref(
-  fullPath == "/niceui/started"
-    ? 1
-    : sessionStorage.getItem("tabIndex") || 0
-);
-
 const state = reactive({
   tools: [
     {
@@ -58,9 +46,25 @@ const state = reactive({
   ],
 });
 const { tools } = state;
+const fullPath: any = ref(currentRoute.value.fullPath)
+const tabIndex: any = ref(sessionStorage.getItem("tabIndex"));
+onMounted(() => {
+  //监听sessionStorage数据变化
+  window.addEventListener('setItemEvent', function (e: any) {
+    if (e.key === 'tabIndex') {
+      tabIndex.value = e.newValue || sessionStorage.getItem('tabIndex')
+    }
+  })
+});
+const toHome = () => {
+  push("/");
+  sessionStorage.setItem("tabIndex", '0')
+}
+//切换menu选中状态，修改sessionStorage数据
 const pageView = (item: any, index: any) => {
-  tabIndex.value = index;
-  sessionStorage.setItem("tabIndex", index);
+  if (item.name !== '问题反馈') {
+    sessionStorage.setItem("tabIndex", String(index));
+  }
   if (item.path == "open") {
     window.open(item.url);
   } else {
@@ -69,11 +73,7 @@ const pageView = (item: any, index: any) => {
     }
   }
 };
-onMounted(() => {
-  if (fullPath == "/niceui") {
-    sessionStorage.setItem("tabIndex", '1');
-  }
-});
+
 </script>
 
 <style scoped lang="less">

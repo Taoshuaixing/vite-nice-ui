@@ -1,12 +1,36 @@
 {
 	"name": "vite-nice-ui",
+	"author": "Taoshuaixing",
 	"private": false,
-	"version": "0.0.1",
+	"version": "0.0.2",
 	"type": "module",
 	"description": "vite-nice-ui",
+	"main": "./dist/vite-nice-ui.umd.cjs",
+	"module": "./dist/vite-nice-ui.js",
+	"exports": {
+		".": {
+			"import": "./dist/vite-nice-ui.js",
+			"require": "./dist/vite-nice-ui.umd.cjs"
+		}
+	},
+	"keywords": [
+		"vue",
+		"vue3",
+		"vuejs",
+		"vite",
+		"vite-nice-ui",
+		"ui",
+		"vueui",
+		"vertical",
+		"horizontal",
+		"components",
+		"vue组件库",
+		"vue3组件库"
+	],
 	"files": [
 		"dist/*"
 	],
+	"license": "MIT",
 	"scripts": {
 		"dev": "vite",
 		"build": "run-p type-check build-only",

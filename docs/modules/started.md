@@ -38,7 +38,7 @@ $ pnpm add vite-nice-ui
 import { createApp } from 'vue'
 import App from './App.vue'
 
-import VueAmazingUI from 'vite-nice-ui'
+import ViteNiceUI from 'vite-nice-ui'
 import 'vite-nice-ui/css'
 
 const app = createApp(App)

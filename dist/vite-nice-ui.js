@@ -8,7 +8,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   },
   __name: "Button",
   props: {
-    name: { default: "按钮" },
+    name: { default: "" },
     type: { default: "default" },
     effect: { default: "fade" },
     size: { default: "middle" },
@@ -79,7 +79,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const Button_vue_vue_type_style_index_0_scoped_db9c1064_lang = "";
+const Button_vue_vue_type_style_index_0_scoped_8daaa2f1_lang = "";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -87,7 +87,7 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const nButton = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-db9c1064"]]);
+const nButton = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-8daaa2f1"]]);
 nButton.install = (app) => {
   app.component(nButton.name, nButton);
 };

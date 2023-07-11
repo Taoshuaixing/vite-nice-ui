@@ -54,7 +54,7 @@ interface Props {
   textColor?: string
 }
 const props = withDefaults(defineProps<Props>(), {
-  name: '按钮',
+  name: '',
   type: 'default',
   effect: 'fade',
   size: 'middle',

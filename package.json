@@ -39,7 +39,8 @@
 		"docs:build": "vitepress build docs",
 		"build-only": "vite build",
 		"type-check": "vue-tsc --noEmit",
-		"pub": "sh script/publish.sh"
+		"pub": "sh script/publish.sh",
+		"deploy": "sh script/deploy.sh"
 	},
 	"dependencies": {
 		"@vuepic/vue-datepicker": "^4.5.1",

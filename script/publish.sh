@@ -5,7 +5,7 @@
 # @Author: 陶帅星
 # @Date: 2023-07-11 13:57:28
 # @LastEditors: 陶帅星
-# @LastEditTime: 2023-07-11 17:42:37
+# @LastEditTime: 2023-07-11 17:59:35
 ###
 # 删除dist, 否则第二次会提示fatal: A branch named 'main' already exists.
 rm -rf dist
@@ -22,7 +22,8 @@ npm run build
 npm publish
 
 # 升级 vite-nice-ui 依赖版本
-npm update vite-nice-ui --save
+# npm update vite-nice-ui
+ncu vite-nice-ui -u
 
 # 提交版本更新代码到github
 git add .

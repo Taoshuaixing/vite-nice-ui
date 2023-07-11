@@ -1,7 +1,7 @@
 {
 	"name": "vite-nice-ui",
 	"private": false,
-	"version": "0.0.0",
+	"version": "0.0.1",
 	"type": "module",
 	"description": "vite-nice-ui",
 	"files": [
@@ -14,7 +14,8 @@
 		"docs:dev": "vitepress dev docs --port 8888 --open",
 		"docs:build": "vitepress build docs",
 		"build-only": "vite build",
-		"type-check": "vue-tsc --noEmit"
+		"type-check": "vue-tsc --noEmit",
+		"pub": "sh script/publish.sh"
 	},
 	"dependencies": {
 		"@vuepic/vue-datepicker": "^4.5.1",
@@ -22,6 +23,7 @@
 		"@vueuse/integrations": "^10.1.2",
 		"core-js": "^3.30.2",
 		"date-fns": "^2.30.0",
+		"vite-nice-ui": "^0.0.1",
 		"vite-plugin-md": "^0.22.5",
 		"vue": "^3.3.4",
 		"vue-router": "^4.2.1"

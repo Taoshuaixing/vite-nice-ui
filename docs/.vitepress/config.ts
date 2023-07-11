@@ -15,7 +15,6 @@ export default defineConfig({
 	},
 	themeConfig: {
 		logo: '/favicon.ico',
-
 		editLink: {
 			pattern:
 				'https://github.com/themusecatcher/vue-amazing-ui/tree/master/docs/:path',
@@ -25,25 +24,21 @@ export default defineConfig({
 		socialLinks: [
 			{ icon: 'github', link: 'https://github.com/Taoshuaixing/vite-nice-ui' },
 		],
-
+		// vitepress 内置 search
 		search: {
-			// vitepress 内置 search
 			provider: 'local',
 		},
-
+		// algolia 搜索服务 与 内置 search 可二选一
 		// algolia: {
-		// 	// algolia 搜索服务 与 内置 search 可二选一
 		// 	appId: '1LSW22DJLN',
 		// 	apiKey: 'efc85e434f49f86ff3766016cf4c64e5',
 		// 	indexName: 'vite-nice-ui',
 		// 	placeholder: '请输入关键词',
 		// },
-
 		footer: {
 			message: 'Released under the MIT License.',
 			copyright: 'Copyright © 2023-present The TSXWEB',
 		},
-
 		nav: [
 			{ text: '组件', link: '/modules/started', activeMatch: '/modules/' },
 			{

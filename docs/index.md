@@ -2,7 +2,7 @@
 layout: home
 
 title: Vite Nice UI
-titleTemplate: Nice UI Components Library
+# titleTemplate: Nice UI Components Library
 
 hero:
   name: Vite Nice UI

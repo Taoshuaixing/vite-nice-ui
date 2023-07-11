@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-07-10 16:01:58
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-10 16:03:43
+ * @LastEditTime: 2023-07-11 11:20:48
 -->
 # 快速上手
 
@@ -56,6 +56,6 @@ import 'vite-nice-ui/css'
 </script>
 
 <template>
-  <Button></Button>
+  <n-button></n-button>
 </template>
 ```

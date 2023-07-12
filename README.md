@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-07-07 10:29:57
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-11 16:40:27
+ * @LastEditTime: 2023-07-12 18:53:58
 -->
 <div align="center">
   <img src="http://img63.ddimg.cn/upload_img/00890/new/NiceUI-1689061930.png" width="100"/>
@@ -18,6 +18,7 @@
 
 
 官网主页: [vite-nice-ui使用文档](https://taoshuaixing.github.io/vite-nice-ui/)
+国内访问: [vite-nice-ui使用文档](https://taoshuaixing.github.io/vite-nice-ui/)
 ***
 ### 快速使用
 ```

@@ -5,7 +5,7 @@
 # @Author: 陶帅星
 # @Date: 2023-07-11 16:15:24
 # @LastEditors: 陶帅星
-# @LastEditTime: 2023-07-11 16:36:47
+# @LastEditTime: 2023-07-11 18:45:12
 ###
 # 删除dist, 否则第二次会提示fatal: A branch named 'main' already exists.
 rm -rf dist
@@ -25,7 +25,7 @@ cd docs/.vitepress/dist
 # 提交打包静态网站到 github-pages 分支
 git init
 git add .
-git commit -m 'deploy'
+git commit -m 'deploy github.io -b github-pages'
 
 # 部署到 https://<username>.github.io/<repo>
 git push -f git@github.com:Taoshuaixing/vite-nice-ui.git main:github-pages

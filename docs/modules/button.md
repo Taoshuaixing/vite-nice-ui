@@ -1,8 +1,8 @@
+
 # 按钮 Button
 
 <br>
 <p>常用组件，用于响应某些时间或者处理某些逻辑</p>
-
 
 ## 基本使用
 
@@ -29,7 +29,6 @@ function onClick (e: Event) {
   <n-button type="danger" @click="onClick">Danger</n-button>
   <n-button disabled @click="onClick">Disabled</n-button>
 </template>
-
 ```
 
 :::

@@ -4,8 +4,8 @@
 # @version:
 # @Author: 陶帅星
 # @Date: 2023-07-11 16:15:24
-# @LastEditors: 陶帅星
-# @LastEditTime: 2023-07-11 18:45:12
+ # @LastEditors: 陶帅星
+ # @LastEditTime: 2023-07-13 15:21:15
 ###
 # 删除dist, 否则第二次会提示fatal: A branch named 'main' already exists.
 rm -rf dist
@@ -33,5 +33,5 @@ git push -f git@github.com:Taoshuaixing/vite-nice-ui.git main:github-pages
 # 提交所有代码到github
 cd ../../../
 git add .
-git commit -m 'update'
+git commit -m 'update version'
 git push

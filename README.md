@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-07-07 10:29:57
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-13 09:50:23
+ * @LastEditTime: 2023-07-13 12:33:44
 -->
 <div align="center">
   <img src="http://img63.ddimg.cn/upload_img/00890/new/NiceUI-1689061930.png" width="100"/>
@@ -33,18 +33,18 @@ cnpm install  vite-nice-ui --save
 ```
 import { createApp } from 'vue'
 import App from '@/App.vue'
-import ViteNiceUI from 'vite-nice-ui'
+import NiceUI from 'vite-nice-ui'
 import 'vite-nice-ui/dist/style.css'
 
 const app = createApp(App)
-app.use(ViteNiceUI)
+app.use(NiceUI)
 app.mount('#app')
 ```
 
 ### 按需引用
 
 ```
-import { nButton, nInput } from 'vite-nice-ui'
+import { NButton, NInput } from 'vite-nice-ui'
 ```
 
 ### 愉快开始

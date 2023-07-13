@@ -85,15 +85,15 @@ export default defineConfig({
 					items: [
 						{
 							text: '布局 Layout',
-							link: '/modules/components/layout',
+							link: '/modules/layout',
 						},
 						{
 							text: '颜色 Color',
-							link: '/modules/components/color',
+							link: '/modules/color',
 						},
 						{
 							text: '图标 Icon',
-							link: '/modules/components/icon',
+							link: '/modules/icon',
 						},
 					],
 				},
@@ -102,44 +102,44 @@ export default defineConfig({
 					items: [
 						{
 							text: '按钮 Button',
-							link: '/modules/components/button',
+							link: '/modules/button',
 						},
 						{
 							text: '输入框 Input',
-							link: '/modules/components/input',
+							link: '/modules/input',
 						},
 						{
 							text: '多选框 Checkbox',
-							link: '/modules/components/checkbox',
+							link: '/modules/checkbox',
 						},
 						{
 							text: '折叠面板 Collapse',
-							link: '/modules/components/collapse',
+							link: '/modules/collapse',
 						},
 						{
 							text: '分割线 Divider',
-							link: '/modules/components/divider',
+							link: '/modules/divider',
 						},
 						{
 							text: '空状态 Empty',
-							link: '/modules/components/empty',
+							link: '/modules/empty',
 						},
 						{
 							text: '图片 Image',
-							link: '/modules/components/image',
+							link: '/modules/image',
 						},
 						{
 							text: '数字输入框 InputNumber',
-							link: '/modules/components/inputnumber',
+							link: '/modules/inputnumber',
 						},
 
 						{
 							text: '单选框 Radio',
-							link: '/modules/components/radio',
+							link: '/modules/radio',
 						},
 						{
 							text: '开关 Switch',
-							link: '/modules/components/switch',
+							link: '/modules/switch',
 						},
 					],
 				},
@@ -148,23 +148,23 @@ export default defineConfig({
 					items: [
 						{
 							text: '表格 Table',
-							link: '/modules/components/table',
+							link: '/modules/table',
 						},
 						{
 							text: '标签页 Tabs',
-							link: '/modules/components/tabs',
+							link: '/modules/tabs',
 						},
 						{
 							text: '文字滚动 TextScroll',
-							link: '/modules/components/textscroll',
+							link: '/modules/textscroll',
 						},
 						{
 							text: '分页 Pagination',
-							link: '/modules/components/pagination',
+							link: '/modules/pagination',
 						},
 						{
 							text: '进度条 Progress',
-							link: '/modules/components/progress',
+							link: '/modules/progress',
 						},
 					],
 				},
@@ -173,19 +173,19 @@ export default defineConfig({
 					items: [
 						{
 							text: '文字提示 Tooltip',
-							link: '/modules/components/tooltip',
+							link: '/modules/tooltip',
 						},
 						{
 							text: '加载中 Spin',
-							link: '/modules/components/spin',
+							link: '/modules/spin',
 						},
 						{
 							text: '全局提示 Message',
-							link: '/modules/components/message',
+							link: '/modules/message',
 						},
 						{
 							text: '模态框 Modal',
-							link: '/modules/components/modal',
+							link: '/modules/modal',
 						},
 					],
 				},

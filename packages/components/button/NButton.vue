@@ -1,5 +1,5 @@
 <template>
-  <div :class="['n-btn-wrap', { 'center': center }]">
+  <div :class="['n-btn-wrap', { center: center }]">
     <a
       @click.stop="isRoute ? () => false : $emit('click', $event)"
       :href="getUrl(route)"
@@ -9,15 +9,8 @@
       :class="[type, size, { [effect]: type === 'default', widthType: width, disabled: disabled, 'n-btn-loading': !isRoute && loading }]"
       :style="`border-radius: ${borderRadius}px; width: ${width ? width + 'px' : 'auto'}; height: ${height ? height + 'px' : 'auto'}; line-height: ${height - 2}px;`"
     >
-      <span
-        v-show="!isRoute"
-        class="n-loading-icon"
-        :class="{ 'show-spin': loading }"
-      >
-        <span
-          class="u-spin-circle"
-          v-show="loading"
-        ></span>
+      <span v-show="!isRoute" class="n-loading-icon" :class="{ 'show-spin': loading }">
+        <span class="u-spin-circle" v-show="loading"></span>
       </span>
       <span class="u-text">
         <slot>{{ name }}</slot>
@@ -56,7 +49,9 @@ const props = withDefaults(defineProps<Props>(), {
   width: 0, // 优先级高于size属性，为0时自适应内容的宽度
   height: 0, // 优先级高于size属性
   borderRadius: 5,
-  route: () => { return {} },
+  route: () => {
+    return {}
+  },
   target: '_self',
   disabled: false,
   loading: false,
@@ -69,7 +64,7 @@ const isRoute = computed(() => {
     return true
   }
 })
-function getUrl (route: Route) {
+function getUrl(route: Route) {
   var targetUrl = route.path
   if (route.query && JSON.stringify(route.query) !== '{}') {
     const query = route.query
@@ -85,19 +80,19 @@ function getUrl (route: Route) {
 }
 </script>
 <style lang="less" scoped>
-@primary: #1677FF;
-@danger: #FF4D4F;
+@primary: #9708cc;
+@danger: #ff4d4f;
 
 .n-btn-wrap {
   display: inline-block;
 
   .n-btn {
     display: inline-block;
-    color: rgba(0, 0, 0, .88);
+    color: rgba(0, 0, 0, 0.88);
     background-color: #ffffff;
     border: 1px solid #d9d9d9;
     box-shadow: 0 2px 0 rgba(0, 0, 0, 0.02);
-    transition: all .25s cubic-bezier(.645, .045, .355, 1);
+    transition: all 0.25s cubic-bezier(0.645, 0.045, 0.355, 1);
     -webkit-user-select: none;
     -moz-user-select: none;
     -ms-user-select: none;
@@ -258,7 +253,6 @@ function getUrl (route: Route) {
       text-shadow: none;
       box-shadow: none;
       transform: none;
-
     }
   }
 }

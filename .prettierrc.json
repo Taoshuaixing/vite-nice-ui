@@ -1,0 +1,18 @@
+{
+  "singleQuote": true,
+  "semi": false,
+  "trailingComma": "all",
+  "endOfLine": "lf",
+  "printWidth": 200,
+  "proseWrap": "never",
+  "arrowParens": "avoid",
+  "htmlWhitespaceSensitivity": "ignore",
+  "overrides": [
+    {
+      "files": ".prettierrc.json",
+      "options": {
+        "parser": "json"
+      }
+    }
+  ]
+}

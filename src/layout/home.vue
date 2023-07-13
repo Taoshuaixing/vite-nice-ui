@@ -2,16 +2,12 @@
   <div class="nice-ui-doc">
     <aside>
       <div class="list-box">
-        <div
-          class="item-list"
-          v-for="(item, index) in MenuList"
-          :key="index"
-        >
+        <div class="item-list" v-for="(item, index) in MenuList" :key="index">
           <p class="titls">
             <span>{{ item.text }}</span>
           </p>
           <li
-            v-for="( v, i ) in  item.items "
+            v-for="(v, i) in item.items"
             :key="i"
             :class="{ active: menuIndex == index + '-' + i }"
             @click="
@@ -22,7 +18,7 @@
                 index1: i,
                 path: v.link,
               })
-              "
+            "
           >
             {{ v.text }}
           </li>
@@ -37,24 +33,23 @@
 </template>
 
 <script setup lang="ts">
-import { ref } from "vue";
-import { useRouter } from "vue-router";
-import MenuList from "@/components/data/menuList";
-const router = useRouter();
-const menuIndex = ref(sessionStorage.getItem("mIndex") || "0-0");
+import { ref } from 'vue'
+import { useRouter } from 'vue-router'
+import MenuList from '@/components/data/menuList'
+const router = useRouter()
+const menuIndex = ref(sessionStorage.getItem('mIndex') || '0-0')
 
-const activeIndex: any = ref(sessionStorage.getItem("index") || 0);
+const activeIndex: any = ref(sessionStorage.getItem('index') || 0)
 
 // 菜单切换
 const switchMenu = (obj: any): void => {
   if (router.currentRoute.value.path != obj.path) {
-    let lastSegment = obj.path.split('/').pop();
-    router.push('/niceui/' + lastSegment);
+    let lastSegment = obj.path.split('/').pop()
+    router.push('/niceui/' + lastSegment)
   }
-  menuIndex.value = obj.index + "-" + obj.index1;
-  sessionStorage.setItem("mIndex", obj.index + "-" + obj.index1);
-};
-
+  menuIndex.value = obj.index + '-' + obj.index1
+  sessionStorage.setItem('mIndex', obj.index + '-' + obj.index1)
+}
 </script>
 
 <style lang="less" scoped>
@@ -109,14 +104,14 @@ const switchMenu = (obj: any): void => {
           transform: all 0.2s ease;
 
           &:hover {
-            color: #9708CC;
+            color: #9708cc;
           }
         }
 
         li.active {
-          color: #9708CC;
+          color: #9708cc;
           background: rgba(14, 128, 235, 0.1);
-          border-left: 3px solid #9708CC;
+          border-left: 3px solid #9708cc;
           padding-left: 31px;
           transform: all 0.2s ease;
         }

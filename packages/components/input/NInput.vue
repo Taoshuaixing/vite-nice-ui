@@ -1,17 +1,7 @@
 <template>
-  <div
-    :class="[`nice-group-input-${size}`]"
-    :style="{ 'min-width': 'auto' }"
-  >
-    <div
-      :class="isClass"
-      :style="isStyle"
-      style=""
-    >
-      <i
-        :class="['left-icon', 'iconfont', leftIcon]"
-        v-if="!showPassword && leftIcon != ''"
-      ></i>
+  <div :class="[`nice-group-input-${size}`]" :style="{ 'min-width': 'auto' }">
+    <div :class="isClass" :style="isStyle" style="">
+      <i :class="['left-icon', 'iconfont', leftIcon]" v-if="!showPassword && leftIcon != ''"></i>
       <input
         :type="inptype"
         @focus="focus"
@@ -26,25 +16,11 @@
         :form="form"
       />
       <transition name="slide-fade">
-        <i
-          class="clearable-icon iconfont m-icon-close"
-          v-if="!showPassword && clearable && modelValue != ''"
-          @click="clear"
-        ></i>
+        <i class="clearable-icon iconfont m-icon-close" v-if="!showPassword && clearable && modelValue != ''" @click="clear"></i>
       </transition>
 
-
-
-
-      <i
-        :class="['right-icon', 'iconfont', rightIcon]"
-        v-if="!showPassword && rightIcon != ''"
-      ></i>
-      <i
-        v-if="showPassword"
-        :class="['password-icon', 'iconfont m-icon-browse']"
-        @click="showPwd(type)"
-      ></i>
+      <i :class="['right-icon', 'iconfont', rightIcon]" v-if="!showPassword && rightIcon != ''"></i>
+      <i v-if="showPassword" :class="['password-icon', 'iconfont m-icon-browse']" @click="showPwd(type)"></i>
     </div>
     <slot name="btn" />
   </div>
@@ -57,7 +33,7 @@ interface Props {
   clearable?: boolean
   showPassword?: boolean
   type?: string
-  size?: 'small' | 'mini' | 'default' // 尺寸
+  size?: 'small' | 'large' | 'default' // 尺寸
   leftIcon?: string
   rightIcon?: string
   placeholder?: string
@@ -73,41 +49,40 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: false,
   clearable: false,
   showPassword: false,
-  type: 'input',
+  type: '',
   size: 'default',
   leftIcon: '',
   rightIcon: '',
   placeholder: '',
   autofocus: false,
-  focusColor: '',
+  focusColor: '#9708cc',
   readonly: false,
   form: '',
-
 })
 const slot = useSlots()
 const isStyle = ref({})
 const inptype = ref(props.type)
 let focusStyle = {
-  'width': !!slot.btn ? 'auto' : '100%',
-  'float': !!slot.btn ? 'left' : 'auto',
+  width: !!slot.btn ? 'auto' : '100%',
+  float: !!slot.btn ? 'left' : 'auto',
   'border-radius': !!slot.btn ? '4px 0 0 4px' : '4px',
-  'border-color': '#dcdfe6f6'
+  'border-color': '#dcdfe6f6',
 }
 isStyle.value = focusStyle
 const focus = (e: any) => {
-  focusStyle['border-color'] = "#9708CC"
+  focusStyle['border-color'] = '#9708CC'
   isStyle.value = {
-    'width': !!slot.btn ? 'auto' : '100%',
-    'float': !!slot.btn ? 'left' : 'auto',
+    width: !!slot.btn ? 'auto' : '100%',
+    float: !!slot.btn ? 'left' : 'auto',
     'border-radius': !!slot.btn ? '4px 0 0 4px' : '4px',
-    'border-color': props.focusColor
+    'border-color': props.focusColor,
   }
   emit('focus', e)
 }
 const blur = (e: any) => {
   isStyle.value = {
-    'width': !!slot.btn ? 'auto' : '100%',
-    'float': !!slot.btn ? 'left' : 'auto',
+    width: !!slot.btn ? 'auto' : '100%',
+    float: !!slot.btn ? 'left' : 'auto',
     'border-radius': !!slot.btn ? '4px 0 0 4px' : '4px',
   }
   emit('blur', e)
@@ -120,7 +95,7 @@ const change = (e: any) => {
   emit('change', e)
 }
 const clear = () => {
-  emit('update:modelValue', "")
+  emit('update:modelValue', '')
   emit('clear')
 }
 // 显示密码
@@ -131,14 +106,14 @@ const showPwd = (e: any) => {
     inptype.value = 'text'
   }
 
-  console.log(e);
+  console.log(e)
 }
 const isClass = computed(() => {
   return [
     props.clearable ? 'nice-input-clearable' : props.size == 'default' ? 'nice-input-default' : `nice-input-${props.size}`,
-    props.leftIcon != "" ? `nice-input-left-icon-${props.size}` : !props.clearable ? props.rightIcon != "" ? `nice-input-right-icon-${props.size}` : '' : '',
+    props.leftIcon != '' ? `nice-input-left-icon-${props.size}` : !props.clearable ? (props.rightIcon != '' ? `nice-input-right-icon-${props.size}` : '') : '',
     props.disabled ? 'nice-input-disabled' : '',
-    props.type == 'password' ? props.showPassword ? `nice-input-password-showpassword-${props.size}` : `nice-input-password-${props.size}` : ''
+    props.type == 'password' ? (props.showPassword ? `nice-input-password-showpassword-${props.size}` : `nice-input-password-${props.size}`) : '',
   ]
 })
 </script>
@@ -152,12 +127,13 @@ const isClass = computed(() => {
   border: 1px solid #dcdfe6f6;
   overflow: hidden;
   border-radius: 4px;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   position: relative;
   box-sizing: border-box;
 
   input {
     width: 100%;
+    height: 35px;
     font-size: 14px;
     outline: none;
     border: 0;
@@ -178,14 +154,14 @@ const isClass = computed(() => {
     right: 10px;
     top: 11px;
     color: #94969b;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
   }
 }
 
 .nice-input-password-showpassword-default {
   input {
-    padding-right: 30px
+    padding-right: 30px;
   }
 }
 
@@ -195,7 +171,7 @@ const isClass = computed(() => {
   border: 1px solid #dcdfe6f6;
   overflow: hidden;
   border-radius: 4px;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   position: relative;
   box-sizing: border-box;
 
@@ -221,7 +197,7 @@ const isClass = computed(() => {
     right: 10px;
     top: 10px;
     color: #94969b;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
   }
 }
@@ -235,19 +211,20 @@ const isClass = computed(() => {
   border: 1px solid #dcdfe6f6;
   overflow: hidden;
   border-radius: 4px;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   position: relative;
   box-sizing: border-box;
 
   input {
     width: 100%;
+    height: 30px;
     font-size: 13px;
     outline: none;
     border: 0;
     margin: 0;
     padding: 7px 30px 7px 10px;
     box-sizing: border-box;
-    color: #606266
+    color: #606266;
   }
 
   input::placeholder {
@@ -261,33 +238,34 @@ const isClass = computed(() => {
     right: 10px;
     top: 8px;
     color: #94969b;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
   }
 }
 
 .nice-input-password-showpassword-small {
   input {
-    padding-right: 30px
+    padding-right: 30px;
   }
 }
 
-.nice-input-mini,
-.nice-input-password-mini,
-.nice-input-password-showpassword-mini,
-.nice-group-input-mini {
+.nice-input-large,
+.nice-input-password-large,
+.nice-input-password-showpassword-large,
+.nice-group-input-large {
   width: 100%;
-  height: 28px;
+  height: 45px;
   border: 1px solid #dcdfe6f6;
   overflow: hidden;
   border-radius: 4px;
-  transition: all .2s ease;
+  transition: all 0.2s ease;
   position: relative;
   box-sizing: border-box;
 
   input {
     width: 100%;
-    font-size: 12px;
+    font-size: 15px;
+    height: 45px;
     outline: none;
     border: 0;
     margin: 0;
@@ -299,7 +277,7 @@ const isClass = computed(() => {
   input::placeholder {
     /* 大部分现代浏览器 */
     color: #c6c8cc;
-    font-size: 12px;
+    font-size: 15px;
   }
 
   i.password-icon {
@@ -307,14 +285,14 @@ const isClass = computed(() => {
     right: 10px;
     top: 7px;
     color: #94969b;
-    transition: all .2s ease;
+    transition: all 0.2s ease;
     cursor: pointer;
   }
 }
 
-.nice-input-password-showpassword-mini {
+.nice-input-password-showpassword-large {
   input {
-    padding-right: 30px
+    padding-right: 30px;
   }
 }
 
@@ -367,8 +345,8 @@ const isClass = computed(() => {
   }
 }
 
-.nice-input-left-icon-mini {
-  height: 28px;
+.nice-input-left-icon-large {
+  height: 45px;
 
   input {
     padding: 6px 25px 6px 32px;
@@ -438,8 +416,8 @@ const isClass = computed(() => {
   }
 }
 
-.nice-input-right-icon-mini {
-  height: 28px;
+.nice-input-right-icon-large {
+  height: 45px;
 
   input {
     padding: 6px 32px 6px 10px;
@@ -468,7 +446,7 @@ const isClass = computed(() => {
   }
 
   .clearable-icon {
-    display: none
+    display: none;
   }
 
   .left-icon {
@@ -505,11 +483,11 @@ const isClass = computed(() => {
   }
 }
 
-.nice-group-input-mini {
+.nice-group-input-large {
   border: none;
 
   .nice-input-clearable {
-    height: 28px;
+    height: 45px;
 
     .clearable-icon {
       top: 8px;
@@ -528,7 +506,7 @@ const isClass = computed(() => {
   border-radius: 0 2px 2px 0;
 }
 
-.nice-group-input-mini :deep(.nice-button) {
+.nice-group-input-large :deep(.nice-button) {
   padding: 7px 15px !important;
   font-size: 12px;
   border-radius: 0 2px 2px 0;

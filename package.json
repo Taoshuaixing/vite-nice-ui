@@ -81,6 +81,8 @@
 		}
 	},
 	"dependencies": {
-		"vite-plugin-raw": "^1.0.3"
+		"feather-icons": "^4.29.0",
+		"vite-plugin-raw": "^1.0.3",
+		"vue-feather": "^2.0.0"
 	}
 }

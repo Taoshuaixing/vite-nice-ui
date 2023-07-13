@@ -3,25 +3,19 @@
     <div class="main">
       <b>Vue Nice UI</b>
       <p>Nice UI 组件库</p>
-      <p><span>基于 Vue3 + TS + Vite 开发</span><span>V 0.0.1</span></p>
+      <p>
+        <span>基于 Vue3 + TS + Vite 开发</span>
+        <span>V 0.0.1</span>
+      </p>
       <div class="btn">
         <a @click="toComponents">Get Started</a>
-        <a
-          href="https://github.com/Taoshuaixing/vite-nice-ui"
-          target="_blank"
-        >View on GitHub</a>
-        <a
-          href=""
-          target="_blank"
-        >View on NPM</a>
+        <a href="https://github.com/Taoshuaixing/vite-nice-ui" target="_blank">View on GitHub</a>
+        <a href="" target="_blank">View on NPM</a>
       </div>
     </div>
     <div class="img">
-      <div class="img-bg"></div><img
-        class="img-src"
-        src="/src/assets/NiceUI.png"
-        alt="Vue Nice UI"
-      >
+      <div class="img-bg"></div>
+      <img class="img-src" src="/src/assets/NiceUI.png" alt="Vue Nice UI" />
       <div class="img-shadow"></div>
     </div>
   </div>
@@ -31,18 +25,18 @@
   </div>
 </template>
 
-<script setup lang='ts'>
-import { useRouter } from "vue-router";
+<script setup lang="ts">
+import { useRouter } from 'vue-router'
 
-const router = useRouter();
+const router = useRouter()
 const toComponents = () => {
-  router.push("/niceui");
-  sessionStorage.setItem("mIndex", "0-0");
-  sessionStorage.setItem("tabIndex", '1')
-};
+  router.push('/niceui')
+  sessionStorage.setItem('mIndex', '0-0')
+  sessionStorage.setItem('tabIndex', '1')
+}
 </script>
 
-<style lang='less' scoped>
+<style lang="less" scoped>
 .container {
   width: 100%;
   height: 80%;
@@ -55,7 +49,7 @@ const toComponents = () => {
       font-weight: bold;
       white-space: pre-wrap;
       font-size: 100px;
-      background: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+      background: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
       -webkit-background-clip: text;
       background-clip: text;
       -webkit-text-fill-color: transparent;
@@ -76,7 +70,7 @@ const toComponents = () => {
         border-radius: 10px;
 
         &:last-child {
-          background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+          background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
           color: #fff;
           padding: 0 10px;
           border-radius: 10px;
@@ -85,7 +79,6 @@ const toComponents = () => {
         }
       }
     }
-
 
     .btn {
       margin-top: 50px;
@@ -96,14 +89,14 @@ const toComponents = () => {
         text-align: center;
         font-weight: 600;
         white-space: nowrap;
-        transition: color .25s, border-color .25s, background-color .25s;
+        transition: color 0.25s, border-color 0.25s, background-color 0.25s;
         border-radius: 20px;
         padding: 0 20px;
         line-height: 38px;
         font-size: 14px;
         color: #333;
         background-color: #f6f6f7;
-        border-color: rgba(60, 60, 67, .29);
+        border-color: rgba(60, 60, 67, 0.29);
         text-decoration: none;
         margin-right: 20px;
         cursor: pointer;
@@ -115,7 +108,7 @@ const toComponents = () => {
         &:first-child {
           border: none;
           color: #fff;
-          background-color: #9708CC;
+          background-color: #9708cc;
         }
 
         &:first-child:hover {
@@ -136,7 +129,7 @@ const toComponents = () => {
       border-radius: 50%;
       width: 600px;
       height: 600px;
-      background-image: linear-gradient(135deg, #43CBFF 10%, #9708CC 100%);
+      background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
       filter: blur(112px);
       z-index: -1;
     }
@@ -179,7 +172,6 @@ const toComponents = () => {
   100% {
     transform: translate(0px, 0px);
   }
-
 }
 
 @keyframes shadowWidth {
@@ -189,14 +181,11 @@ const toComponents = () => {
 
   50% {
     width: 250px;
-
   }
 
   100% {
     width: 350px;
-
   }
-
 }
 
 .footer {

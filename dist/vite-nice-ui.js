@@ -3,10 +3,7 @@ const _hoisted_1$1 = ["href", "target", "disabled"];
 const _hoisted_2 = { class: "u-spin-circle" };
 const _hoisted_3 = { class: "u-text" };
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
-  ...{
-    name: "nButton"
-  },
-  __name: "Button",
+  __name: "NButton",
   props: {
     name: { default: "" },
     type: { default: "default" },
@@ -21,9 +18,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     target: { default: "_self" },
     disabled: { type: Boolean, default: false },
     loading: { type: Boolean, default: false },
-    center: { type: Boolean, default: false },
-    bgColor: { default: "" },
-    textColor: { default: "" }
+    center: { type: Boolean, default: false }
   },
   setup(__props) {
     const props = __props;
@@ -38,8 +33,8 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
       var targetUrl = route.path;
       if (route.query && JSON.stringify(route.query) !== "{}") {
         const query = route.query;
-        Object.keys(query).forEach((param, index) => {
-          if (index === 0) {
+        Object.keys(query).forEach((param, index2) => {
+          if (index2 === 0) {
             targetUrl = targetUrl + "?" + param + "=" + query[param];
           } else {
             targetUrl = targetUrl + "&" + param + "=" + query[param];
@@ -58,7 +53,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
           target: isRoute.value ? _ctx.target : "_self",
           disabled: _ctx.disabled,
           class: normalizeClass(["n-btn", [_ctx.type, _ctx.size, { [_ctx.effect]: _ctx.type === "default", widthType: _ctx.width, disabled: _ctx.disabled, "n-btn-loading": !isRoute.value && _ctx.loading }]]),
-          style: normalizeStyle(`border-radius: ${_ctx.borderRadius}px; width: ${_ctx.width ? _ctx.width + "px" : "auto"}; height: ${_ctx.height ? _ctx.height + "px" : "auto"}; line-height: ${_ctx.height - 2}px; background-color: ${_ctx.bgColor};color: ${_ctx.textColor};`)
+          style: normalizeStyle(`border-radius: ${_ctx.borderRadius}px; width: ${_ctx.width ? _ctx.width + "px" : "auto"}; height: ${_ctx.height ? _ctx.height + "px" : "auto"}; line-height: ${_ctx.height - 2}px;`)
         }, [
           withDirectives(createElementVNode("span", {
             class: normalizeClass(["n-loading-icon", { "show-spin": _ctx.loading }])
@@ -79,7 +74,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const Button_vue_vue_type_style_index_0_scoped_8daaa2f1_lang = "";
+const NButton_vue_vue_type_style_index_0_scoped_cee4205a_lang = "";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -87,16 +82,10 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const nButton = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-8daaa2f1"]]);
-nButton.install = (app) => {
-  app.component(nButton.name, nButton);
-};
+const NButton = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-cee4205a"]]);
 const _hoisted_1 = ["type", "value", "disabled", "placeholder", "autofocus", "readonly", "form"];
 const _sfc_main = /* @__PURE__ */ defineComponent({
-  ...{
-    name: "nInput"
-  },
-  __name: "Input",
+  __name: "NInput",
   props: {
     modelValue: { default: "" },
     disabled: { type: Boolean, default: false },
@@ -221,23 +210,31 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const Input_vue_vue_type_style_index_0_scoped_dbf09cfa_lang = "";
-const nInput = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-dbf09cfa"]]);
-nInput.install = (app) => {
-  app.component(nInput.name, nInput);
-};
-const components = [nButton, nInput];
-console.log("components:", components);
-const install = (app) => {
-  components.forEach((component) => {
-    app.component(component.name, component);
+const NInput_vue_vue_type_style_index_0_scoped_27fb8b88_lang = "";
+const NInput = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-27fb8b88"]]);
+const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
+  __proto__: null,
+  NButton,
+  NInput
+}, Symbol.toStringTag, { value: "Module" }));
+const install = function(Vue) {
+  if (install.installed)
+    return;
+  const _components = Object.keys(components).map(
+    (key) => components[key]
+  );
+  _components.forEach((component) => {
+    if (component.hasOwnProperty("name") || component.hasOwnProperty("__name")) {
+      console.log(component);
+      Vue.component(`${component.name || component.__name}`, component);
+    }
   });
 };
-const ViteNiceUI = {
+const index = {
   install
 };
 export {
-  ViteNiceUI as default,
-  nButton,
-  nInput
+  NButton,
+  NInput,
+  index as default
 };

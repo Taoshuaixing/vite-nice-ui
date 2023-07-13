@@ -4,7 +4,7 @@
  * @Author: 陶帅星
  * @Date: 2023-07-10 16:01:58
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-11 11:20:48
+ * @LastEditTime: 2023-07-13 12:25:45
 -->
 # 快速上手
 
@@ -32,26 +32,11 @@ $ pnpm add vite-nice-ui
 
 ## 使用
 
-> **Global**
-
-```ts
-import { createApp } from 'vue'
-import App from './App.vue'
-
-import ViteNiceUI from 'vite-nice-ui'
-import 'vite-nice-ui/css'
-
-const app = createApp(App)
-app.use(ViteNiceUI)
-
-app.mount('#app')
-```
-
-> **Local**
+> **直接引入（推荐）**
 
 ```vue
 <script setup lang="ts">
-import { nButton } from 'vite-nice-ui'
+import { NButton } from 'vite-nice-ui'
 import 'vite-nice-ui/css'
 </script>
 
@@ -59,3 +44,20 @@ import 'vite-nice-ui/css'
   <n-button></n-button>
 </template>
 ```
+
+> **全局安装（不推荐）**
+
+```ts
+import { createApp } from 'vue'
+import App from './App.vue'
+
+import NiceUI from 'vite-nice-ui'
+import 'vite-nice-ui/css'
+
+const app = createApp(App)
+app.use(NiceUI)
+
+app.mount('#app')
+```
+
+

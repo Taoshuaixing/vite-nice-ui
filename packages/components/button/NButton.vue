@@ -7,7 +7,7 @@
       :disabled="disabled"
       class="n-btn"
       :class="[type, size, { [effect]: type === 'default', widthType: width, disabled: disabled, 'n-btn-loading': !isRoute && loading }]"
-      :style="`border-radius: ${borderRadius}px; width: ${width ? width + 'px' : 'auto'}; height: ${height ? height + 'px' : 'auto'}; line-height: ${height - 2}px; background-color: ${bgColor};color: ${textColor};`"
+      :style="`border-radius: ${borderRadius}px; width: ${width ? width + 'px' : 'auto'}; height: ${height ? height + 'px' : 'auto'}; line-height: ${height - 2}px;`"
     >
       <span
         v-show="!isRoute"
@@ -26,9 +26,6 @@
   </div>
 </template>
 <script setup lang="ts">
-defineOptions({
-  name: 'nButton'
-})
 import { computed } from 'vue'
 interface Query {
   [propName: string]: any // 添加一个字符串索引签名，用于包含带有任意数量的其他属性
@@ -50,8 +47,6 @@ interface Props {
   disabled?: boolean // 是否禁用
   loading?: boolean // 是否加载中
   center?: boolean // 是否将按钮设置为块级元素并居中展示
-  bgColor?: string
-  textColor?: string
 }
 const props = withDefaults(defineProps<Props>(), {
   name: '',
@@ -66,8 +61,6 @@ const props = withDefaults(defineProps<Props>(), {
   disabled: false,
   loading: false,
   center: false,
-  bgColor: '',
-  textColor: ''
 })
 const isRoute = computed(() => {
   if (JSON.stringify(props.route) === '{}') {
@@ -110,6 +103,10 @@ function getUrl (route: Route) {
     -ms-user-select: none;
     user-select: none;
     cursor: pointer;
+
+    &:active {
+      transform: scale(0.96);
+    }
 
     .n-loading-icon {
       display: inline-flex;
@@ -260,6 +257,8 @@ function getUrl (route: Route) {
       border-color: #d9d9d9;
       text-shadow: none;
       box-shadow: none;
+      transform: none;
+
     }
   }
 }

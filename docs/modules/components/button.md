@@ -1,16 +1,8 @@
-# 按钮
+# 按钮 Button
 
-## 何时使用
+<br>
+<p>常用组件，用于响应某些时间或者处理某些逻辑</p>
 
-- 当需要添加一个操作按钮时
-
-<script setup lang="ts">
-import { ref } from 'vue'
-const loading = ref(true)
-function onClick (e: Event) {
-  console.log('click')
-}
-</script>
 
 ## 基本使用
 

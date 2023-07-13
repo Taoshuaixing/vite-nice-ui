@@ -24,7 +24,7 @@ hero:
       # 按钮下方的描述
 features:
   - icon: 😊
-    title: 完美支持Vue3
+    title: 全面支持Vue3
     details: 专为vue3版本开发。
     # link: /column/views/guide
   - icon: 🎨
@@ -32,7 +32,7 @@ features:
     details: 极少的代码量，极简配置项。
   - icon: ⚡️
     title: 更快的响应
-    details: 配合vue3的composition API，更快的相应。
+    details: 配合vue3的composition API，更快的响应。
 ---
 
 

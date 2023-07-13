@@ -4,25 +4,33 @@
  * @Author: 陶帅星
  * @Date: 2023-07-07 17:54:26
  * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-09 21:10:03
+ * @LastEditTime: 2023-07-13 11:55:38
  */
 import type { App } from 'vue';
 
-import nButton from './button/index';
-import nInput from './input/index';
+// 全局 => 定义 install 方法
+import * as components from './components';
 
-// 所有组件
-const components = [nButton, nInput];
-console.log('components:', components);
-//定义install方法
-const install = (app: App): void => {
-	components.forEach((component) => {
-		app.component(component.name, component);
+export * from './components';
+
+const install: any = function (Vue: App): void {
+	if (install.installed) return;
+
+	const _components = Object.keys(components).map(
+		(key) => components[key as keyof typeof components]
+	);
+
+	_components.forEach((component: any) => {
+		if (
+			component.hasOwnProperty('name') ||
+			component.hasOwnProperty('__name')
+		) {
+			console.log(component);
+			Vue.component(`${component.name || component.__name}`, component);
+		}
 	});
 };
 
-export { nButton, nInput };
-const ViteNiceUI = {
+export default {
 	install,
 };
-export default ViteNiceUI;

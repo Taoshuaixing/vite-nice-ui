@@ -51,9 +51,6 @@
 </template>
 <script setup lang="ts">
 import { ref, computed, useSlots } from 'vue'
-defineOptions({
-  name: 'nInput'
-})
 interface Props {
   modelValue?: string | number
   disabled?: boolean

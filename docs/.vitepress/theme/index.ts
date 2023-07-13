@@ -8,11 +8,11 @@
  */
 import DefaultTheme from 'vitepress/theme';
 import './reset.less'; // global less
-import ViteNiceUI from '../../../packages/index';
+import NiceUI from '../../../packages/index';
 // import '../../../dist/style.css';
 export default {
 	extends: DefaultTheme, // or ...DefaultTheme
 	enhanceApp({ app }) {
-		app.use(ViteNiceUI);
+		app.use(NiceUI);
 	},
 };

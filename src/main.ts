@@ -3,8 +3,8 @@
  * @version:
  * @Author: 陶帅星
  * @Date: 2023-07-07 10:29:57
- * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-13 16:16:33
+ * @LastEditors: Taoshuaixing 1554307063@qq.com
+ * @LastEditTime: 2023-07-14 16:37:51
  */
 import { createApp } from 'vue'
 import './styles/style.less'

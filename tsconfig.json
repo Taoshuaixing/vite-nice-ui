@@ -1,25 +1,20 @@
 {
-	"extends": "@vue/tsconfig/tsconfig.web.json",
-	"include": [
-		"env.d.ts",
-		"src/**/*",
-		"src/**/*.vue",
-		"packages/**/*.ts",
-		"packages/**/*.vue"
-	],
-	"compilerOptions": {
-		"ignoreDeprecations": "5.0",
-		"isolatedModules": true,
-		"baseUrl": ".",
-		"paths": {
-			"@/*": ["./src/*"],
-			"images/*": ["./src/assets"]
-		}
-	},
+  "extends": "@vue/tsconfig/tsconfig.web.json",
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "packages/**/*.ts", "packages/**/*.vue", "docs/**/*.ts"],
+  "compilerOptions": {
+    "ignoreDeprecations": "5.0",
+    "isolatedModules": true,
+    "baseUrl": ".",
+    "types": ["vite/client"],
+    "paths": {
+      "@/*": ["./src/*"],
+      "images/*": ["./src/assets"]
+    }
+  },
 
-	"references": [
-		{
-			"path": "./tsconfig.config.json"
-		}
-	]
+  "references": [
+    {
+      "path": "./tsconfig.config.json"
+    }
+  ]
 }

@@ -1,11 +1,3 @@
-<!--
- * @Descripttion: 
- * @version: 
- * @Author: 陶帅星
- * @Date: 2023-07-13 18:55:43
- * @LastEditors: 陶帅星
- * @LastEditTime: 2023-07-13 18:57:37
--->
 <template>
   <n-row>
     <n-col :span="12"><div class="col-box-2 col-box">12</div></n-col>

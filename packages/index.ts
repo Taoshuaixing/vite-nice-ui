@@ -20,7 +20,8 @@ const install: any = function (Vue: App): void {
 
   _components.forEach((component: any) => {
     if (component.hasOwnProperty('name') || component.hasOwnProperty('__name')) {
-      Vue.component(`${component.name || component.__name}`, component)
+      // console.log(`N${component.name || component.__name}`)
+      Vue.component(`N${component.name || component.__name}`, component)
     }
   })
 }

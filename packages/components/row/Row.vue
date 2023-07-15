@@ -12,7 +12,7 @@
 
 <script setup lang="ts">
 defineOptions({
-  name: 'NRow',
+  name: 'Row',
 })
 </script>
 

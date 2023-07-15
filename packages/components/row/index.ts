@@ -1,1 +1,1 @@
-export { default as NRow } from './NRow.vue'
+export { default as Row } from './Row.vue'

@@ -12,18 +12,25 @@
 <script setup lang="ts">
 import { useClipboard } from '@vueuse/core'
 import feather from 'feather-icons'
+import Message from '../../../packages/components/message/index' //此处为本地示例，请使用import {Message} from "vite-nice-ui";引入
 
 const { copy, isSupported } = useClipboard()
 const icons = Object.keys(feather.icons)
 
 const handleCopy = (text: string) => {
   if (!isSupported) {
-    console.log('您的浏览器不支持Clipboard API')
+    Message({
+      type: 'error',
+      text: '您的浏览器不支持Clipboard API!',
+    })
     return
   }
   const htmlText = `<n-icon type="${text}" />`
   copy(htmlText)
-  console.log(`复制成功`, htmlText)
+  Message({
+    type: 'success',
+    text: '复制成功!',
+  })
 }
 </script>
 

@@ -22,7 +22,7 @@ const _hoisted_1$3 = ["href", "target", "disabled"];
 const _hoisted_2 = { class: "u-spin-circle" };
 const _hoisted_3 = { class: "u-text" };
 const _sfc_main$3 = /* @__PURE__ */ defineComponent({
-  __name: "NButton",
+  __name: "Button",
   props: {
     name: { default: "" },
     type: { default: "default" },
@@ -93,7 +93,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const NButton_vue_vue_type_style_index_0_scoped_64b7629d_lang = "";
+const Button_vue_vue_type_style_index_0_scoped_cf35ad80_lang = "";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -101,10 +101,10 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const NButton = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-64b7629d"]]);
+const Button = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-cf35ad80"]]);
 const _hoisted_1$2 = ["type", "value", "disabled", "placeholder", "autofocus", "readonly", "form"];
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
-  __name: "NInput",
+  __name: "Input",
   props: {
     modelValue: { default: "" },
     disabled: { type: Boolean, default: false },
@@ -229,8 +229,8 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const NInput_vue_vue_type_style_index_0_scoped_7720dde6_lang = "";
-const NInput = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-7720dde6"]]);
+const Input_vue_vue_type_style_index_0_scoped_e9da5b37_lang = "";
+const Input = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-e9da5b37"]]);
 var commonjsGlobal = typeof globalThis !== "undefined" ? globalThis : typeof window !== "undefined" ? window : typeof global !== "undefined" ? global : typeof self !== "undefined" ? self : {};
 function getDefaultExportFromCjs(x) {
   return x && x.__esModule && Object.prototype.hasOwnProperty.call(x, "default") ? x["default"] : x;
@@ -2972,13 +2972,13 @@ function styleInject(css, ref2) {
 }
 var css_248z = "@keyframes vue-feather--spin{0%{transform:rotate(0)}to{transform:rotate(1turn)}}.vue-feather{display:inline-block;overflow:hidden}.vue-feather--spin{animation:vue-feather--spin 2s linear infinite}.vue-feather--pulse{animation:vue-feather--spin 2s steps(8) infinite}.vue-feather--slow{animation-duration:3s}.vue-feather--fast{animation-duration:1s}.vue-feather__content{display:block;height:inherit;width:inherit}";
 styleInject(css_248z);
-script.name = "NIcon";
+script.name = "Icon";
 const _hoisted_1$1 = { class: "nice-row-default" };
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   ...{
-    name: "NRow"
+    name: "Row"
   },
-  __name: "NRow",
+  __name: "Row",
   setup(__props) {
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$1, [
@@ -2987,11 +2987,11 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const NRow_vue_vue_type_style_index_0_scoped_875e1d76_lang = "";
-const NRow = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-875e1d76"]]);
+const Row_vue_vue_type_style_index_0_scoped_2fa79525_lang = "";
+const Row = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-2fa79525"]]);
 const _hoisted_1 = { class: "nice-col-default" };
 const _sfc_main = /* @__PURE__ */ defineComponent({
-  __name: "NCol",
+  __name: "Col",
   props: {
     span: {
       type: Number,
@@ -3005,8 +3005,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   setup(__props) {
     const props = __props;
     useCssVars((_ctx) => ({
-      "5c71c4da": width.value,
-      "594c6e66": offset.value
+      "7496e1f6": width.value,
+      "10753663": offset.value
     }));
     const width = ref(props.span <= 24 ? props.span % 1 == 0 ? 100 / 24 * props.span + "%" : "" : "");
     const offset = ref(props.offset <= 24 ? props.offset % 1 == 0 ? 100 / 24 * props.offset + "%" : "" : "");
@@ -3017,26 +3017,23 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const NCol_vue_vue_type_style_index_0_scoped_a23fb429_lang = "";
-const NCol = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-a23fb429"]]);
+const Col_vue_vue_type_style_index_0_scoped_4c1791c0_lang = "";
+const Col = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-4c1791c0"]]);
 const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
-  NButton,
-  NCol,
-  NIcon: script,
-  NInput,
-  NRow
+  Button,
+  Col,
+  Icon: script,
+  Input,
+  Row
 }, Symbol.toStringTag, { value: "Module" }));
 const install = function(Vue) {
   if (install.installed)
     return;
-  const _components = Object.keys(components).map(
-    (key) => components[key]
-  );
+  const _components = Object.keys(components).map((key) => components[key]);
   _components.forEach((component) => {
     if (component.hasOwnProperty("name") || component.hasOwnProperty("__name")) {
-      console.log(component);
-      Vue.component(`${component.name || component.__name}`, component);
+      Vue.component(`N${component.name || component.__name}`, component);
     }
   });
 };
@@ -3044,10 +3041,10 @@ const index = {
   install
 };
 export {
-  NButton,
-  NCol,
-  script as NIcon,
-  NInput,
-  NRow,
+  Button,
+  Col,
+  script as Icon,
+  Input,
+  Row,
   index as default
 };

@@ -62,7 +62,7 @@ const state = reactive({
   },
 })
 const isShow = ref(false)
-const { style } = state
+const { style }: any = state
 const isText = computed(() => {
   return typeof props.text === 'string'
 })

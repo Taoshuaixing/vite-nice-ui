@@ -6,6 +6,7 @@
 ## 基本使用
 
 <button-basic />
+<n-icon type='user' />
 
 ::: details Show Code
 
@@ -45,9 +46,9 @@
 :::
 
 
-## APIs
+## API
 
-参数 | 说明 | 类型 | 默认值 | 必传
+参数 | 说明 | 类型 | 默认值 | 可选值
 -- | -- | -- | -- | --
 name | 默认文本 | string &#124; slot | '按钮' | false
 type | 类型 | 'default' &#124; 'primary' &#124; 'danger' | 'default' | false

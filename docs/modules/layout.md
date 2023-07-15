@@ -25,3 +25,11 @@
 <<<../examples/layout/position.vue
 
 :::
+
+
+## API
+
+参数 | 说明 | 类型 | 默认值 | 可选值
+-- | -- | -- | -- | --
+span |每行占用列数  |number | 24 | —— 
+offset | 偏移指定列数 | number | —— | ——

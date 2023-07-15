@@ -22,5 +22,6 @@ defineOptions({
   height: auto;
   box-sizing: border-box;
   overflow: hidden;
+  text-align: center;
 }
 </style>

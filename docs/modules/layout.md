@@ -15,3 +15,13 @@
 
 
 ## 位置偏移
+
+通过 offset 设置偏移占用指定的列数。
+
+<layout-position />
+
+::: details Show Code
+
+<<<../examples/layout/position.vue
+
+:::

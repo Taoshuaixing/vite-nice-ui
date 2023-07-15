@@ -9,161 +9,74 @@
 
 # 输入框 Input
 
-<br>
-<p>数据输入框类型，通过键盘输入字符。</p>
+
+数据输入框类型，通过键盘输入字符。
+
+<input-basic />
 
 ## 基本使用
 
-<n-input size="default"  placeholder="基本使用"></n-input>
+<input-basic />
 
 ::: details Show Code
 
-```vue
-<template>
-  <n-input v-model="value1" placeholder="基本使用"></n-input>
-</template>
-
-<script setup lang="ts">
-import { ref } from 'vue'
-const value1 = ref('')
-</script>
-```
+<<<../examples/input/basic.vue
 
 :::
 
 ## 大、中、小三种尺寸
 
-<div :class="$style['n-flex']">
-    <n-input
-      size="small"
-      placeholder="小"
-    ></n-input>
-    <n-input
-      size="default"
-      placeholder="中"
-    ></n-input>
-    <n-input
-      size="large"
-      placeholder="大"
-  ></n-input>
-</div>
+<input-size />
 
 ::: details Show Code
 
-```vue
-<template>
-  <n-input size="small" placeholder="小"></n-input>
-  <n-input size="default" placeholder="中"></n-input>
-  <n-input size="large" placeholder="大"></n-input>
-</template>
-```
+<<<../examples/input/size.vue
 
 :::
 
 ## 禁用状态
 
-<n-input disabled placeholder="禁用状态"></n-input>
+<input-disabled />
 
 ::: details Show Code
 
-```vue
-<template>
-  <n-input v-model="value1" disabled placeholder="禁用状态"></n-input>
-</template>
-<script setup>
-import { ref } from 'vue'
-const value1 = ref('')
-</script>
-```
+<<<../examples/input/disabled.vue
 
 :::
 
 ## 可清空数据
 
-<script setup lang="ts">
-  import {ref} from 'vue'
-  const value1 = ref('')
-  const clear = () =>{
-    console.log("清空")
-  }
-    const password = ref('')
-</script>
-
-<n-input v-model="value1" clearable @clear="clear" placeholder="可清空"></n-input>
+<input-clearable />
 
 ::: details Show Code
 
-```vue
-<template>
-  <n-input v-model="value1" clearable @clear="clear" placeholder="可清空"></n-input>
-</template>
-<script setup>
-import { ref } from 'vue'
-const value1 = ref('')
-const clear = () => {
-  console.log('清空')
-}
-</script>
-```
+<<<../examples/input/clearable.vue
 
 :::
 
 ## 带图标
 
-<br>
-<p>可使用 leftIcon 或者 rightIcon 来定义显示图标并确定显示的位置。需要注意的是如果定义了右侧显示图标，那 clearable 将不再起作用</p>
+可使用 leftIcon 或者 rightIcon 来定义显示图标并确定显示的位置。需要注意的是如果定义了右侧显示图标，那 clearable 将不再起作用
 
-<div :class="$style['n-flex']">
-    <n-input v-model="value1" leftIcon="m-icon-search"></n-input>
-    <n-input v-model="value1" rightIcon="m-icon-calendar"></n-input>
-    </div>
+<input-icon />
 
 ::: details Show Code
 
-```vue
-<template>
-    <n-input v-model="value1" leftIcon="m-icon-search"></n-input>
-    <n-input v-model="value2" rightIcon="m-icon-calendar"></n-input>
-</template>
-<script setup>
-import { ref } from 'vue'
-const value1 = ref('')
-const value2 = ref('')
-</script>
-```
+<<<../examples/input/icon.vue
 
 :::
-
 
 ## 密码类型
 
-<br>
-<p>通过 showPassword 来启用是否开启显示密码</p>
-  <n-input v-model="password" type="password" showPassword placeholder="请输入密码"></n-input>
+通过 showPassword 来启用是否开启显示密码
+
+<input-password />
 
 ::: details Show Code
 
-```vue
-<template>
-  <n-input v-model="password" type="password" showPassword placeholder="请输入密码"></n-input>
-</template>
-
-<script setup>
-  import {ref} from 'vue'
-  const password = ref('')
-</script>
-```
+<<<../examples/input/password.vue
 
 :::
-
-<style module>
-.n-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
-</style>
 
 ## APIs
 

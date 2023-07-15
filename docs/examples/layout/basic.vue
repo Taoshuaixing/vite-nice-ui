@@ -31,11 +31,11 @@
   line-height: 34px;
 }
 .col-box-1 {
-  background-color: #9eaaaf;
+  background-color: #f4d7ff;
   color: #333;
 }
 .col-box-2 {
-  background-color: #505050;
+  background-color: #e59fff;
   color: #fff;
 }
 </style>

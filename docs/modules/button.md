@@ -1,132 +1,49 @@
 
 # 按钮 Button
 
-<br>
-<p>常用组件，用于响应某些时间或者处理某些逻辑</p>
+常用组件，用于响应某些时间或者处理某些逻辑
 
 ## 基本使用
 
-<div :class="$style['m-flex']">
-  <n-button @click="onClick">Default</n-button>
-  <n-button effect="reverse" @click="onClick">Reverse</n-button>
-  <n-button type="primary" @click="onClick">Primary</n-button>
-  <n-button type="danger" @click="onClick">Danger</n-button>
-  <n-button disabled @click="onClick">Disabled</n-button>
-</div>
+<button-basic />
 
 ::: details Show Code
 
-```vue
-<script setup lang="ts">
-function onClick (e: Event) {
-  console.log('click')
-}
-</script>
-<template>
-  <n-button @click="onClick">Default</n-button>
-  <n-button effect="reverse" @click="onClick">Reverse</n-button>
-  <n-button type="primary" @click="onClick">Primary</n-button>
-  <n-button type="danger" @click="onClick">Danger</n-button>
-  <n-button disabled @click="onClick">Disabled</n-button>
-</template>
-```
+<<<../examples/button/basic.vue
 
 :::
 
 ## 大、中、小三种尺寸
 
-<div :class="$style['m-flex']">
-  <n-button size="small" @click="onClick">Small</n-button>
-  <n-button @click="onClick">Default</n-button>
-  <n-button size="large" @click="onClick">Large</n-button>
-</div>
+<button-size />
 
 ::: details Show Code
 
-```vue
-<script setup lang="ts">
-function onClick (e: Event) {
-  console.log('click')
-}
-</script>
-<template>
-  <n-button size="small" @click="onClick">Small</n-button>
-  <n-button @click="onClick">Default</n-button>
-  <n-button size="large" @click="onClick">Large</n-button>
-</template>
-
-```
+<<<../examples/button/size.vue
 
 :::
 
 ## 自定义样式
 
-<n-button :width="120" :height="40" :border-radius="8" size="large" @click="onClick">
-  <p style="font-size: 18px;">自定义样式</p>
-</n-button>
+<button-style />
 
 ::: details Show Code
 
-```vue
-<script setup lang="ts">
-function onClick (e: Event) {
-  console.log('click')
-}
-</script>
-<template>
-  <n-button :width="120" :height="40" :border-radius="8" size="large" @click="onClick">
-    <p style="font-size: 18px;">自定义样式</p>
-  </n-button>
-</template>
-
-```
+<<<../examples/button/style.vue
 
 :::
 
 ## 加载中状态
 
-<div :class="$style['m-flex']">
-  <n-button :loading="loading" @click="onClick">Default</n-button>
-  <n-button :loading="loading" type="primary" @click="onClick">Primary</n-button>
-  <n-button :loading="loading" type="danger" @click="onClick">Danger</n-button>
-</div>
-<div :class="$style['m-flex']" style="margin-top: 30px;">
-  <h3 :class="$style['u-h3']">Loading state: </h3>
-  <Switch v-model:checked="loading" />
-</div>
+
+<button-loading />
 
 ::: details Show Code
 
-```vue
-<script setup lang="ts">
-import { ref } from 'vue'
-const loading = ref(true)
-function onClick (e: Event) {
-  console.log('click')
-}
-</script>
-<template>
-  <n-button :loading="loading" @click="onClick">Default</n-button>
-  <n-button :loading="loading" type="primary" @click="onClick">Primary</n-button>
-  <n-button :loading="loading" type="danger" @click="onClick">Danger</n-button>
-  <h3>Loading state: <Switch v-model:checked="loading" /></h3>
-</template>
-
-```
+<<<../examples/button/loading.vue
 
 :::
 
-<style module>
-.m-flex {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 12px;
-  align-items: center;
-}
-.u-h3 {
-  margin-top: 0 !important;
-}
-</style>
 
 ## APIs
 

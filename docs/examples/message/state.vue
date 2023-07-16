@@ -37,7 +37,7 @@ const openCustom = () => {
   Message({
     type: 'custom',
     text: '自定义消息弹窗样式',
-    icon: 'n-icon-file-common',
+    icon: 'chrome',
     textColor: '#000',
     bgColor: '#e19af3',
   })

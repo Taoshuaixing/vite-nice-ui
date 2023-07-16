@@ -1,7 +1,7 @@
 <template>
   <div :class="[`nice-group-input-${size}`]" :style="{ 'min-width': 'auto' }">
     <div :class="isClass" :style="isStyle" style="">
-      <i :class="['left-icon', 'iconfont', leftIcon]" v-if="!showPassword && leftIcon != ''"></i>
+      <icon :class="['left-icon']" :type="leftIcon" v-if="!showPassword && leftIcon != ''"></icon>
       <input
         :type="inptype"
         @focus="focus"
@@ -16,17 +16,19 @@
         :form="form"
       />
       <transition name="slide-fade">
-        <i class="clearable-icon iconfont m-icon-close" v-if="!showPassword && clearable && modelValue != ''" @click="clear"></i>
+        <icon type="x" class="clearable-icon" v-if="!showPassword && clearable && modelValue != ''" @click="clear" />
       </transition>
 
-      <i :class="['right-icon', 'iconfont', rightIcon]" v-if="!showPassword && rightIcon != ''"></i>
-      <i v-if="showPassword" :class="['password-icon', 'iconfont m-icon-browse']" @click="showPwd(type)"></i>
+      <icon :class="['right-icon']" :type="rightIcon" v-if="!showPassword && rightIcon != ''"></icon>
+      <icon v-if="showPassword" type="eye-off" :class="['password-icon']" @click="showPwd(type)"></icon>
     </div>
     <slot name="btn" />
   </div>
 </template>
 <script setup lang="ts">
 import { ref, computed, useSlots } from 'vue'
+import { Icon } from '../icon/index'
+
 interface Props {
   modelValue?: string | number
   disabled?: boolean
@@ -152,10 +154,12 @@ const isClass = computed(() => {
   i.password-icon {
     position: absolute;
     right: 10px;
-    top: 11px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #94969b;
     transition: all 0.2s ease;
     cursor: pointer;
+    width: 17px;
   }
 }
 
@@ -195,10 +199,12 @@ const isClass = computed(() => {
   .clearable-icon {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #94969b;
     transition: all 0.2s ease;
     cursor: pointer;
+    width: 17px;
   }
 }
 
@@ -236,10 +242,12 @@ const isClass = computed(() => {
   i.password-icon {
     position: absolute;
     right: 10px;
-    top: 8px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #94969b;
     transition: all 0.2s ease;
     cursor: pointer;
+    width: 15px;
   }
 }
 
@@ -283,10 +291,12 @@ const isClass = computed(() => {
   i.password-icon {
     position: absolute;
     right: 10px;
-    top: 7px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #94969b;
     transition: all 0.2s ease;
     cursor: pointer;
+    width: 20px;
   }
 }
 
@@ -312,8 +322,10 @@ const isClass = computed(() => {
   .left-icon {
     position: absolute;
     left: 10px;
-    top: 11px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #94969b;
+    width: 17px;
   }
 }
 
@@ -334,9 +346,11 @@ const isClass = computed(() => {
   .left-icon {
     position: absolute;
     left: 10px;
-    top: 8px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 13px;
     color: #94969b;
+    width: 15px;
   }
 
   .clearable-icon {
@@ -362,9 +376,11 @@ const isClass = computed(() => {
   .left-icon {
     position: absolute;
     left: 10px;
-    top: 7px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 12px;
     color: #94969b;
+    width: 20px;
   }
 
   .clearable-icon {
@@ -388,8 +404,10 @@ const isClass = computed(() => {
   .right-icon {
     position: absolute;
     right: 10px;
-    top: 11px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #94969b;
+    width: 20px;
   }
 }
 
@@ -410,9 +428,11 @@ const isClass = computed(() => {
   .right-icon {
     position: absolute;
     right: 10px;
-    top: 8px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 13px;
     color: #94969b;
+    width: 15px;
   }
 }
 
@@ -433,9 +453,11 @@ const isClass = computed(() => {
   .right-icon {
     position: absolute;
     right: 10px;
-    top: 7px;
+    top: 50%;
+    transform: translateY(-50%);
     font-size: 12px;
     color: #94969b;
+    width: 20px;
   }
 }
 
@@ -452,15 +474,19 @@ const isClass = computed(() => {
   .left-icon {
     position: absolute;
     left: 10px;
-    top: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #c6c8cc;
+    width: 17px;
   }
 
   .right-icon {
     position: absolute;
     right: 10px;
-    top: 10px;
+    top: 50%;
+    transform: translateY(-50%);
     color: #c6c8cc;
+    width: 17px;
   }
 }
 

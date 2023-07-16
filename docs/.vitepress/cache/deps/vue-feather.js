@@ -1,10 +1,10 @@
 import {
+  require_feather
+} from "./chunk-WDH66KDU.js";
+import {
   defineComponent,
   h
 } from "./chunk-V634PGSD.js";
-import {
-  require_feather
-} from "./chunk-WDH66KDU.js";
 import {
   __toESM
 } from "./chunk-UXIASGQL.js";

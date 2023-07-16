@@ -2,7 +2,7 @@
   <Transition name="slide-fade">
     <div :class="['nice-message', customClass]" :style="style[type]" v-show="isShow">
       <template v-if="isText">
-        <n-icon :type="[style[type].icon]"></n-icon>
+        <icon :type="style[type].icon"></icon>
         <span class="text">{{ text }}</span>
       </template>
       <template v-else>
@@ -13,6 +13,7 @@
 </template>
 <script setup lang="ts">
 import { onMounted, ref, reactive, computed } from 'vue'
+import { Icon } from '../icon/index'
 const props = defineProps({
   text: {
     type: [String, Object],

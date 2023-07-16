@@ -6,6 +6,7 @@ import Message from '../../../packages/components/message/index' //此处为本�
 const openMsg = () => {
   Message({
     text: '默认消息提示',
+    timeOut: 3000,
   })
 }
 </script>

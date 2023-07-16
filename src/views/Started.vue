@@ -8,6 +8,7 @@
 -->
 <template>
   <div>started</div>
+  <n-icon type="home"></n-icon>
 </template>
 
 <script setup lang="ts"></script>

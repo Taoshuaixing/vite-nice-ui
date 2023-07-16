@@ -9,7 +9,8 @@
     "paths": {
       "@/*": ["./src/*"],
       "images/*": ["./src/assets"]
-    }
+    },
+    "importsNotUsedAsValues": "remove"
   },
 
   "references": [

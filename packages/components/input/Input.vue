@@ -1,7 +1,7 @@
 <template>
   <div :class="[`nice-group-input-${size}`]" :style="{ 'min-width': 'auto' }">
     <div :class="isClass" :style="isStyle" style="">
-      <icon :class="['left-icon']" :type="leftIcon" v-if="!showPassword && leftIcon != ''"></icon>
+      <Icon :class="['left-icon']" :type="leftIcon" v-if="!showPassword && leftIcon != ''"></Icon>
       <input
         :type="inptype"
         @focus="focus"
@@ -16,11 +16,11 @@
         :form="form"
       />
       <transition name="slide-fade">
-        <icon type="x" class="clearable-icon" v-if="!showPassword && clearable && modelValue != ''" @click="clear" />
+        <Icon type="x" class="clearable-icon" v-if="!showPassword && clearable && modelValue != ''" @click="clear" />
       </transition>
 
-      <icon :class="['right-icon']" :type="rightIcon" v-if="!showPassword && rightIcon != ''"></icon>
-      <icon v-if="showPassword" type="eye-off" :class="['password-icon']" @click="showPwd(type)"></icon>
+      <Icon :class="['right-icon']" :type="rightIcon" v-if="!showPassword && rightIcon != ''"></Icon>
+      <Icon v-if="showPassword" type="eye-off" :class="['password-icon']" @click="showPwd(type)"></Icon>
     </div>
     <slot name="btn" />
   </div>

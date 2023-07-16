@@ -2,7 +2,7 @@
   <Transition name="slide-fade">
     <div :class="['nice-message', customClass]" :style="style[type]" v-show="isShow">
       <template v-if="isText">
-        <icon :type="style[type].icon"></icon>
+        <Icon :type="style[type].icon"></Icon>
         <span class="text">{{ text }}</span>
       </template>
       <template v-else>

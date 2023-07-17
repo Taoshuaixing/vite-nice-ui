@@ -17,8 +17,10 @@
 
 
 
-官网主页: [vite-nice-ui使用文档](https://taoshuaixing.github.io/vite-nice-ui/)
-国内访问: [vite-nice-ui使用文档](https://taoshuaixing.github.io/vite-nice-ui/)
+- 官网主页: [vite-nice-ui使用文档](https://taoshuaixing.github.io/vite-nice-ui/)
+
+- 国内访问: [vite-nice-ui使用文档](http://taoshuaixing.gitee.io/vite-nice-ui)
+
 ***
 
 ### 快速使用

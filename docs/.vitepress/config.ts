@@ -16,8 +16,8 @@ export default defineConfig({
   themeConfig: {
     logo: '/favicon.ico',
     editLink: {
-      pattern: 'https://github.com/themusecatcher/vue-amazing-ui/tree/master/docs/:path',
-      text: 'Suggest changes to this page',
+      pattern: 'https://github.com/Taoshuaixing/vite-nice-ui/blob/main/docs/:path',
+      text: '源码 · 文档',
     },
     // 默认支持icon包括：'discord'|'facebook'|'github'|'instagram'|'linkedin'|'mastodon'|'slack'|'twitter'|'youtube'
     socialLinks: [{ icon: 'github', link: 'https://github.com/Taoshuaixing/vite-nice-ui' }],

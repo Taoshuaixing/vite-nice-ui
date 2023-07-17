@@ -82,6 +82,7 @@
   },
   "dependencies": {
     "feather-icons": "^4.29.0",
+    "less-loader": "^11.1.3",
     "vite-plugin-raw": "^1.0.3",
     "vue-feather": "^2.0.0"
   }

@@ -9,9 +9,7 @@
 import DefaultTheme from 'vitepress/theme'
 import './reset.less' // global less
 import NiceUI from '../../../packages/index'
-import components from '../../examples/index'
-
-// import '../../../dist/style.css';
+import components from '../../examples/index' //组件demo
 
 export default {
   extends: DefaultTheme, // or ...DefaultTheme

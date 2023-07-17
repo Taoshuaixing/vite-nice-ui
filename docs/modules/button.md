@@ -6,7 +6,6 @@
 ## 基本使用
 
 <button-basic />
-<n-icon type='user' />
 
 ::: details Show Code
 

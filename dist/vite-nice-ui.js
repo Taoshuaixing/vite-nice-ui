@@ -1,10 +1,10 @@
-import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, createElementVNode, withModifiers, normalizeStyle, withDirectives, vShow, renderSlot, createTextVNode, toDisplayString, useSlots, ref, createBlock, unref, createCommentVNode, createVNode, Transition, withCtx, useCssVars, watch, Fragment, renderList } from "vue";
+import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, createElementVNode, withModifiers, normalizeStyle, withDirectives, vShow, renderSlot, createTextVNode, toDisplayString, useSlots, ref, createBlock, unref, createCommentVNode, createVNode, Transition, withCtx, useCssVars, watch, Fragment, renderList, pushScopeId, popScopeId } from "vue";
 import Icon from "vue-feather";
 import { default as default2 } from "vue-feather";
-const _hoisted_1$4 = ["href", "target", "disabled"];
-const _hoisted_2$1 = { class: "u-spin-circle" };
-const _hoisted_3$1 = { class: "u-text" };
-const _sfc_main$4 = /* @__PURE__ */ defineComponent({
+const _hoisted_1$6 = ["href", "target", "disabled"];
+const _hoisted_2$2 = { class: "u-spin-circle" };
+const _hoisted_3$2 = { class: "u-text" };
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "Button",
   props: {
     name: { default: "" },
@@ -60,18 +60,18 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
           withDirectives(createElementVNode("span", {
             class: normalizeClass(["n-loading-icon", { "show-spin": _ctx.loading }])
           }, [
-            withDirectives(createElementVNode("span", _hoisted_2$1, null, 512), [
+            withDirectives(createElementVNode("span", _hoisted_2$2, null, 512), [
               [vShow, _ctx.loading]
             ])
           ], 2), [
             [vShow, !isRoute.value]
           ]),
-          createElementVNode("span", _hoisted_3$1, [
+          createElementVNode("span", _hoisted_3$2, [
             renderSlot(_ctx.$slots, "default", {}, () => [
               createTextVNode(toDisplayString(_ctx.name), 1)
             ], true)
           ])
-        ], 14, _hoisted_1$4)
+        ], 14, _hoisted_1$6)
       ], 2);
     };
   }
@@ -84,10 +84,10 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const Button = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-cf35ad80"]]);
+const Button = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-cf35ad80"]]);
 Icon.name = "Icon";
-const _hoisted_1$3 = ["type", "value", "disabled", "placeholder", "autofocus", "readonly", "form"];
-const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+const _hoisted_1$5 = ["type", "value", "disabled", "placeholder", "autofocus", "readonly", "form"];
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   __name: "Input",
   props: {
     modelValue: { default: "" },
@@ -188,7 +188,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
             autofocus: _ctx.autofocus,
             readonly: _ctx.readonly,
             form: _ctx.form
-          }, null, 40, _hoisted_1$3),
+          }, null, 40, _hoisted_1$5),
           createVNode(Transition, { name: "slide-fade" }, {
             default: withCtx(() => [
               !_ctx.showPassword && _ctx.clearable && _ctx.modelValue != "" ? (openBlock(), createBlock(unref(Icon), {
@@ -218,25 +218,25 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   }
 });
 const Input_vue_vue_type_style_index_0_scoped_37800659_lang = "";
-const Input = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-37800659"]]);
-const _hoisted_1$2 = { class: "nice-row-default" };
-const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+const Input = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-37800659"]]);
+const _hoisted_1$4 = { class: "nice-row-default" };
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   ...{
     name: "Row"
   },
   __name: "Row",
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$2, [
+      return openBlock(), createElementBlock("div", _hoisted_1$4, [
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ]);
     };
   }
 });
 const Row_vue_vue_type_style_index_0_scoped_2fa79525_lang = "";
-const Row = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-2fa79525"]]);
-const _hoisted_1$1 = { class: "nice-col-default" };
-const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+const Row = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-2fa79525"]]);
+const _hoisted_1$3 = { class: "nice-col-default" };
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   __name: "Col",
   props: {
     span: {
@@ -257,23 +257,23 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
     const width = ref(props.span <= 24 ? props.span % 1 == 0 ? 100 / 24 * props.span + "%" : "" : "");
     const offset = ref(props.offset <= 24 ? props.offset % 1 == 0 ? 100 / 24 * props.offset + "%" : "" : "");
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$1, [
+      return openBlock(), createElementBlock("div", _hoisted_1$3, [
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ]);
     };
   }
 });
 const Col_vue_vue_type_style_index_0_scoped_4c1791c0_lang = "";
-const Col = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-4c1791c0"]]);
-const _hoisted_1 = { class: "n-checkbox" };
-const _hoisted_2 = ["onClick"];
-const _hoisted_3 = { class: "u-label" };
-const _hoisted_4 = {
+const Col = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-4c1791c0"]]);
+const _hoisted_1$2 = { class: "n-checkbox" };
+const _hoisted_2$1 = ["onClick"];
+const _hoisted_3$1 = { class: "u-label" };
+const _hoisted_4$1 = {
   key: 1,
   class: "n-checkbox-wrap"
 };
-const _hoisted_5 = { class: "u-label" };
-const _sfc_main = /* @__PURE__ */ defineComponent({
+const _hoisted_5$1 = { class: "u-label" };
+const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "Checkbox",
   props: {
     options: { default: () => [] },
@@ -323,7 +323,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       emits("update:checked", !props.checked);
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1, [
+      return openBlock(), createElementBlock("div", _hoisted_1$2, [
         sum.value ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(_ctx.options, (option, index2) => {
           return openBlock(), createElementBlock("div", {
             class: normalizeClass(["n-checkbox-wrap", { vertical: _ctx.vertical }]),
@@ -337,16 +337,16 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
               createElementVNode("span", {
                 class: normalizeClass(["u-checkbox", { "u-checkbox-checked": checkedValue.value.includes(option.value) }])
               }, null, 2),
-              createElementVNode("span", _hoisted_3, [
+              createElementVNode("span", _hoisted_3$1, [
                 renderSlot(_ctx.$slots, "default", {
                   label: option.label
                 }, () => [
                   createTextVNode(toDisplayString(option.label), 1)
                 ], true)
               ])
-            ], 10, _hoisted_2)
+            ], 10, _hoisted_2$1)
           ], 6);
-        }), 128)) : (openBlock(), createElementBlock("div", _hoisted_4, [
+        }), 128)) : (openBlock(), createElementBlock("div", _hoisted_4$1, [
           createElementVNode("div", {
             class: normalizeClass(["n-box", { disabled: _ctx.disabled }]),
             onClick: onCheckAll
@@ -354,7 +354,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
             createElementVNode("span", {
               class: normalizeClass(["u-checkbox", { "u-checkbox-checked": _ctx.checked && !_ctx.indeterminate, indeterminate: _ctx.indeterminate }])
             }, null, 2),
-            createElementVNode("span", _hoisted_5, [
+            createElementVNode("span", _hoisted_5$1, [
               renderSlot(_ctx.$slots, "default", {}, () => [
                 createTextVNode("Check all")
               ], true)
@@ -365,8 +365,130 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const Checkbox_vue_vue_type_style_index_0_scoped_7c7fb0f7_lang = "";
-const Checkbox = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-7c7fb0f7"]]);
+const Checkbox_vue_vue_type_style_index_0_scoped_8f268a2f_lang = "";
+const Checkbox = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-8f268a2f"]]);
+const _withScopeId = (n) => (pushScopeId("data-v-f6d7b3b7"), n = n(), popScopeId(), n);
+const _hoisted_1$1 = { class: "n-loading" };
+const _hoisted_2 = { class: "n-loading-box" };
+const _hoisted_3 = {
+  key: 0,
+  class: "n-loading-dot"
+};
+const _hoisted_4 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_5 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_6 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_7 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_8 = [
+  _hoisted_4,
+  _hoisted_5,
+  _hoisted_6,
+  _hoisted_7
+];
+const _hoisted_9 = {
+  key: 1,
+  class: "u-spin-circle"
+};
+const _hoisted_10 = {
+  key: 2,
+  class: "n-dynamic-circle"
+};
+const _hoisted_11 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("svg", {
+  class: "circular",
+  viewBox: "0 0 50 50"
+}, [
+  /* @__PURE__ */ createElementVNode("circle", {
+    class: "path",
+    cx: "25",
+    cy: "25",
+    r: "20",
+    fill: "none"
+  })
+], -1));
+const _hoisted_12 = [
+  _hoisted_11
+];
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+  __name: "Loading",
+  props: {
+    loading: { type: Boolean, default: true },
+    size: { default: "default" },
+    tip: { default: "" },
+    indicator: { default: "dot" },
+    color: { default: "#9708cc" }
+  },
+  setup(__props) {
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", {
+        class: normalizeClass(`n-loading-wrap ${_ctx.size}`),
+        style: normalizeStyle(`--color: ${_ctx.color};`)
+      }, [
+        withDirectives(createElementVNode("div", _hoisted_1$1, [
+          createElementVNode("div", _hoisted_2, [
+            _ctx.indicator === "dot" ? (openBlock(), createElementBlock("div", _hoisted_3, _hoisted_8)) : createCommentVNode("", true),
+            _ctx.indicator === "static-circle" ? (openBlock(), createElementBlock("div", _hoisted_9)) : createCommentVNode("", true),
+            _ctx.indicator === "dynamic-circle" ? (openBlock(), createElementBlock("div", _hoisted_10, _hoisted_12)) : createCommentVNode("", true),
+            withDirectives(createElementVNode("p", { class: "u-tip" }, toDisplayString(_ctx.tip), 513), [
+              [vShow, _ctx.tip]
+            ])
+          ])
+        ], 512), [
+          [vShow, _ctx.loading]
+        ]),
+        createElementVNode("div", {
+          class: normalizeClass(["n-loading-content", { "n-loading-mask": _ctx.loading }])
+        }, [
+          renderSlot(_ctx.$slots, "default", {}, void 0, true)
+        ], 2)
+      ], 6);
+    };
+  }
+});
+const Loading_vue_vue_type_style_index_0_scoped_f6d7b3b7_lang = "";
+const Loading = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-f6d7b3b7"]]);
+const _hoisted_1 = { class: "n-switch-wrap" };
+const _sfc_main = /* @__PURE__ */ defineComponent({
+  __name: "Switch",
+  props: {
+    checkedInfo: { default: "" },
+    uncheckedInfo: { default: "" },
+    disabled: { type: Boolean, default: false },
+    checked: { type: Boolean, default: false }
+  },
+  emits: ["update:checked", "change"],
+  setup(__props, { emit }) {
+    const props = __props;
+    const checked = ref(props.checked);
+    watch(
+      () => props.checked,
+      (to) => {
+        checked.value = to;
+      }
+    );
+    function onSwitch() {
+      emit("update:checked", !checked.value);
+      emit("change", !checked.value);
+    }
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1, [
+        createElementVNode("div", {
+          onClick: _cache[0] || (_cache[0] = ($event) => _ctx.disabled ? () => false : onSwitch()),
+          class: normalizeClass(["n-switch", { "switch-checked": checked.value, disabled: _ctx.disabled }])
+        }, [
+          createElementVNode("div", {
+            class: normalizeClass(["u-switch-inner", checked.value ? "inner-checked" : "inner-unchecked"])
+          }, toDisplayString(checked.value ? _ctx.checkedInfo : _ctx.uncheckedInfo), 3),
+          createElementVNode("div", {
+            class: normalizeClass(["u-node", { "node-checked": checked.value }])
+          }, [
+            renderSlot(_ctx.$slots, "node", { checked: checked.value }, void 0, true)
+          ], 2)
+        ], 2)
+      ]);
+    };
+  }
+});
+const Switch_vue_vue_type_style_index_0_scoped_aefb5278_lang = "";
+const Switch = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-aefb5278"]]);
 const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Button,
@@ -374,7 +496,9 @@ const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePr
   Col,
   Icon,
   Input,
-  Row
+  Loading,
+  Row,
+  Switch
 }, Symbol.toStringTag, { value: "Module" }));
 const install = function(Vue) {
   if (install.installed)
@@ -395,6 +519,8 @@ export {
   Col,
   default2 as Icon,
   Input,
+  Loading,
   Row,
+  Switch,
   index as default
 };

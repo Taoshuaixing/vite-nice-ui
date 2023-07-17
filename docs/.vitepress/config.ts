@@ -177,8 +177,8 @@ export default defineConfig({
               link: '/modules/tooltip',
             },
             {
-              text: '加载中 Spin',
-              link: '/modules/spin',
+              text: '加载中 Loading',
+              link: '/modules/loading',
             },
             {
               text: '全局提示 Message',

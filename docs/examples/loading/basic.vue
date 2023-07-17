@@ -13,7 +13,7 @@ const loading = ref(true)
   <br />
   <h4>
     Loading state:
-    <Switch v-model:checked="loading" />
+    <n-switch v-model:checked="loading" />
   </h4>
 </template>
 <style scoped>

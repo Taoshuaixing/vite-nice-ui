@@ -114,7 +114,6 @@
 </template>
 <script setup lang="ts">
 import { computed, ref, onMounted, onUnmounted, watchEffect } from 'vue'
-// import Spin from '../spin'
 interface Image {
   src: string // 图像地址
   name?: string // 图像名称

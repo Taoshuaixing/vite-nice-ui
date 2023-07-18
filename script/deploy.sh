@@ -12,6 +12,9 @@ rm -rf dist
 # 确保脚本抛出遇到的错误
 set -e
 
+# 读取package.json中的version
+version=$(jq -r .version package.json)
+
 # 重新打包组件库
 npm run build
 
@@ -25,7 +28,7 @@ cd docs/.vitepress/dist
 # 提交打包静态网站到 github-pages 分支
 git init
 git add .
-git commit -m 'deploy github.io -b github-pages'
+git commit -m "deploy v$version"
 
 # 部署到 https://<username>.github.io/<repo>
 git push -f git@github.com:Taoshuaixing/vite-nice-ui.git main:github-pages
@@ -33,5 +36,5 @@ git push -f git@github.com:Taoshuaixing/vite-nice-ui.git main:github-pages
 # 提交所有代码到github
 cd ../../../
 git add .
-git commit -m 'update version'
+git commit -m "update v$version"
 git push

@@ -801,7 +801,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
 });
 const NEmpty_vue_vue_type_style_index_0_scoped_d0028f6b_lang = "";
 const NEmpty = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-d0028f6b"]]);
-const _withScopeId = (n) => (pushScopeId("data-v-18f01495"), n = n(), popScopeId(), n);
+const _withScopeId = (n) => (pushScopeId("data-v-1ed181ee"), n = n(), popScopeId(), n);
 const _hoisted_1 = { class: "n-image-wrap" };
 const _hoisted_2 = ["onLoad", "src", "alt"];
 const _hoisted_3 = ["onClick"];
@@ -1276,8 +1276,8 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const NImage_vue_vue_type_style_index_0_scoped_18f01495_lang = "";
-const NImage = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-18f01495"]]);
+const NImage_vue_vue_type_style_index_0_scoped_1ed181ee_lang = "";
+const NImage = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-1ed181ee"]]);
 const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   NButton,

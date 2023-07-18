@@ -1,20 +1,20 @@
 <template>
   <div
     :class="[
-      `n-divider ${orientation}`,
+      `n-divider ${position}`,
       {
         dashed: dashed,
         margin24: !showText,
-        marginLeft: orientationMargin !== '' && orientation === 'left',
-        marginRight: orientationMargin !== '' && orientation === 'right',
+        marginLeft: positionMargin !== '' && position === 'left',
+        marginRight: positionMargin !== '' && position === 'right',
       },
     ]"
     :style="`----border-width:${borderWidth}px`"
   >
-    <span class="u-text" v-if="orientation === 'left'" :style="`margin-left: ${margin};`" ref="text" v-show="showText">
+    <span class="u-text" v-if="position === 'left'" :style="`margin-left: ${margin};`" ref="text" v-show="showText">
       <slot></slot>
     </span>
-    <span class="u-text" v-else-if="orientation === 'right'" :style="`margin-right: ${margin};`" ref="text" v-show="showText">
+    <span class="u-text" v-else-if="position === 'right'" :style="`margin-right: ${margin};`" ref="text" v-show="showText">
       <slot></slot>
     </span>
     <span class="u-text" v-else ref="text" v-show="showText">
@@ -28,14 +28,14 @@ import { ref, onMounted, computed } from 'vue'
 
 interface Props {
   dashed?: boolean // 是否为虚线
-  orientation?: 'left' | 'center' | 'right' // 分割线标题的位置
-  orientationMargin?: string | number // 标题和最近 left/right 边框之间的距离，去除了分割线，同时 orientation 必须为 left 或 right
+  position?: 'left' | 'center' | 'right' // 分割线标题的位置
+  positionMargin?: string | number // 标题和最近 left/right 边框之间的距离，去除了分割线，同时 position 必须为 left 或 right
   borderWidth?: number // 分割线宽度
 }
 const props = withDefaults(defineProps<Props>(), {
   dashed: false,
-  orientation: 'center', // 可选 left center right
-  orientationMargin: '',
+  position: 'center', // 可选 left center right
+  positionMargin: '',
   borderWidth: 1,
 })
 const text = ref()
@@ -43,11 +43,11 @@ const showText = ref(true)
 
 //通用margin
 const margin = computed(() => {
-  if (props.orientationMargin !== '') {
-    if (typeof props.orientationMargin === 'number') {
-      return props.orientationMargin + 'px'
+  if (props.positionMargin !== '') {
+    if (typeof props.positionMargin === 'number') {
+      return props.positionMargin + 'px'
     } else {
-      return props.orientationMargin
+      return props.positionMargin
     }
   }
 })
@@ -60,7 +60,7 @@ onMounted(() => {
 </script>
 
 <style lang="less" scoped>
-.m-divider {
+.n-divider {
   display: flex;
   align-items: center;
   margin: 16px 0;

@@ -471,7 +471,7 @@ var drawChart = (function (exports) {
         minRatio = newRatio;
       }
 
-      // Position and record the row orientation.
+      // Position and record the row position.
       rows.push(row = {value: sumValue, dice: dx < dy, children: nodes.slice(i0, i1)});
       if (row.dice) treemapDice(row, x0, y0, x1, value ? y0 += dy * sumValue / value : y1);
       else treemapSlice(row, x0, y0, value ? x0 += dx * sumValue / value : x1, y1);

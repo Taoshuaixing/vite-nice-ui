@@ -20,12 +20,8 @@ const install: any = (Vue: App): void => {
 
   _components.forEach((component: any) => {
     if (component.hasOwnProperty('name') || component.hasOwnProperty('__name')) {
-      console.log(component, `${component.__name || component.name}`)
       Vue.component(`${component.__name || component.name}`, component)
     }
   })
 }
-const NiceUI = {
-  install,
-}
-export default NiceUI
+export default install

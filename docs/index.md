@@ -35,4 +35,30 @@ features:
     details: 配合vue3的composition API，更快的响应。
 ---
 
+<script setup lang="ts">
+import { onMounted } from 'vue'
+/*
+  远程读取 github 仓库中 package.json 文件中的 version 版本号
+*/
+onMounted(() => {
+  if(document.getElementsByClassName('version-tag').length < 1){
+  return fetch('https://api.github.com/repos/Taoshuaixing/vite-nice-ui/contents/package.json?ref=main', {
+    headers: {
+      Accept: 'application/vnd.github.v3.raw',
+    }, 
+  })
+    .then(res => res.json())
+    .then(json => json.version ?? '')
+    .then(version => { 
+      if (!version) return
+      const tagLineParagragh = document.querySelector('div.VPHero.has-image.VPHomeHero > div > div.main > p.tagline')
+      const docsVersionSpan = document.createElement('samp')
+      docsVersionSpan.classList.add('version-tag')
+      docsVersionSpan.innerText = `v${version}`
+      tagLineParagragh?.appendChild(docsVersionSpan)
+    })
+  }
+})
+</script>
+
 

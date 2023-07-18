@@ -1,10 +1,10 @@
-import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, createElementVNode, withModifiers, normalizeStyle, withDirectives, vShow, renderSlot, createTextVNode, toDisplayString, useSlots, ref, createBlock, unref, createCommentVNode, createVNode, Transition, withCtx, useCssVars, watch, Fragment, renderList, pushScopeId, popScopeId } from "vue";
+import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, createElementVNode, withModifiers, normalizeStyle, withDirectives, vShow, renderSlot, createTextVNode, toDisplayString, useSlots, ref, createBlock, unref, createCommentVNode, createVNode, Transition, withCtx, useCssVars, watch, Fragment, renderList, pushScopeId, popScopeId, watchEffect, resolveComponent, onMounted, createStaticVNode } from "vue";
 import Icon from "vue-feather";
 import { default as default2 } from "vue-feather";
-const _hoisted_1$6 = ["href", "target", "disabled"];
-const _hoisted_2$2 = { class: "u-spin-circle" };
-const _hoisted_3$2 = { class: "u-text" };
-const _sfc_main$6 = /* @__PURE__ */ defineComponent({
+const _hoisted_1$8 = ["href", "target", "disabled"];
+const _hoisted_2$4 = { class: "u-spin-circle" };
+const _hoisted_3$4 = { class: "u-text" };
+const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   __name: "Button",
   props: {
     name: { default: "" },
@@ -60,18 +60,18 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
           withDirectives(createElementVNode("span", {
             class: normalizeClass(["n-loading-icon", { "show-spin": _ctx.loading }])
           }, [
-            withDirectives(createElementVNode("span", _hoisted_2$2, null, 512), [
+            withDirectives(createElementVNode("span", _hoisted_2$4, null, 512), [
               [vShow, _ctx.loading]
             ])
           ], 2), [
             [vShow, !isRoute.value]
           ]),
-          createElementVNode("span", _hoisted_3$2, [
+          createElementVNode("span", _hoisted_3$4, [
             renderSlot(_ctx.$slots, "default", {}, () => [
               createTextVNode(toDisplayString(_ctx.name), 1)
             ], true)
           ])
-        ], 14, _hoisted_1$6)
+        ], 14, _hoisted_1$8)
       ], 2);
     };
   }
@@ -84,10 +84,10 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const Button = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-cf35ad80"]]);
+const Button = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-cf35ad80"]]);
 Icon.name = "Icon";
-const _hoisted_1$5 = ["type", "value", "disabled", "placeholder", "autofocus", "readonly", "form"];
-const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+const _hoisted_1$7 = ["type", "value", "disabled", "placeholder", "autofocus", "readonly", "form"];
+const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "Input",
   props: {
     modelValue: { default: "" },
@@ -188,7 +188,7 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
             autofocus: _ctx.autofocus,
             readonly: _ctx.readonly,
             form: _ctx.form
-          }, null, 40, _hoisted_1$5),
+          }, null, 40, _hoisted_1$7),
           createVNode(Transition, { name: "slide-fade" }, {
             default: withCtx(() => [
               !_ctx.showPassword && _ctx.clearable && _ctx.modelValue != "" ? (openBlock(), createBlock(unref(Icon), {
@@ -218,25 +218,25 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   }
 });
 const Input_vue_vue_type_style_index_0_scoped_37800659_lang = "";
-const Input = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-37800659"]]);
-const _hoisted_1$4 = { class: "nice-row-default" };
-const _sfc_main$4 = /* @__PURE__ */ defineComponent({
+const Input = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-37800659"]]);
+const _hoisted_1$6 = { class: "nice-row-default" };
+const _sfc_main$7 = /* @__PURE__ */ defineComponent({
   ...{
     name: "Row"
   },
   __name: "Row",
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$4, [
+      return openBlock(), createElementBlock("div", _hoisted_1$6, [
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ]);
     };
   }
 });
 const Row_vue_vue_type_style_index_0_scoped_2fa79525_lang = "";
-const Row = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-2fa79525"]]);
-const _hoisted_1$3 = { class: "nice-col-default" };
-const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+const Row = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-2fa79525"]]);
+const _hoisted_1$5 = { class: "nice-col-default" };
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "Col",
   props: {
     span: {
@@ -257,23 +257,23 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     const width = ref(props.span <= 24 ? props.span % 1 == 0 ? 100 / 24 * props.span + "%" : "" : "");
     const offset = ref(props.offset <= 24 ? props.offset % 1 == 0 ? 100 / 24 * props.offset + "%" : "" : "");
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$3, [
+      return openBlock(), createElementBlock("div", _hoisted_1$5, [
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ]);
     };
   }
 });
 const Col_vue_vue_type_style_index_0_scoped_4c1791c0_lang = "";
-const Col = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-4c1791c0"]]);
-const _hoisted_1$2 = { class: "n-checkbox" };
-const _hoisted_2$1 = ["onClick"];
-const _hoisted_3$1 = { class: "u-label" };
-const _hoisted_4$1 = {
+const Col = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-4c1791c0"]]);
+const _hoisted_1$4 = { class: "n-checkbox" };
+const _hoisted_2$3 = ["onClick"];
+const _hoisted_3$3 = { class: "u-label" };
+const _hoisted_4$3 = {
   key: 1,
   class: "n-checkbox-wrap"
 };
-const _hoisted_5$1 = { class: "u-label" };
-const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+const _hoisted_5$3 = { class: "u-label" };
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   __name: "Checkbox",
   props: {
     options: { default: () => [] },
@@ -323,7 +323,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       emits("update:checked", !props.checked);
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$2, [
+      return openBlock(), createElementBlock("div", _hoisted_1$4, [
         sum.value ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(_ctx.options, (option, index2) => {
           return openBlock(), createElementBlock("div", {
             class: normalizeClass(["n-checkbox-wrap", { vertical: _ctx.vertical }]),
@@ -337,16 +337,16 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
               createElementVNode("span", {
                 class: normalizeClass(["u-checkbox", { "u-checkbox-checked": checkedValue.value.includes(option.value) }])
               }, null, 2),
-              createElementVNode("span", _hoisted_3$1, [
+              createElementVNode("span", _hoisted_3$3, [
                 renderSlot(_ctx.$slots, "default", {
                   label: option.label
                 }, () => [
                   createTextVNode(toDisplayString(option.label), 1)
                 ], true)
               ])
-            ], 10, _hoisted_2$1)
+            ], 10, _hoisted_2$3)
           ], 6);
-        }), 128)) : (openBlock(), createElementBlock("div", _hoisted_4$1, [
+        }), 128)) : (openBlock(), createElementBlock("div", _hoisted_4$3, [
           createElementVNode("div", {
             class: normalizeClass(["n-box", { disabled: _ctx.disabled }]),
             onClick: onCheckAll
@@ -354,7 +354,7 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
             createElementVNode("span", {
               class: normalizeClass(["u-checkbox", { "u-checkbox-checked": _ctx.checked && !_ctx.indeterminate, indeterminate: _ctx.indeterminate }])
             }, null, 2),
-            createElementVNode("span", _hoisted_5$1, [
+            createElementVNode("span", _hoisted_5$3, [
               renderSlot(_ctx.$slots, "default", {}, () => [
                 createTextVNode("Check all")
               ], true)
@@ -366,22 +366,22 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   }
 });
 const Checkbox_vue_vue_type_style_index_0_scoped_8f268a2f_lang = "";
-const Checkbox = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-8f268a2f"]]);
-const _withScopeId = (n) => (pushScopeId("data-v-f6d7b3b7"), n = n(), popScopeId(), n);
-const _hoisted_1$1 = { class: "n-loading" };
-const _hoisted_2 = { class: "n-loading-box" };
-const _hoisted_3 = {
+const Checkbox = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-8f268a2f"]]);
+const _withScopeId$1 = (n) => (pushScopeId("data-v-f6d7b3b7"), n = n(), popScopeId(), n);
+const _hoisted_1$3 = { class: "n-loading" };
+const _hoisted_2$2 = { class: "n-loading-box" };
+const _hoisted_3$2 = {
   key: 0,
   class: "n-loading-dot"
 };
-const _hoisted_4 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_5 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_6 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_7 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_4$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_5$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_6$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_7 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
 const _hoisted_8 = [
-  _hoisted_4,
-  _hoisted_5,
-  _hoisted_6,
+  _hoisted_4$2,
+  _hoisted_5$2,
+  _hoisted_6$2,
   _hoisted_7
 ];
 const _hoisted_9 = {
@@ -392,7 +392,7 @@ const _hoisted_10 = {
   key: 2,
   class: "n-dynamic-circle"
 };
-const _hoisted_11 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_11 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("svg", {
   class: "circular",
   viewBox: "0 0 50 50"
 }, [
@@ -407,7 +407,7 @@ const _hoisted_11 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createEle
 const _hoisted_12 = [
   _hoisted_11
 ];
-const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "Loading",
   props: {
     loading: { type: Boolean, default: true },
@@ -422,9 +422,9 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         class: normalizeClass(`n-loading-wrap ${_ctx.size}`),
         style: normalizeStyle(`--color: ${_ctx.color};`)
       }, [
-        withDirectives(createElementVNode("div", _hoisted_1$1, [
-          createElementVNode("div", _hoisted_2, [
-            _ctx.indicator === "dot" ? (openBlock(), createElementBlock("div", _hoisted_3, _hoisted_8)) : createCommentVNode("", true),
+        withDirectives(createElementVNode("div", _hoisted_1$3, [
+          createElementVNode("div", _hoisted_2$2, [
+            _ctx.indicator === "dot" ? (openBlock(), createElementBlock("div", _hoisted_3$2, _hoisted_8)) : createCommentVNode("", true),
             _ctx.indicator === "static-circle" ? (openBlock(), createElementBlock("div", _hoisted_9)) : createCommentVNode("", true),
             _ctx.indicator === "dynamic-circle" ? (openBlock(), createElementBlock("div", _hoisted_10, _hoisted_12)) : createCommentVNode("", true),
             withDirectives(createElementVNode("p", { class: "u-tip" }, toDisplayString(_ctx.tip), 513), [
@@ -444,9 +444,9 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   }
 });
 const Loading_vue_vue_type_style_index_0_scoped_f6d7b3b7_lang = "";
-const Loading = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-f6d7b3b7"]]);
-const _hoisted_1 = { class: "n-switch-wrap" };
-const _sfc_main = /* @__PURE__ */ defineComponent({
+const Loading = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-f6d7b3b7"]]);
+const _hoisted_1$2 = { class: "n-switch-wrap" };
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   __name: "Switch",
   props: {
     checkedInfo: { default: "" },
@@ -469,7 +469,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
       emit("change", !checked.value);
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1, [
+      return openBlock(), createElementBlock("div", _hoisted_1$2, [
         createElementVNode("div", {
           onClick: _cache[0] || (_cache[0] = ($event) => _ctx.disabled ? () => false : onSwitch()),
           class: normalizeClass(["n-switch", { "switch-checked": checked.value, disabled: _ctx.disabled }])
@@ -488,12 +488,327 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   }
 });
 const Switch_vue_vue_type_style_index_0_scoped_aefb5278_lang = "";
-const Switch = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-aefb5278"]]);
+const Switch = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-aefb5278"]]);
+function rafTimeout(fn, delay = 0, interval = false) {
+  const requestAnimationFrame2 = typeof window !== "undefined" ? window.requestAnimationFrame || window.mozRequestAnimationFrame || window.webkitRequestAnimationFrame || window.msRequestAnimationFrame : () => {
+  };
+  var start = null;
+  function timeElapse(timestamp) {
+    if (!start) {
+      start = timestamp;
+    }
+    const elapsed = timestamp - start;
+    if (elapsed >= delay) {
+      fn();
+      if (interval) {
+        start = null;
+        raf.id = requestAnimationFrame2(timeElapse);
+      }
+    } else {
+      raf.id = requestAnimationFrame2(timeElapse);
+    }
+  }
+  const raf = {
+    // 引用类型保存，方便获取 requestAnimationFrame()方法返回的 ID.
+    id: requestAnimationFrame2(timeElapse)
+  };
+  return raf;
+}
+const _withScopeId = (n) => (pushScopeId("data-v-60f16b3f"), n = n(), popScopeId(), n);
+const _hoisted_1$1 = { class: "n-collapse" };
+const _hoisted_2$1 = ["onClick"];
+const _hoisted_3$1 = {
+  key: 0,
+  focusable: "false",
+  class: "u-arrow",
+  "data-icon": "right",
+  "aria-hidden": "true",
+  viewBox: "64 64 896 896"
+};
+const _hoisted_4$1 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("path", { d: "M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z" }, null, -1));
+const _hoisted_5$1 = [
+  _hoisted_4$1
+];
+const _hoisted_6$1 = { class: "u-lang" };
+const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+  __name: "Collapse",
+  props: {
+    collapseData: { default: () => [] },
+    activeKey: { default: null },
+    copyable: { type: Boolean, default: false },
+    lang: { default: "" },
+    fontSize: { default: 14 },
+    headerFontSize: { default: 0 },
+    textFontSize: { default: 0 },
+    showArrow: { type: Boolean, default: true }
+  },
+  emits: ["update:activeKey", "change"],
+  setup(__props, { emit: emits }) {
+    const props = __props;
+    watchEffect(
+      () => {
+        getCollapseHeight(props.collapseData.length);
+      },
+      { flush: "post" }
+    );
+    const text = ref();
+    const collapseHeight = ref([]);
+    function getCollapseHeight(len) {
+      for (let n = 0; n < len; n++) {
+        collapseHeight.value.push(text.value[n].offsetHeight);
+      }
+    }
+    function dealEmit(value) {
+      emits("update:activeKey", value);
+      emits("change", value);
+    }
+    function onClick(key) {
+      if (activeJudge(key)) {
+        if (Array.isArray(props.activeKey)) {
+          const res = props.activeKey.filter((actKey) => actKey !== key);
+          dealEmit(res);
+        } else {
+          dealEmit(null);
+        }
+      } else {
+        if (Array.isArray(props.activeKey)) {
+          dealEmit([...props.activeKey, key]);
+        } else {
+          dealEmit(key);
+        }
+      }
+    }
+    function activeJudge(key) {
+      if (Array.isArray(props.activeKey)) {
+        return props.activeKey.includes(key);
+      } else {
+        return props.activeKey === key;
+      }
+    }
+    const copyTxt = ref("Copy");
+    function onCopy(index2) {
+      navigator.clipboard.writeText(text.value[index2].innerText || "").then(
+        () => {
+          copyTxt.value = "Copied";
+          rafTimeout(() => {
+            copyTxt.value = "Copy";
+          }, 3e3);
+        },
+        (err) => {
+          copyTxt.value = err;
+        }
+      );
+    }
+    return (_ctx, _cache) => {
+      const _component_n_button = resolveComponent("n-button");
+      return openBlock(), createElementBlock("div", _hoisted_1$1, [
+        (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.collapseData, (data, index2) => {
+          return openBlock(), createElementBlock("div", {
+            class: normalizeClass(["n-collapse-item", { "u-collapse-item-active": activeJudge(data.key || index2) }]),
+            key: index2
+          }, [
+            createElementVNode("div", {
+              class: "u-collapse-header",
+              onClick: ($event) => onClick(data.key || index2)
+            }, [
+              _ctx.showArrow ? (openBlock(), createElementBlock("svg", _hoisted_3$1, _hoisted_5$1)) : createCommentVNode("", true),
+              createElementVNode("div", {
+                class: normalizeClass(["u-header", { ml24: _ctx.showArrow }]),
+                style: normalizeStyle(`font-size: ${_ctx.headerFontSize || _ctx.fontSize}px;`)
+              }, [
+                renderSlot(_ctx.$slots, "header", {
+                  header: data.header,
+                  key: data.key || index2
+                }, () => [
+                  createTextVNode(toDisplayString(data.header || "--"), 1)
+                ], true)
+              ], 6)
+            ], 8, _hoisted_2$1),
+            createElementVNode("div", {
+              class: normalizeClass(["u-collapse-content", { "u-collapse-copyable": _ctx.copyable }]),
+              style: normalizeStyle(`height: ${activeJudge(data.key || index2) ? collapseHeight.value[index2] : 0}px;`)
+            }, [
+              createElementVNode("div", _hoisted_6$1, [
+                renderSlot(_ctx.$slots, "lang", {
+                  lang: _ctx.lang,
+                  key: data.key || index2
+                }, () => [
+                  createTextVNode(toDisplayString(_ctx.lang), 1)
+                ], true)
+              ]),
+              createVNode(_component_n_button, {
+                size: "small",
+                class: "u-copy",
+                type: "primary",
+                onClick: ($event) => onCopy(index2)
+              }, {
+                default: withCtx(() => [
+                  createTextVNode(toDisplayString(copyTxt.value), 1)
+                ]),
+                _: 2
+              }, 1032, ["onClick"]),
+              createElementVNode("div", {
+                ref_for: true,
+                ref_key: "text",
+                ref: text,
+                class: "u-text",
+                style: normalizeStyle(`font-size: ${_ctx.textFontSize || _ctx.fontSize}px;`)
+              }, [
+                renderSlot(_ctx.$slots, "text", {
+                  text: data.text,
+                  key: data.key || index2
+                }, () => [
+                  createTextVNode(toDisplayString(data.text), 1)
+                ], true)
+              ], 4)
+            ], 6)
+          ], 2);
+        }), 128))
+      ]);
+    };
+  }
+});
+const Collapse_vue_vue_type_style_index_0_scoped_60f16b3f_lang = "";
+const Collapse = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-60f16b3f"]]);
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+  __name: "Divider",
+  props: {
+    dashed: { type: Boolean, default: false },
+    position: { default: "center" },
+    positionMargin: { default: "" },
+    borderWidth: { default: 1 }
+  },
+  setup(__props) {
+    const props = __props;
+    const text = ref();
+    const showText = ref(true);
+    const margin = computed(() => {
+      if (props.positionMargin !== "") {
+        if (typeof props.positionMargin === "number") {
+          return props.positionMargin + "px";
+        } else {
+          return props.positionMargin;
+        }
+      }
+    });
+    onMounted(() => {
+      if (!text.value.offsetHeight) {
+        showText.value = false;
+      }
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", {
+        class: normalizeClass([
+          `n-divider ${_ctx.position}`,
+          {
+            dashed: _ctx.dashed,
+            margin24: !showText.value,
+            marginLeft: _ctx.positionMargin !== "" && _ctx.position === "left",
+            marginRight: _ctx.positionMargin !== "" && _ctx.position === "right"
+          }
+        ]),
+        style: normalizeStyle(`----border-width:${_ctx.borderWidth}px`)
+      }, [
+        _ctx.position === "left" ? withDirectives((openBlock(), createElementBlock("span", {
+          key: 0,
+          class: "u-text",
+          style: normalizeStyle(`margin-left: ${margin.value};`),
+          ref_key: "text",
+          ref: text
+        }, [
+          renderSlot(_ctx.$slots, "default", {}, void 0, true)
+        ], 4)), [
+          [vShow, showText.value]
+        ]) : _ctx.position === "right" ? withDirectives((openBlock(), createElementBlock("span", {
+          key: 1,
+          class: "u-text",
+          style: normalizeStyle(`margin-right: ${margin.value};`),
+          ref_key: "text",
+          ref: text
+        }, [
+          renderSlot(_ctx.$slots, "default", {}, void 0, true)
+        ], 4)), [
+          [vShow, showText.value]
+        ]) : withDirectives((openBlock(), createElementBlock("span", {
+          key: 2,
+          class: "u-text",
+          ref_key: "text",
+          ref: text
+        }, [
+          renderSlot(_ctx.$slots, "default", {}, void 0, true)
+        ], 512)), [
+          [vShow, showText.value]
+        ])
+      ], 6);
+    };
+  }
+});
+const Divider_vue_vue_type_style_index_0_scoped_7f183008_lang = "";
+const Divider = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-7f183008"]]);
+const _hoisted_1 = { class: "n-empty" };
+const _hoisted_2 = /* @__PURE__ */ createStaticVNode('<g fill="none" fill-rule="evenodd" data-v-4436d96b><g transform="translate(24 31.67)" data-v-4436d96b><ellipse fill-opacity=".8" fill="#F5F5F7" cx="67.797" cy="106.89" rx="67.797" ry="12.668" data-v-4436d96b></ellipse><path d="M122.034 69.674L98.109 40.229c-1.148-1.386-2.826-2.225-4.593-2.225h-51.44c-1.766 0-3.444.839-4.592 2.225L13.56 69.674v15.383h108.475V69.674z" fill="#AEB8C2" data-v-4436d96b></path><path d="M101.537 86.214L80.63 61.102c-1.001-1.207-2.507-1.867-4.048-1.867H31.724c-1.54 0-3.047.66-4.048 1.867L6.769 86.214v13.792h94.768V86.214z" fill="url(#linearGradient-1)" transform="translate(13.56)" data-v-4436d96b></path><path d="M33.83 0h67.933a4 4 0 0 1 4 4v93.344a4 4 0 0 1-4 4H33.83a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z" fill="#F5F5F7" data-v-4436d96b></path><path d="M42.678 9.953h50.237a2 2 0 0 1 2 2V36.91a2 2 0 0 1-2 2H42.678a2 2 0 0 1-2-2V11.953a2 2 0 0 1 2-2zM42.94 49.767h49.713a2.262 2.262 0 1 1 0 4.524H42.94a2.262 2.262 0 0 1 0-4.524zM42.94 61.53h49.713a2.262 2.262 0 1 1 0 4.525H42.94a2.262 2.262 0 0 1 0-4.525zM121.813 105.032c-.775 3.071-3.497 5.36-6.735 5.36H20.515c-3.238 0-5.96-2.29-6.734-5.36a7.309 7.309 0 0 1-.222-1.79V69.675h26.318c2.907 0 5.25 2.448 5.25 5.42v.04c0 2.971 2.37 5.37 5.277 5.37h34.785c2.907 0 5.277-2.421 5.277-5.393V75.1c0-2.972 2.343-5.426 5.25-5.426h26.318v33.569c0 .617-.077 1.216-.221 1.789z" fill="#DCE0E6" data-v-4436d96b></path></g><path d="M149.121 33.292l-6.83 2.65a1 1 0 0 1-1.317-1.23l1.937-6.207c-2.589-2.944-4.109-6.534-4.109-10.408C138.802 8.102 148.92 0 161.402 0 173.881 0 184 8.102 184 18.097c0 9.995-10.118 18.097-22.599 18.097-4.528 0-8.744-1.066-12.28-2.902z" fill="#DCE0E6" data-v-4436d96b></path><g transform="translate(149.65 15.383)" fill="#FFF" data-v-4436d96b><ellipse cx="20.654" cy="3.167" rx="2.849" ry="2.815" data-v-4436d96b></ellipse><path d="M5.698 5.63H0L2.898.704zM9.259.704h4.985V5.63H9.259z" data-v-4436d96b></path></g></g>', 1);
+const _hoisted_3 = [
+  _hoisted_2
+];
+const _hoisted_4 = /* @__PURE__ */ createStaticVNode('<g transform="translate(0 1)" fill="none" fill-rule="evenodd" data-v-4436d96b><ellipse fill="#f5f5f5" cx="32" cy="33" rx="32" ry="7" data-v-4436d96b></ellipse><g fill-rule="nonzero" stroke="#d9d9d9" data-v-4436d96b><path d="M55 12.76L44.854 1.258C44.367.474 43.656 0 42.907 0H21.093c-.749 0-1.46.474-1.947 1.257L9 12.761V22h46v-9.24z" data-v-4436d96b></path><path d="M41.613 15.931c0-1.605.994-2.93 2.227-2.931H55v18.137C55 33.26 53.68 35 52.05 35h-40.1C10.32 35 9 33.259 9 31.137V13h11.16c1.233 0 2.227 1.323 2.227 2.928v.022c0 1.605 1.005 2.901 2.237 2.901h14.752c1.232 0 2.237-1.308 2.237-2.913v-.007z" fill="#fafafa" data-v-4436d96b></path></g></g>', 1);
+const _hoisted_5 = [
+  _hoisted_4
+];
+const _hoisted_6 = ["src"];
+const _sfc_main = /* @__PURE__ */ defineComponent({
+  __name: "Empty",
+  props: {
+    description: { default: "暂无数据" },
+    image: { default: "1" },
+    imageStyle: { default: () => {
+      return {};
+    } }
+  },
+  setup(__props) {
+    return (_ctx, _cache) => {
+      return openBlock(), createElementBlock("div", _hoisted_1, [
+        _ctx.image === "1" ? (openBlock(), createElementBlock("svg", {
+          key: 0,
+          class: "u-empty-1",
+          style: normalizeStyle(_ctx.imageStyle),
+          viewBox: "0 0 184 152",
+          xmlns: "http://www.w3.org/2000/svg"
+        }, _hoisted_3, 4)) : _ctx.image === "2" ? (openBlock(), createElementBlock("svg", {
+          key: 1,
+          class: "u-empty-2",
+          style: normalizeStyle(_ctx.imageStyle),
+          viewBox: "0 0 64 41",
+          xmlns: "http://www.w3.org/2000/svg"
+        }, _hoisted_5, 4)) : renderSlot(_ctx.$slots, "default", { key: 2 }, () => [
+          createElementVNode("img", {
+            class: "u-empty",
+            src: _ctx.image,
+            style: normalizeStyle(_ctx.imageStyle),
+            alt: "image"
+          }, null, 12, _hoisted_6)
+        ], true),
+        _ctx.description ? (openBlock(), createElementBlock("p", {
+          key: 3,
+          class: normalizeClass(["u-description", { gray: _ctx.image === "2" }])
+        }, [
+          renderSlot(_ctx.$slots, "description", {}, () => [
+            createTextVNode(toDisplayString(_ctx.description), 1)
+          ], true)
+        ], 2)) : createCommentVNode("", true)
+      ]);
+    };
+  }
+});
+const Empty_vue_vue_type_style_index_0_scoped_4436d96b_lang = "";
+const Empty = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-4436d96b"]]);
 const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   Button,
   Checkbox,
   Col,
+  Collapse,
+  Divider,
+  Empty,
   Icon,
   Input,
   Loading,
@@ -517,6 +832,9 @@ export {
   Button,
   Checkbox,
   Col,
+  Collapse,
+  Divider,
+  Empty,
   default2 as Icon,
   Input,
   Loading,

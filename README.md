@@ -25,14 +25,14 @@
 
 ### 快速使用
 
-```
+```javascript
 npm install  vite-nice-ui
 cnpm install  vite-nice-ui --save
 ```
 
 ### 引入
 
-```
+```javascript
 import { createApp } from 'vue'
 import App from '@/App.vue'
 import NiceUI from 'vite-nice-ui'
@@ -45,13 +45,13 @@ app.mount('#app')
 
 ### 按需引用
 
-```
+```javascript
 import { NButton, NInput } from 'vite-nice-ui'
 ```
 
 ### 愉快开始
 
-```
+```javascript
 <n-button>默认按钮</n-buttonn> 
 <n-button type="primary">主要按钮</n-button>
 ```
@@ -61,7 +61,7 @@ import { NButton, NInput } from 'vite-nice-ui'
 - 你需要 Node.js 14+，yarn 1.1+ 和 npm 6+及 vite 2+
 - 如果您在使用yarn安装依赖的过程中出现esline检查不通过，请执行：
 
-  ```
+  ```javascript
   yarn config set ignore-engines true
   ```
 
@@ -79,15 +79,12 @@ import { NButton, NInput } from 'vite-nice-ui'
 
 ### 组件开发规范
 
-- 通过在 *packages* 目录下创建组件目录结构，包含入口文件、文档。
-- 组件入口文件必须以 *index.ts* 命名，并包含 *install* 方法,参考代码：
+- 通过在 *packages* 目录下创建组件目录结构，包含ts入口文件、组件源码文件。
+- 组件入口文件必须以 *index.ts* 命名。
+- 只需将组件导出，*packages* 目录下的index文件会自动引入所有组件并注册install方法，参考代码：
 
   ```javascript
-  import nButton from "./index.vue";
-  nButton.install = (app) => {
-    app.component(nButton.name, nButton);
-  };
-  export default nButton;
+  export { default as Button } from './Button';
   ```
 
 ### 问题反馈

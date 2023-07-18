@@ -2,7 +2,7 @@
   "name": "vite-nice-ui",
   "author": "Taoshuaixing",
   "private": false,
-  "version": "0.1.8",
+  "version": "0.1.9",
   "type": "module",
   "description": "vite-nice-ui",
   "main": "./dist/vite-nice-ui.umd.cjs",

@@ -1,1 +1,1 @@
-export { default as Divider } from './Divider.vue'
+export { default as NDivider } from './NDivider.vue'

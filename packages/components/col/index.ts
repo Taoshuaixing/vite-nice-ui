@@ -1,1 +1,1 @@
-export { default as Col } from './Col.vue'
+export { default as NCol } from './NCol.vue'

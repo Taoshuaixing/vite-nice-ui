@@ -11,6 +11,6 @@ function onClick(e: Event) {
   <n-button :loading="loading" type="danger" @click="onClick">Danger</n-button>
   <h3>
     Loading state:
-    <Switch v-model:checked="loading" />
+    <n-switch v-model:checked="loading" />
   </h3>
 </template>

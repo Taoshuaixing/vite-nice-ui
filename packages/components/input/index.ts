@@ -6,4 +6,4 @@
  * @LastEditors: 陶帅星
  * @LastEditTime: 2023-07-13 11:52:47
  */
-export { default as Input } from './Input.vue'
+export { default as NInput } from './NInput.vue'

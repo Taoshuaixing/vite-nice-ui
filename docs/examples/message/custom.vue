@@ -3,15 +3,15 @@
   <n-button @click="openMsg2">5秒后消失</n-button>
 </template>
 <script setup lang="ts">
-import Message from '../../../packages/components/message/index' //此处为本地示例，请使用import {Message} from "vite-nice-ui";引入
+import NMessage from '../../../packages/components/message/index' //此处为本地示例，请使用import {Message} from "vite-nice-ui";引入
 const openMsg1 = () => {
-  Message({
+  NMessage({
     text: '自定义Icon！',
     icon: 'codepen',
   })
 }
 const openMsg2 = () => {
-  Message({
+  NMessage({
     text: '5秒后消失！',
     icon: 'clock',
     timeout: 5000,

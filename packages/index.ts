@@ -13,19 +13,19 @@ import * as components from './components'
 
 export * from './components'
 
-const install: any = function (Vue: App): void {
+const install: any = (Vue: App): void => {
   if (install.installed) return
 
   const _components = Object.keys(components).map(key => components[key as keyof typeof components])
 
   _components.forEach((component: any) => {
     if (component.hasOwnProperty('name') || component.hasOwnProperty('__name')) {
-      // console.log(`N${component.name || component.__name}`)
-      Vue.component(`N${component.name || component.__name}`, component)
+      console.log(component, `${component.__name || component.name}`)
+      Vue.component(`${component.__name || component.name}`, component)
     }
   })
 }
-
-export default {
+const NiceUI = {
   install,
 }
+export default NiceUI

@@ -84,7 +84,7 @@ import { NButton, NInput } from 'vite-nice-ui'
 - 只需将组件导出，*packages* 目录下的index文件会自动引入所有组件并注册install方法，参考代码：
 
   ```javascript
-  export { default as Button } from './Button';
+  export { default as NButton } from './Button';
   ```
 
 ### 问题反馈

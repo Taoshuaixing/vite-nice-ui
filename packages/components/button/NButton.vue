@@ -19,6 +19,7 @@
   </div>
 </template>
 <script setup lang="ts">
+// 这里至少有一行注释，否则插件不生效
 import { computed } from 'vue'
 interface Query {
   [propName: string]: any // 添加一个字符串索引签名，用于包含带有任意数量的其他属性

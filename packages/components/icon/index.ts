@@ -8,5 +8,5 @@
  */
 import VueFeather from 'vue-feather'
 
-VueFeather.name = 'Icon'
-export { VueFeather as Icon }
+VueFeather.name = 'NIcon'
+export { VueFeather as NIcon }

@@ -7,34 +7,34 @@
 </template>
 
 <script setup lang="ts">
-import Message from '../../../packages/components/message/index' //此处为本地示例，请使用import {Message} from "vite-nice-ui";引入
+import NMessage from '../../../packages/components/message/index' //此处为本地示例，请使用import {NMessage} from "vite-nice-ui";引入
 
 const openInfo = () => {
-  Message({
+  NMessage({
     type: 'info',
     text: '文本消息提示!',
   })
 }
 const openSuccess = () => {
-  Message({
+  NMessage({
     type: 'success',
     text: '成功状态消息提示!',
   })
 }
 const openWarn = () => {
-  Message({
+  NMessage({
     type: 'warn',
     text: '警告状态消息提示!',
   })
 }
 const openError = () => {
-  Message({
+  NMessage({
     type: 'error',
     text: '错误状态消息提示!',
   })
 }
 const openCustom = () => {
-  Message({
+  NMessage({
     type: 'custom',
     text: '自定义消息弹窗样式',
     icon: 'chrome',

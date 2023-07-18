@@ -1,23 +1,41 @@
 {
-  "hash": "22c12b11",
-  "browserHash": "d1fd2e5f",
+  "hash": "9c7245fe",
+  "browserHash": "94737a8c",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "34bf4805",
+      "fileHash": "49b149c2",
       "needsInterop": false
     },
     "vue-feather": {
       "src": "../../../../node_modules/vue-feather/dist/vue-feather.esm.js",
       "file": "vue-feather.js",
-      "fileHash": "e415dfa6",
+      "fileHash": "4d31c29f",
       "needsInterop": false
+    },
+    "@vueuse/core": {
+      "src": "../../../../node_modules/@vueuse/core/index.mjs",
+      "file": "@vueuse_core.js",
+      "fileHash": "81f8994d",
+      "needsInterop": false
+    },
+    "feather-icons": {
+      "src": "../../../../node_modules/feather-icons/dist/feather.js",
+      "file": "feather-icons.js",
+      "fileHash": "c200b2d0",
+      "needsInterop": true
     }
   },
   "chunks": {
-    "chunk-HCTWQJ6V": {
-      "file": "chunk-HCTWQJ6V.js"
+    "chunk-WDH66KDU": {
+      "file": "chunk-WDH66KDU.js"
+    },
+    "chunk-V634PGSD": {
+      "file": "chunk-V634PGSD.js"
+    },
+    "chunk-UXIASGQL": {
+      "file": "chunk-UXIASGQL.js"
     }
   }
 }

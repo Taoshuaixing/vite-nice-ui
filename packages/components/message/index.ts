@@ -1,5 +1,5 @@
 import { createVNode, render } from 'vue'
-import Message from './Message.vue'
+import NMessage from './NMessage.vue'
 
 export default ({ text, type, timeOut, icon, textColor, bgColor, customClass }: any) => {
   // 动态创建一个DOM容器
@@ -10,7 +10,7 @@ export default ({ text, type, timeOut, icon, textColor, bgColor, customClass }: 
   }
   let timer: any = null
   // 传递给组件的选项
-  const vnode: any = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text])
+  const vnode: any = createVNode(NMessage, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text])
   render(vnode, div)
   clearTimeout(timer)
   timer = setTimeout(() => {

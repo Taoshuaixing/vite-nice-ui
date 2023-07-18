@@ -1,7 +1,7 @@
 <template>
   <div :class="[`nice-group-input-${size}`]" :style="{ 'min-width': 'auto' }">
     <div :class="isClass" :style="isStyle" style="">
-      <Icon :class="['left-icon']" :type="leftIcon" v-if="!showPassword && leftIcon != ''"></Icon>
+      <n-icon :class="['left-icon']" :type="leftIcon" v-if="!showPassword && leftIcon != ''"></n-icon>
       <input
         :type="inptype"
         @focus="focus"
@@ -16,18 +16,18 @@
         :form="form"
       />
       <transition name="slide-fade">
-        <Icon type="x" class="clearable-icon" v-if="!showPassword && clearable && modelValue != ''" @click="clear" />
+        <n-icon type="x" class="clearable-icon" v-if="!showPassword && clearable && modelValue != ''" @click="clear" />
       </transition>
 
-      <Icon :class="['right-icon']" :type="rightIcon" v-if="!showPassword && rightIcon != ''"></Icon>
-      <Icon v-if="showPassword" type="eye-off" :class="['password-icon']" @click="showPwd(type)"></Icon>
+      <n-icon :class="['right-icon']" :type="rightIcon" v-if="!showPassword && rightIcon != ''"></n-icon>
+      <n-icon v-if="showPassword" type="eye-off" :class="['password-icon']" @click="showPwd(type)"></n-icon>
     </div>
     <slot name="btn" />
   </div>
 </template>
 <script setup lang="ts">
 import { ref, computed, useSlots } from 'vue'
-import { Icon } from '../icon/index'
+import { NIcon } from '../icon/index'
 
 interface Props {
   modelValue?: string | number

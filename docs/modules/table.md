@@ -1,4 +1,4 @@
-# 分页 Pagination
+# 表格 Table
 
 <script setup lang="ts">
 import {onMounted} from 'vue'

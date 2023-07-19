@@ -1,4 +1,4 @@
-# 分页 Pagination
+# 文字滚动 TextScroll
 
 <script setup lang="ts">
 import {onMounted} from 'vue'

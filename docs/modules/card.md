@@ -1,4 +1,4 @@
-# 分页 Pagination
+# 卡片 Card
 
 <script setup lang="ts">
 import {onMounted} from 'vue'
@@ -8,7 +8,7 @@ onMounted(() => {
   Message({
     type:'warn',
     text: '功能开发中，敬请期待！',
-    timeOut: 5000,
+    timeOut: 3000,
   })
 })
 </script>

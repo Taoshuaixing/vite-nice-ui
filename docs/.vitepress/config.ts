@@ -149,31 +149,6 @@ export default defineConfig({
           ],
         },
         {
-          text: '数据组件',
-          items: [
-            {
-              text: '表格 Table',
-              link: '/modules/table',
-            },
-            {
-              text: '标签页 Tabs',
-              link: '/modules/tabs',
-            },
-            {
-              text: '文字滚动 TextScroll',
-              link: '/modules/textscroll',
-            },
-            {
-              text: '分页 Pagination',
-              link: '/modules/pagination',
-            },
-            {
-              text: '进度条 Progress',
-              link: '/modules/progress',
-            },
-          ],
-        },
-        {
           text: '交互组件',
           items: [
             {
@@ -191,6 +166,31 @@ export default defineConfig({
             {
               text: '模态框 Modal',
               link: '/modules/modal',
+            },
+          ],
+        },
+        {
+          text: '数据组件',
+          items: [
+            {
+              text: '表格 Table',
+              link: '/modules/table',
+            },
+            {
+              text: '标签页 Tabs',
+              link: '/modules/tabs',
+            },
+            {
+              text: '文字滚动 TextScroll',
+              link: '/modules/text-scroll',
+            },
+            {
+              text: '分页 Pagination',
+              link: '/modules/pagination',
+            },
+            {
+              text: '进度条 Progress',
+              link: '/modules/progress',
             },
           ],
         },

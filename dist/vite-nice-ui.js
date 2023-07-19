@@ -1,4 +1,4 @@
-import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, createElementVNode, withModifiers, normalizeStyle, withDirectives, vShow, renderSlot, createTextVNode, toDisplayString, useSlots, ref, createBlock, unref, createCommentVNode, createVNode, Transition, withCtx, useCssVars, watch, Fragment, renderList, pushScopeId, popScopeId, watchEffect, resolveComponent, onMounted, createStaticVNode, onUnmounted, reactive, render, withKeys, vModelText } from "vue";
+import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, createElementVNode, withModifiers, normalizeStyle, withDirectives, vShow, renderSlot, createTextVNode, toDisplayString, useSlots, ref, createBlock, unref, createCommentVNode, createVNode, Transition, withCtx, useCssVars, watch, Fragment, renderList, pushScopeId, popScopeId, watchEffect, resolveComponent, onMounted, createStaticVNode, onUnmounted, withKeys, vModelText, reactive, render } from "vue";
 import NIcon from "vue-feather";
 import { default as default2 } from "vue-feather";
 const _var = "";
@@ -1477,111 +1477,8 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
 });
 const NMark_vue_vue_type_style_index_0_scoped_58766505_lang = "";
 const NMark = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-58766505"]]);
-const _hoisted_1$1 = { class: "text" };
-const _sfc_main$1 = /* @__PURE__ */ defineComponent({
-  __name: "NMessage",
-  props: {
-    text: {
-      type: [String, Object],
-      default: ""
-    },
-    type: {
-      type: String,
-      default: "info"
-    },
-    icon: String,
-    textColor: String,
-    bgColor: String,
-    customClass: String
-  },
-  setup(__props) {
-    const props = __props;
-    const state = reactive({
-      style: {
-        info: {
-          icon: props.icon || "alert-circle",
-          color: "#909398",
-          backgroundColor: "#F4F4F5",
-          borderColor: "#bdbdbd"
-        },
-        warn: {
-          icon: props.icon || "alert-triangle",
-          color: "#E6A23B",
-          backgroundColor: "#FDF6EC",
-          borderColor: "#fad39d"
-        },
-        error: {
-          icon: props.icon || "meh",
-          color: "#F56C6B",
-          backgroundColor: "#FEEFF0",
-          borderColor: "#ffafb4"
-        },
-        success: {
-          icon: props.icon || "smile",
-          color: "#67C23A",
-          backgroundColor: "#F0F9EB",
-          borderColor: "#bbfc95"
-        },
-        custom: {
-          icon: props.icon,
-          color: props.textColor,
-          backgroundColor: props.bgColor,
-          borderColor: props.bgColor
-        }
-      }
-    });
-    const isShow = ref(false);
-    const { style } = state;
-    const isText = computed(() => {
-      return typeof props.text === "string";
-    });
-    onMounted(() => {
-      isShow.value = true;
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createBlock(Transition, { name: "slide-fade" }, {
-        default: withCtx(() => [
-          withDirectives(createElementVNode("div", {
-            class: normalizeClass(["nice-message", __props.customClass]),
-            style: normalizeStyle(unref(style)[__props.type])
-          }, [
-            isText.value ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
-              createVNode(unref(NIcon), {
-                type: unref(style)[__props.type].icon
-              }, null, 8, ["type"]),
-              createElementVNode("span", _hoisted_1$1, toDisplayString(__props.text), 1)
-            ], 64)) : renderSlot(_ctx.$slots, "default", { key: 1 }, void 0, true)
-          ], 6), [
-            [vShow, isShow.value]
-          ])
-        ]),
-        _: 3
-      });
-    };
-  }
-});
-const NMessage_vue_vue_type_style_index_0_scoped_ef2ef157_lang = "";
-const Message = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-ef2ef157"]]);
-const NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
-  const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
-  div.setAttribute("class", "nice-meassage-container");
-  if (typeof document !== "undefined") {
-    document.body.appendChild(div);
-  }
-  let timer = null;
-  const vnode = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
-  render(vnode, div);
-  clearTimeout(timer);
-  timer = setTimeout(() => {
-    render(vnode, div);
-    if (typeof document !== "undefined") {
-      document.body.removeChild(div);
-    }
-    clearTimeout(timer);
-  }, timeOut || 2500);
-};
 const _withScopeId = (n) => (pushScopeId("data-v-7d791723"), n = n(), popScopeId(), n);
-const _hoisted_1 = { class: "n-input-wrap" };
+const _hoisted_1$1 = { class: "n-input-wrap" };
 const _hoisted_2 = { class: "n-handler-wrap" };
 const _hoisted_3 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("svg", {
   focusable: "false",
@@ -1607,7 +1504,7 @@ const _hoisted_5 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElem
 const _hoisted_6 = [
   _hoisted_5
 ];
-const _sfc_main = /* @__PURE__ */ defineComponent({
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "NInputNumber",
   props: {
     width: { default: 90 },
@@ -1697,7 +1594,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
         tabindex: "1",
         style: normalizeStyle(`width: ${_ctx.width}px;`)
       }, [
-        createElementVNode("div", _hoisted_1, [
+        createElementVNode("div", _hoisted_1$1, [
           createElementVNode("span", {
             class: normalizeClass(["u-input-prefix", { mr3: _ctx.prefix }])
           }, [
@@ -1743,7 +1640,7 @@ const _sfc_main = /* @__PURE__ */ defineComponent({
   }
 });
 const NInputNumber_vue_vue_type_style_index_0_scoped_7d791723_lang = "";
-const NInputNumber = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-7d791723"]]);
+const NInputNumber = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-7d791723"]]);
 const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   NButton,
@@ -1758,10 +1655,112 @@ const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePr
   NInputNumber,
   NLoading,
   NMark,
-  NMessage,
   NRow,
   NSwitch
 }, Symbol.toStringTag, { value: "Module" }));
+const _hoisted_1 = { class: "text" };
+const _sfc_main = /* @__PURE__ */ defineComponent({
+  __name: "NMessage",
+  props: {
+    text: {
+      type: [String, Object],
+      default: ""
+    },
+    type: {
+      type: String,
+      default: "info"
+    },
+    icon: String,
+    textColor: String,
+    bgColor: String,
+    customClass: String
+  },
+  setup(__props) {
+    const props = __props;
+    const state = reactive({
+      style: {
+        info: {
+          icon: props.icon || "alert-circle",
+          color: "#909398",
+          backgroundColor: "#F4F4F5",
+          borderColor: "#bdbdbd"
+        },
+        warn: {
+          icon: props.icon || "alert-triangle",
+          color: "#E6A23B",
+          backgroundColor: "#FDF6EC",
+          borderColor: "#fad39d"
+        },
+        error: {
+          icon: props.icon || "meh",
+          color: "#F56C6B",
+          backgroundColor: "#FEEFF0",
+          borderColor: "#ffafb4"
+        },
+        success: {
+          icon: props.icon || "smile",
+          color: "#67C23A",
+          backgroundColor: "#F0F9EB",
+          borderColor: "#bbfc95"
+        },
+        custom: {
+          icon: props.icon,
+          color: props.textColor,
+          backgroundColor: props.bgColor,
+          borderColor: props.bgColor
+        }
+      }
+    });
+    const isShow = ref(false);
+    const { style } = state;
+    const isText = computed(() => {
+      return typeof props.text === "string";
+    });
+    onMounted(() => {
+      isShow.value = true;
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createBlock(Transition, { name: "slide-fade" }, {
+        default: withCtx(() => [
+          withDirectives(createElementVNode("div", {
+            class: normalizeClass(["nice-message", __props.customClass]),
+            style: normalizeStyle(unref(style)[__props.type])
+          }, [
+            isText.value ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
+              createVNode(unref(NIcon), {
+                type: unref(style)[__props.type].icon
+              }, null, 8, ["type"]),
+              createElementVNode("span", _hoisted_1, toDisplayString(__props.text), 1)
+            ], 64)) : renderSlot(_ctx.$slots, "default", { key: 1 }, void 0, true)
+          ], 6), [
+            [vShow, isShow.value]
+          ])
+        ]),
+        _: 3
+      });
+    };
+  }
+});
+const NMessage_vue_vue_type_style_index_0_scoped_ef2ef157_lang = "";
+const Message = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-ef2ef157"]]);
+const NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
+  const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
+  div.setAttribute("class", "nice-meassage-container");
+  if (typeof document !== "undefined") {
+    document.body.appendChild(div);
+  }
+  let timer = null;
+  const vnode = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
+  render(vnode, div);
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    render(vnode, div);
+    if (typeof document !== "undefined") {
+      document.body.removeChild(div);
+    }
+    clearTimeout(timer);
+  }, timeOut || 2500);
+};
 const install = (Vue) => {
   if (install.installed)
     return;

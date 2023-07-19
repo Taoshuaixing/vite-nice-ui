@@ -13,7 +13,7 @@
 </template>
 <script setup lang="ts">
 import { onMounted, ref, reactive, computed } from 'vue'
-import { NIcon } from '../icon/index'
+import { NIcon } from 'vite-nice-ui'
 const props = defineProps({
   text: {
     type: [String, Object],
@@ -115,3 +115,4 @@ div.slide-fade-leave-to {
   }
 }
 </style>
+../../components/icon/index

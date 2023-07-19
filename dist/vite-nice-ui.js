@@ -1,5 +1,6 @@
-import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, createElementVNode, withModifiers, normalizeStyle, withDirectives, vShow, renderSlot, createTextVNode, toDisplayString, useSlots, ref, createBlock, unref, createCommentVNode, createVNode, Transition, withCtx, useCssVars, watch, Fragment, renderList, pushScopeId, popScopeId, watchEffect, resolveComponent, onMounted, createStaticVNode, onUnmounted, withKeys, vModelText, reactive, render } from "vue";
-import NIcon from "vue-feather";
+import { defineComponent, reactive, ref, computed, onMounted, openBlock, createBlock, Transition, withCtx, withDirectives, createElementVNode, normalizeClass, normalizeStyle, unref, createElementBlock, Fragment, createVNode, toDisplayString, renderSlot, vShow, render, withModifiers, createTextVNode, useSlots, createCommentVNode, useCssVars, watch, renderList, pushScopeId, popScopeId, watchEffect, resolveComponent, createStaticVNode, onUnmounted, withKeys, vModelText } from "vue";
+import { NIcon } from "vite-nice-ui";
+import NIcon$1 from "vue-feather";
 import { default as default2 } from "vue-feather";
 const _var = "";
 function dateFormat(value = Date.now(), format = "YYYY-MM-DD HH:mm:ss") {
@@ -161,10 +162,120 @@ function moneyFormat(value, decimal = 2, split = ",") {
     return "--";
   }
 }
-const _hoisted_1$b = ["href", "target", "disabled"];
+const _hoisted_1$b = { class: "text" };
+const _sfc_main$d = /* @__PURE__ */ defineComponent({
+  __name: "Message",
+  props: {
+    text: {
+      type: [String, Object],
+      default: ""
+    },
+    type: {
+      type: String,
+      default: "info"
+    },
+    icon: String,
+    textColor: String,
+    bgColor: String,
+    customClass: String
+  },
+  setup(__props) {
+    const props = __props;
+    const state = reactive({
+      style: {
+        info: {
+          icon: props.icon || "alert-circle",
+          color: "#909398",
+          backgroundColor: "#F4F4F5",
+          borderColor: "#bdbdbd"
+        },
+        warn: {
+          icon: props.icon || "alert-triangle",
+          color: "#E6A23B",
+          backgroundColor: "#FDF6EC",
+          borderColor: "#fad39d"
+        },
+        error: {
+          icon: props.icon || "meh",
+          color: "#F56C6B",
+          backgroundColor: "#FEEFF0",
+          borderColor: "#ffafb4"
+        },
+        success: {
+          icon: props.icon || "smile",
+          color: "#67C23A",
+          backgroundColor: "#F0F9EB",
+          borderColor: "#bbfc95"
+        },
+        custom: {
+          icon: props.icon,
+          color: props.textColor,
+          backgroundColor: props.bgColor,
+          borderColor: props.bgColor
+        }
+      }
+    });
+    const isShow = ref(false);
+    const { style } = state;
+    const isText = computed(() => {
+      return typeof props.text === "string";
+    });
+    onMounted(() => {
+      isShow.value = true;
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createBlock(Transition, { name: "slide-fade" }, {
+        default: withCtx(() => [
+          withDirectives(createElementVNode("div", {
+            class: normalizeClass(["nice-message", __props.customClass]),
+            style: normalizeStyle(unref(style)[__props.type])
+          }, [
+            isText.value ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
+              createVNode(unref(NIcon), {
+                type: unref(style)[__props.type].icon
+              }, null, 8, ["type"]),
+              createElementVNode("span", _hoisted_1$b, toDisplayString(__props.text), 1)
+            ], 64)) : renderSlot(_ctx.$slots, "default", { key: 1 }, void 0, true)
+          ], 6), [
+            [vShow, isShow.value]
+          ])
+        ]),
+        _: 3
+      });
+    };
+  }
+});
+const Message_vue_vue_type_style_index_0_scoped_922dd1fa_lang = "";
+const _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+const Message = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-922dd1fa"]]);
+const NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
+  const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
+  div.setAttribute("class", "nice-meassage-container");
+  if (typeof document !== "undefined") {
+    document.body.appendChild(div);
+  }
+  let timer = null;
+  const vnode = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
+  render(vnode, div);
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    render(vnode, div);
+    if (typeof document !== "undefined") {
+      document.body.removeChild(div);
+    }
+    clearTimeout(timer);
+  }, timeOut || 2500);
+};
+const _hoisted_1$a = ["href", "target", "disabled"];
 const _hoisted_2$6 = { class: "u-spin-circle" };
 const _hoisted_3$6 = { class: "u-text" };
-const _sfc_main$d = /* @__PURE__ */ defineComponent({
+const _sfc_main$c = /* @__PURE__ */ defineComponent({
   __name: "NButton",
   props: {
     name: { default: "" },
@@ -231,23 +342,16 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
               createTextVNode(toDisplayString(_ctx.name), 1)
             ], true)
           ])
-        ], 14, _hoisted_1$b)
+        ], 14, _hoisted_1$a)
       ], 2);
     };
   }
 });
 const NButton_vue_vue_type_style_index_0_scoped_0e325af7_lang = "";
-const _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
-  }
-  return target;
-};
-const NButton = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-0e325af7"]]);
-NIcon.name = "NIcon";
-const _hoisted_1$a = ["type", "value", "disabled", "placeholder", "autofocus", "readonly", "form"];
-const _sfc_main$c = /* @__PURE__ */ defineComponent({
+const NButton = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__scopeId", "data-v-0e325af7"]]);
+NIcon$1.name = "NIcon";
+const _hoisted_1$9 = ["type", "value", "disabled", "placeholder", "autofocus", "readonly", "form"];
+const _sfc_main$b = /* @__PURE__ */ defineComponent({
   __name: "NInput",
   props: {
     modelValue: { default: "" },
@@ -331,7 +435,7 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
           class: normalizeClass(isClass.value),
           style: normalizeStyle([isStyle.value, {}])
         }, [
-          !_ctx.showPassword && _ctx.leftIcon != "" ? (openBlock(), createBlock(unref(NIcon), {
+          !_ctx.showPassword && _ctx.leftIcon != "" ? (openBlock(), createBlock(unref(NIcon$1), {
             key: 0,
             class: normalizeClass(["left-icon"]),
             type: _ctx.leftIcon
@@ -348,10 +452,10 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
             autofocus: _ctx.autofocus,
             readonly: _ctx.readonly,
             form: _ctx.form
-          }, null, 40, _hoisted_1$a),
+          }, null, 40, _hoisted_1$9),
           createVNode(Transition, { name: "slide-fade" }, {
             default: withCtx(() => [
-              !_ctx.showPassword && _ctx.clearable && _ctx.modelValue != "" ? (openBlock(), createBlock(unref(NIcon), {
+              !_ctx.showPassword && _ctx.clearable && _ctx.modelValue != "" ? (openBlock(), createBlock(unref(NIcon$1), {
                 key: 0,
                 type: "x",
                 class: "clearable-icon",
@@ -360,12 +464,12 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
             ]),
             _: 1
           }),
-          !_ctx.showPassword && _ctx.rightIcon != "" ? (openBlock(), createBlock(unref(NIcon), {
+          !_ctx.showPassword && _ctx.rightIcon != "" ? (openBlock(), createBlock(unref(NIcon$1), {
             key: 1,
             class: normalizeClass(["right-icon"]),
             type: _ctx.rightIcon
           }, null, 8, ["type"])) : createCommentVNode("", true),
-          _ctx.showPassword ? (openBlock(), createBlock(unref(NIcon), {
+          _ctx.showPassword ? (openBlock(), createBlock(unref(NIcon$1), {
             key: 2,
             type: "eye-off",
             class: normalizeClass(["password-icon"]),
@@ -378,25 +482,25 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
   }
 });
 const NInput_vue_vue_type_style_index_0_scoped_a60b1150_lang = "";
-const NInput = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__scopeId", "data-v-a60b1150"]]);
-const _hoisted_1$9 = { class: "nice-row-default" };
-const _sfc_main$b = /* @__PURE__ */ defineComponent({
+const NInput = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["__scopeId", "data-v-a60b1150"]]);
+const _hoisted_1$8 = { class: "nice-row-default" };
+const _sfc_main$a = /* @__PURE__ */ defineComponent({
   ...{
     name: "Row"
   },
   __name: "NRow",
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$9, [
+      return openBlock(), createElementBlock("div", _hoisted_1$8, [
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ]);
     };
   }
 });
 const NRow_vue_vue_type_style_index_0_scoped_0f726b51_lang = "";
-const NRow = /* @__PURE__ */ _export_sfc(_sfc_main$b, [["__scopeId", "data-v-0f726b51"]]);
-const _hoisted_1$8 = { class: "nice-col-default" };
-const _sfc_main$a = /* @__PURE__ */ defineComponent({
+const NRow = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["__scopeId", "data-v-0f726b51"]]);
+const _hoisted_1$7 = { class: "nice-col-default" };
+const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   __name: "NCol",
   props: {
     span: {
@@ -417,15 +521,15 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
     const width = ref(props.span <= 24 ? props.span % 1 == 0 ? 100 / 24 * props.span + "%" : "" : "");
     const offset = ref(props.offset <= 24 ? props.offset % 1 == 0 ? 100 / 24 * props.offset + "%" : "" : "");
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$8, [
+      return openBlock(), createElementBlock("div", _hoisted_1$7, [
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ]);
     };
   }
 });
 const NCol_vue_vue_type_style_index_0_scoped_a23fb429_lang = "";
-const NCol = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["__scopeId", "data-v-a23fb429"]]);
-const _hoisted_1$7 = { class: "n-checkbox" };
+const NCol = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-a23fb429"]]);
+const _hoisted_1$6 = { class: "n-checkbox" };
 const _hoisted_2$5 = ["onClick"];
 const _hoisted_3$5 = { class: "u-label" };
 const _hoisted_4$5 = {
@@ -433,7 +537,7 @@ const _hoisted_4$5 = {
   class: "n-checkbox-wrap"
 };
 const _hoisted_5$5 = { class: "u-label" };
-const _sfc_main$9 = /* @__PURE__ */ defineComponent({
+const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   __name: "NCheckbox",
   props: {
     options: { default: () => [] },
@@ -483,7 +587,7 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
       emits("update:checked", !props.checked);
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$7, [
+      return openBlock(), createElementBlock("div", _hoisted_1$6, [
         sum.value ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(_ctx.options, (option, index) => {
           return openBlock(), createElementBlock("div", {
             class: normalizeClass(["n-checkbox-wrap", { vertical: _ctx.vertical }]),
@@ -526,9 +630,9 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
   }
 });
 const NCheckbox_vue_vue_type_style_index_0_scoped_d795e181_lang = "";
-const NCheckbox = /* @__PURE__ */ _export_sfc(_sfc_main$9, [["__scopeId", "data-v-d795e181"]]);
+const NCheckbox = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-d795e181"]]);
 const _withScopeId$3 = (n) => (pushScopeId("data-v-4d6b8648"), n = n(), popScopeId(), n);
-const _hoisted_1$6 = { class: "n-loading" };
+const _hoisted_1$5 = { class: "n-loading" };
 const _hoisted_2$4 = { class: "n-loading-box" };
 const _hoisted_3$4 = {
   key: 0,
@@ -567,7 +671,7 @@ const _hoisted_11$1 = /* @__PURE__ */ _withScopeId$3(() => /* @__PURE__ */ creat
 const _hoisted_12$1 = [
   _hoisted_11$1
 ];
-const _sfc_main$8 = /* @__PURE__ */ defineComponent({
+const _sfc_main$7 = /* @__PURE__ */ defineComponent({
   __name: "NLoading",
   props: {
     loading: { type: Boolean, default: true },
@@ -582,7 +686,7 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
         class: normalizeClass(`n-loading-wrap ${_ctx.size}`),
         style: normalizeStyle(`--color: ${_ctx.color};`)
       }, [
-        withDirectives(createElementVNode("div", _hoisted_1$6, [
+        withDirectives(createElementVNode("div", _hoisted_1$5, [
           createElementVNode("div", _hoisted_2$4, [
             _ctx.indicator === "dot" ? (openBlock(), createElementBlock("div", _hoisted_3$4, _hoisted_8$1)) : createCommentVNode("", true),
             _ctx.indicator === "static-circle" ? (openBlock(), createElementBlock("div", _hoisted_9$1)) : createCommentVNode("", true),
@@ -604,9 +708,9 @@ const _sfc_main$8 = /* @__PURE__ */ defineComponent({
   }
 });
 const NLoading_vue_vue_type_style_index_0_scoped_4d6b8648_lang = "";
-const NLoading = /* @__PURE__ */ _export_sfc(_sfc_main$8, [["__scopeId", "data-v-4d6b8648"]]);
-const _hoisted_1$5 = { class: "n-switch-wrap" };
-const _sfc_main$7 = /* @__PURE__ */ defineComponent({
+const NLoading = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-4d6b8648"]]);
+const _hoisted_1$4 = { class: "n-switch-wrap" };
+const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "NSwitch",
   props: {
     checkedInfo: { default: "" },
@@ -629,7 +733,7 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
       emit("change", !checked.value);
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$5, [
+      return openBlock(), createElementBlock("div", _hoisted_1$4, [
         createElementVNode("div", {
           onClick: _cache[0] || (_cache[0] = ($event) => _ctx.disabled ? () => false : onSwitch()),
           class: normalizeClass(["n-switch", { "switch-checked": checked.value, disabled: _ctx.disabled }])
@@ -648,9 +752,9 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
   }
 });
 const NSwitch_vue_vue_type_style_index_0_scoped_52857184_lang = "";
-const NSwitch = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-52857184"]]);
+const NSwitch = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-52857184"]]);
 const _withScopeId$2 = (n) => (pushScopeId("data-v-65bb8df3"), n = n(), popScopeId(), n);
-const _hoisted_1$4 = { class: "n-collapse" };
+const _hoisted_1$3 = { class: "n-collapse" };
 const _hoisted_2$3 = ["onClick"];
 const _hoisted_3$3 = {
   key: 0,
@@ -665,7 +769,7 @@ const _hoisted_5$3 = [
   _hoisted_4$3
 ];
 const _hoisted_6$3 = { class: "u-lang" };
-const _sfc_main$6 = /* @__PURE__ */ defineComponent({
+const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   __name: "NCollapse",
   props: {
     collapseData: { default: () => [] },
@@ -736,7 +840,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
     }
     return (_ctx, _cache) => {
       const _component_n_button = resolveComponent("n-button");
-      return openBlock(), createElementBlock("div", _hoisted_1$4, [
+      return openBlock(), createElementBlock("div", _hoisted_1$3, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.collapseData, (data, index) => {
           return openBlock(), createElementBlock("div", {
             class: normalizeClass(["n-collapse-item", { "u-collapse-item-active": activeJudge(data.key || index) }]),
@@ -804,8 +908,8 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   }
 });
 const NCollapse_vue_vue_type_style_index_0_scoped_65bb8df3_lang = "";
-const NCollapse = /* @__PURE__ */ _export_sfc(_sfc_main$6, [["__scopeId", "data-v-65bb8df3"]]);
-const _sfc_main$5 = /* @__PURE__ */ defineComponent({
+const NCollapse = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-65bb8df3"]]);
+const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   __name: "NDivider",
   props: {
     dashed: { type: Boolean, default: false },
@@ -879,8 +983,8 @@ const _sfc_main$5 = /* @__PURE__ */ defineComponent({
   }
 });
 const NDivider_vue_vue_type_style_index_0_scoped_6180190e_lang = "";
-const NDivider = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["__scopeId", "data-v-6180190e"]]);
-const _hoisted_1$3 = { class: "n-empty" };
+const NDivider = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-6180190e"]]);
+const _hoisted_1$2 = { class: "n-empty" };
 const _hoisted_2$2 = /* @__PURE__ */ createStaticVNode('<g fill="none" fill-rule="evenodd" data-v-d0028f6b><g transform="translate(24 31.67)" data-v-d0028f6b><ellipse fill-opacity=".8" fill="#F5F5F7" cx="67.797" cy="106.89" rx="67.797" ry="12.668" data-v-d0028f6b></ellipse><path d="M122.034 69.674L98.109 40.229c-1.148-1.386-2.826-2.225-4.593-2.225h-51.44c-1.766 0-3.444.839-4.592 2.225L13.56 69.674v15.383h108.475V69.674z" fill="#AEB8C2" data-v-d0028f6b></path><path d="M101.537 86.214L80.63 61.102c-1.001-1.207-2.507-1.867-4.048-1.867H31.724c-1.54 0-3.047.66-4.048 1.867L6.769 86.214v13.792h94.768V86.214z" fill="url(#linearGradient-1)" transform="translate(13.56)" data-v-d0028f6b></path><path d="M33.83 0h67.933a4 4 0 0 1 4 4v93.344a4 4 0 0 1-4 4H33.83a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z" fill="#F5F5F7" data-v-d0028f6b></path><path d="M42.678 9.953h50.237a2 2 0 0 1 2 2V36.91a2 2 0 0 1-2 2H42.678a2 2 0 0 1-2-2V11.953a2 2 0 0 1 2-2zM42.94 49.767h49.713a2.262 2.262 0 1 1 0 4.524H42.94a2.262 2.262 0 0 1 0-4.524zM42.94 61.53h49.713a2.262 2.262 0 1 1 0 4.525H42.94a2.262 2.262 0 0 1 0-4.525zM121.813 105.032c-.775 3.071-3.497 5.36-6.735 5.36H20.515c-3.238 0-5.96-2.29-6.734-5.36a7.309 7.309 0 0 1-.222-1.79V69.675h26.318c2.907 0 5.25 2.448 5.25 5.42v.04c0 2.971 2.37 5.37 5.277 5.37h34.785c2.907 0 5.277-2.421 5.277-5.393V75.1c0-2.972 2.343-5.426 5.25-5.426h26.318v33.569c0 .617-.077 1.216-.221 1.789z" fill="#DCE0E6" data-v-d0028f6b></path></g><path d="M149.121 33.292l-6.83 2.65a1 1 0 0 1-1.317-1.23l1.937-6.207c-2.589-2.944-4.109-6.534-4.109-10.408C138.802 8.102 148.92 0 161.402 0 173.881 0 184 8.102 184 18.097c0 9.995-10.118 18.097-22.599 18.097-4.528 0-8.744-1.066-12.28-2.902z" fill="#DCE0E6" data-v-d0028f6b></path><g transform="translate(149.65 15.383)" fill="#FFF" data-v-d0028f6b><ellipse cx="20.654" cy="3.167" rx="2.849" ry="2.815" data-v-d0028f6b></ellipse><path d="M5.698 5.63H0L2.898.704zM9.259.704h4.985V5.63H9.259z" data-v-d0028f6b></path></g></g>', 1);
 const _hoisted_3$2 = [
   _hoisted_2$2
@@ -890,7 +994,7 @@ const _hoisted_5$2 = [
   _hoisted_4$2
 ];
 const _hoisted_6$2 = ["src"];
-const _sfc_main$4 = /* @__PURE__ */ defineComponent({
+const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   __name: "NEmpty",
   props: {
     description: { default: "暂无数据" },
@@ -901,7 +1005,7 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$3, [
+      return openBlock(), createElementBlock("div", _hoisted_1$2, [
         _ctx.image === "1" ? (openBlock(), createElementBlock("svg", {
           key: 0,
           class: "u-empty-1",
@@ -935,9 +1039,9 @@ const _sfc_main$4 = /* @__PURE__ */ defineComponent({
   }
 });
 const NEmpty_vue_vue_type_style_index_0_scoped_d0028f6b_lang = "";
-const NEmpty = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["__scopeId", "data-v-d0028f6b"]]);
+const NEmpty = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-d0028f6b"]]);
 const _withScopeId$1 = (n) => (pushScopeId("data-v-1ed181ee"), n = n(), popScopeId(), n);
-const _hoisted_1$2 = { class: "n-image-wrap" };
+const _hoisted_1$1 = { class: "n-image-wrap" };
 const _hoisted_2$1 = ["onLoad", "src", "alt"];
 const _hoisted_3$1 = ["onClick"];
 const _hoisted_4$1 = { class: "n-image-mask-info" };
@@ -1055,7 +1159,7 @@ const _hoisted_27 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createE
 const _hoisted_28 = [
   _hoisted_27
 ];
-const _sfc_main$3 = /* @__PURE__ */ defineComponent({
+const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "NImage",
   props: {
     src: { default: "" },
@@ -1268,7 +1372,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     }
     return (_ctx, _cache) => {
       const _component_n_loading = resolveComponent("n-loading");
-      return openBlock(), createElementBlock("div", _hoisted_1$2, [
+      return openBlock(), createElementBlock("div", _hoisted_1$1, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(images.value, (image, index) => {
           return withDirectives((openBlock(), createElementBlock("div", {
             class: normalizeClass(["n-image", { "image-hover-mask": complete.value[index] }]),
@@ -1412,8 +1516,8 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
   }
 });
 const NImage_vue_vue_type_style_index_0_scoped_1ed181ee_lang = "";
-const NImage = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-1ed181ee"]]);
-const _sfc_main$2 = /* @__PURE__ */ defineComponent({
+const NImage = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-1ed181ee"]]);
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "NMark",
   props: {
     type: {
@@ -1475,10 +1579,10 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const NMark_vue_vue_type_style_index_0_scoped_58766505_lang = "";
-const NMark = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-58766505"]]);
+const NMark_vue_vue_type_style_index_0_scoped_47d87094_lang = "";
+const NMark = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-47d87094"]]);
 const _withScopeId = (n) => (pushScopeId("data-v-7d791723"), n = n(), popScopeId(), n);
-const _hoisted_1$1 = { class: "n-input-wrap" };
+const _hoisted_1 = { class: "n-input-wrap" };
 const _hoisted_2 = { class: "n-handler-wrap" };
 const _hoisted_3 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("svg", {
   focusable: "false",
@@ -1504,7 +1608,7 @@ const _hoisted_5 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElem
 const _hoisted_6 = [
   _hoisted_5
 ];
-const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "NInputNumber",
   props: {
     width: { default: 90 },
@@ -1594,7 +1698,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         tabindex: "1",
         style: normalizeStyle(`width: ${_ctx.width}px;`)
       }, [
-        createElementVNode("div", _hoisted_1$1, [
+        createElementVNode("div", _hoisted_1, [
           createElementVNode("span", {
             class: normalizeClass(["u-input-prefix", { mr3: _ctx.prefix }])
           }, [
@@ -1640,7 +1744,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   }
 });
 const NInputNumber_vue_vue_type_style_index_0_scoped_7d791723_lang = "";
-const NInputNumber = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-7d791723"]]);
+const NInputNumber = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-7d791723"]]);
 const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   NButton,
@@ -1649,7 +1753,7 @@ const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePr
   NCollapse,
   NDivider,
   NEmpty,
-  NIcon,
+  NIcon: NIcon$1,
   NImage,
   NInput,
   NInputNumber,
@@ -1658,115 +1762,13 @@ const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePr
   NRow,
   NSwitch
 }, Symbol.toStringTag, { value: "Module" }));
-const _hoisted_1 = { class: "text" };
-const _sfc_main = /* @__PURE__ */ defineComponent({
-  __name: "NMessage",
-  props: {
-    text: {
-      type: [String, Object],
-      default: ""
-    },
-    type: {
-      type: String,
-      default: "info"
-    },
-    icon: String,
-    textColor: String,
-    bgColor: String,
-    customClass: String
-  },
-  setup(__props) {
-    const props = __props;
-    const state = reactive({
-      style: {
-        info: {
-          icon: props.icon || "alert-circle",
-          color: "#909398",
-          backgroundColor: "#F4F4F5",
-          borderColor: "#bdbdbd"
-        },
-        warn: {
-          icon: props.icon || "alert-triangle",
-          color: "#E6A23B",
-          backgroundColor: "#FDF6EC",
-          borderColor: "#fad39d"
-        },
-        error: {
-          icon: props.icon || "meh",
-          color: "#F56C6B",
-          backgroundColor: "#FEEFF0",
-          borderColor: "#ffafb4"
-        },
-        success: {
-          icon: props.icon || "smile",
-          color: "#67C23A",
-          backgroundColor: "#F0F9EB",
-          borderColor: "#bbfc95"
-        },
-        custom: {
-          icon: props.icon,
-          color: props.textColor,
-          backgroundColor: props.bgColor,
-          borderColor: props.bgColor
-        }
-      }
-    });
-    const isShow = ref(false);
-    const { style } = state;
-    const isText = computed(() => {
-      return typeof props.text === "string";
-    });
-    onMounted(() => {
-      isShow.value = true;
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createBlock(Transition, { name: "slide-fade" }, {
-        default: withCtx(() => [
-          withDirectives(createElementVNode("div", {
-            class: normalizeClass(["nice-message", __props.customClass]),
-            style: normalizeStyle(unref(style)[__props.type])
-          }, [
-            isText.value ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
-              createVNode(unref(NIcon), {
-                type: unref(style)[__props.type].icon
-              }, null, 8, ["type"]),
-              createElementVNode("span", _hoisted_1, toDisplayString(__props.text), 1)
-            ], 64)) : renderSlot(_ctx.$slots, "default", { key: 1 }, void 0, true)
-          ], 6), [
-            [vShow, isShow.value]
-          ])
-        ]),
-        _: 3
-      });
-    };
-  }
-});
-const NMessage_vue_vue_type_style_index_0_scoped_ef2ef157_lang = "";
-const Message = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-ef2ef157"]]);
-const NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
-  const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
-  div.setAttribute("class", "nice-meassage-container");
-  if (typeof document !== "undefined") {
-    document.body.appendChild(div);
-  }
-  let timer = null;
-  const vnode = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
-  render(vnode, div);
-  clearTimeout(timer);
-  timer = setTimeout(() => {
-    render(vnode, div);
-    if (typeof document !== "undefined") {
-      document.body.removeChild(div);
-    }
-    clearTimeout(timer);
-  }, timeOut || 2500);
-};
 const install = (Vue) => {
   if (install.installed)
     return;
   const _components = Object.keys(components).map((key) => components[key]);
   _components.forEach((component) => {
     if (component.hasOwnProperty("name") || component.hasOwnProperty("__name")) {
+      console.log(component);
       Vue.component(`${component.__name || component.name}`, component);
     }
   });

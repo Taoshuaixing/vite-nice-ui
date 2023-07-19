@@ -103,3 +103,4 @@ const object2class = (prefix: string, props: Object) => {
   background-color: var(--nice-normal-color-light);
 }
 </style>
+../../directives/message/NMessage.vue

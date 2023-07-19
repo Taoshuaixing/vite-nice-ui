@@ -9,9 +9,10 @@
 import type { App } from 'vue'
 import './styles/var.less'
 import { dateFormat, requestAnimationFrame, cancelAnimationFrame, rafTimeout, cancelRaf, throttle, debounce, add, downloadFile, moneyFormat } from './utils'
+
+import { NMessage } from './components/message'
 // 全局 => 定义 install 方法
 import * as components from './components'
-import { NMessage } from './components/message'
 
 export * from './components'
 
@@ -22,7 +23,7 @@ const install: any = (Vue: App): void => {
 
   _components.forEach((component: any) => {
     if (component.hasOwnProperty('name') || component.hasOwnProperty('__name')) {
-      // console.log(component)
+      console.log(component)
       Vue.component(`${component.__name || component.name}`, component)
     }
   })

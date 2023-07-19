@@ -1,5 +1,5 @@
 import { createVNode, render } from 'vue'
-import Message from './NMessage.vue'
+import Message from './Message.vue'
 
 export const NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }: any) => {
   // 动态创建一个DOM容器

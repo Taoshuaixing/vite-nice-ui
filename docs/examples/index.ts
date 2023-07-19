@@ -4,7 +4,7 @@ export default {
   install: function (app: ReturnType<typeof createApp>): void {
     const modules: any = import.meta.glob('./*/*.vue')
     Object.keys(modules).forEach((key: string) => {
-      // 拼接组件名
+      // 拼接组件名 首字母大写
       // const files = `${key
       //   .split('/')[1]
       //   .toLowerCase()
@@ -14,6 +14,7 @@ export default {
       //   .split('.')
       //   .shift()}`
       const files = `${key.split('/')[1]}-${key.split('/')[2].split('.').shift()}`
+      // console.log(files)
       const AsyncComponent = defineAsyncComponent(modules[key])
       app.component(files, AsyncComponent)
     })

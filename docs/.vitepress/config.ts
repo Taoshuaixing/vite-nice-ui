@@ -135,7 +135,7 @@ export default defineConfig({
             },
             {
               text: '数字输入框 InputNumber',
-              link: '/modules/inputnumber',
+              link: '/modules/input-number',
             },
 
             {

@@ -34,6 +34,7 @@ const openTo = (to: string) => {
     window.open(to)
   }
 }
+//添加class
 const getMarkClassName = computed(() => {
   const { type, round } = props
   const to = !!props.to

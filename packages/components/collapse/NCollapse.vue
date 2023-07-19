@@ -128,6 +128,10 @@ function onCopy(index: number) {
       padding: 12px 16px;
       cursor: pointer;
       transition: all 0.3s;
+      &:hover {
+        color: var(--nice-primary-color);
+        fill: var(--nice-primary-color);
+      }
       .u-arrow {
         position: absolute;
         width: 12px;
@@ -137,11 +141,13 @@ function onCopy(index: number) {
         margin: auto 0;
         fill: rgba(0, 0, 0, 0.88);
         transition: transform 0.3s;
+        fill: inherit;
       }
       .u-header {
         display: inline-block;
         color: rgba(0, 0, 0, 0.88);
         line-height: 1.5714285714285714;
+        color: inherit;
       }
       .ml24 {
         margin-left: 24px;

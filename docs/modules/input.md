@@ -3,8 +3,6 @@
 
 数据输入框类型，通过键盘输入字符。
 
-<input-basic />
-
 ## 基本使用
 
 <input-basic />

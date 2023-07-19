@@ -254,7 +254,7 @@ const _export_sfc = (sfc, props) => {
   return target;
 };
 const Message = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-991199b8"]]);
-const NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
+function NMessage({ text, type, timeOut, icon, textColor, bgColor, customClass }) {
   const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
   div.setAttribute("class", "nice-meassage-container");
   if (typeof document !== "undefined") {
@@ -271,7 +271,7 @@ const NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }
     }
     clearTimeout(timer);
   }, timeOut || 2500);
-};
+}
 const _hoisted_1$a = ["href", "target", "disabled"];
 const _hoisted_2$6 = { class: "u-spin-circle" };
 const _hoisted_3$6 = { class: "u-text" };

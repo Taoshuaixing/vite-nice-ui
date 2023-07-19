@@ -1,7 +1,7 @@
 import { createVNode, render } from 'vue'
-import NMessage from './NMessage.vue'
+import Message from './NMessage.vue'
 
-export default ({ text, type, timeOut, icon, textColor, bgColor, customClass }: any) => {
+export const NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }: any) => {
   // 动态创建一个DOM容器
   const div: any = typeof document !== 'undefined' ? (typeof document.createElement !== 'undefined' ? document.createElement('div') : '') : ''
   div.setAttribute('class', 'nice-meassage-container')
@@ -10,7 +10,7 @@ export default ({ text, type, timeOut, icon, textColor, bgColor, customClass }: 
   }
   let timer: any = null
   // 传递给组件的选项
-  const vnode: any = createVNode(NMessage, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text])
+  const vnode: any = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text])
   render(vnode, div)
   clearTimeout(timer)
   timer = setTimeout(() => {
@@ -21,3 +21,4 @@ export default ({ text, type, timeOut, icon, textColor, bgColor, customClass }: 
     clearTimeout(timer)
   }, timeOut || 2500)
 }
+export default NMessage

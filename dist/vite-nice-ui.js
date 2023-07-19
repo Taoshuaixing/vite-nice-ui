@@ -1,4 +1,4 @@
-import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, createElementVNode, withModifiers, normalizeStyle, withDirectives, vShow, renderSlot, createTextVNode, toDisplayString, useSlots, ref, createBlock, unref, createCommentVNode, createVNode, Transition, withCtx, useCssVars, watch, Fragment, renderList, pushScopeId, popScopeId, watchEffect, resolveComponent, onMounted, createStaticVNode, onUnmounted, withKeys, vModelText, reactive, render } from "vue";
+import { defineComponent, computed, openBlock, createElementBlock, normalizeClass, createElementVNode, withModifiers, normalizeStyle, withDirectives, vShow, renderSlot, createTextVNode, toDisplayString, useSlots, ref, createBlock, unref, createCommentVNode, createVNode, Transition, withCtx, useCssVars, watch, Fragment, renderList, pushScopeId, popScopeId, watchEffect, resolveComponent, onMounted, createStaticVNode, onUnmounted, reactive, render, withKeys, vModelText } from "vue";
 import NIcon from "vue-feather";
 import { default as default2 } from "vue-feather";
 const _var = "";
@@ -195,8 +195,8 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
       var targetUrl = route.path;
       if (route.query && JSON.stringify(route.query) !== "{}") {
         const query = route.query;
-        Object.keys(query).forEach((param, index2) => {
-          if (index2 === 0) {
+        Object.keys(query).forEach((param, index) => {
+          if (index === 0) {
             targetUrl = targetUrl + "?" + param + "=" + query[param];
           } else {
             targetUrl = targetUrl + "&" + param + "=" + query[param];
@@ -484,11 +484,11 @@ const _sfc_main$9 = /* @__PURE__ */ defineComponent({
     }
     return (_ctx, _cache) => {
       return openBlock(), createElementBlock("div", _hoisted_1$7, [
-        sum.value ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(_ctx.options, (option, index2) => {
+        sum.value ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(_ctx.options, (option, index) => {
           return openBlock(), createElementBlock("div", {
             class: normalizeClass(["n-checkbox-wrap", { vertical: _ctx.vertical }]),
-            style: normalizeStyle(sum.value !== index2 + 1 ? styleObject.value : ""),
-            key: index2
+            style: normalizeStyle(sum.value !== index + 1 ? styleObject.value : ""),
+            key: index
           }, [
             createElementVNode("div", {
               class: normalizeClass(["n-box", { disabled: _ctx.disabled || option.disabled }]),
@@ -721,8 +721,8 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
       }
     }
     const copyTxt = ref("Copy");
-    function onCopy(index2) {
-      navigator.clipboard.writeText(text.value[index2].innerText || "").then(
+    function onCopy(index) {
+      navigator.clipboard.writeText(text.value[index].innerText || "").then(
         () => {
           copyTxt.value = "Copied";
           rafTimeout(() => {
@@ -737,14 +737,14 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
     return (_ctx, _cache) => {
       const _component_n_button = resolveComponent("n-button");
       return openBlock(), createElementBlock("div", _hoisted_1$4, [
-        (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.collapseData, (data, index2) => {
+        (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.collapseData, (data, index) => {
           return openBlock(), createElementBlock("div", {
-            class: normalizeClass(["n-collapse-item", { "u-collapse-item-active": activeJudge(data.key || index2) }]),
-            key: index2
+            class: normalizeClass(["n-collapse-item", { "u-collapse-item-active": activeJudge(data.key || index) }]),
+            key: index
           }, [
             createElementVNode("div", {
               class: "u-collapse-header",
-              onClick: ($event) => onClick(data.key || index2)
+              onClick: ($event) => onClick(data.key || index)
             }, [
               _ctx.showArrow ? (openBlock(), createElementBlock("svg", _hoisted_3$3, _hoisted_5$3)) : createCommentVNode("", true),
               createElementVNode("div", {
@@ -753,7 +753,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
               }, [
                 renderSlot(_ctx.$slots, "header", {
                   header: data.header,
-                  key: data.key || index2
+                  key: data.key || index
                 }, () => [
                   createTextVNode(toDisplayString(data.header || "--"), 1)
                 ], true)
@@ -761,12 +761,12 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
             ], 8, _hoisted_2$3),
             createElementVNode("div", {
               class: normalizeClass(["u-collapse-content", { "u-collapse-copyable": _ctx.copyable }]),
-              style: normalizeStyle(`height: ${activeJudge(data.key || index2) ? collapseHeight.value[index2] : 0}px;`)
+              style: normalizeStyle(`height: ${activeJudge(data.key || index) ? collapseHeight.value[index] : 0}px;`)
             }, [
               createElementVNode("div", _hoisted_6$3, [
                 renderSlot(_ctx.$slots, "lang", {
                   lang: _ctx.lang,
-                  key: data.key || index2
+                  key: data.key || index
                 }, () => [
                   createTextVNode(toDisplayString(_ctx.lang), 1)
                 ], true)
@@ -775,7 +775,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
                 size: "small",
                 class: "u-copy",
                 type: "primary",
-                onClick: ($event) => onCopy(index2)
+                onClick: ($event) => onCopy(index)
               }, {
                 default: withCtx(() => [
                   createTextVNode(toDisplayString(copyTxt.value), 1)
@@ -791,7 +791,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
               }, [
                 renderSlot(_ctx.$slots, "text", {
                   text: data.text,
-                  key: data.key || index2
+                  key: data.key || index
                 }, () => [
                   createTextVNode(toDisplayString(data.text), 1)
                 ], true)
@@ -1137,8 +1137,8 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     function onComplete(n) {
       complete.value[n] = true;
     }
-    function onLoaded(index2) {
-      loaded.value[index2] = true;
+    function onLoaded(index) {
+      loaded.value[index] = true;
     }
     function getImageName(image) {
       if (image) {
@@ -1269,21 +1269,21 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
     return (_ctx, _cache) => {
       const _component_n_loading = resolveComponent("n-loading");
       return openBlock(), createElementBlock("div", _hoisted_1$2, [
-        (openBlock(true), createElementBlock(Fragment, null, renderList(images.value, (image, index2) => {
+        (openBlock(true), createElementBlock(Fragment, null, renderList(images.value, (image, index) => {
           return withDirectives((openBlock(), createElementBlock("div", {
-            class: normalizeClass(["n-image", { "image-hover-mask": complete.value[index2] }]),
+            class: normalizeClass(["n-image", { "image-hover-mask": complete.value[index] }]),
             style: normalizeStyle(`width: ${imageWidth.value}; height: ${imageHeight.value};`),
-            key: index2
+            key: index
           }, [
             createVNode(_component_n_loading, {
-              loading: !complete.value[index2],
+              loading: !complete.value[index],
               indicator: "dynamic-circle"
             }, {
               default: withCtx(() => [
                 createElementVNode("img", {
                   class: "u-image",
                   style: normalizeStyle(`width: calc(${imageWidth.value} - 2px); height: calc(${imageHeight.value} - 2px); object-fit: ${_ctx.fit};`),
-                  onLoad: ($event) => onComplete(index2),
+                  onLoad: ($event) => onComplete(index),
                   src: image.src,
                   alt: image.name
                 }, null, 44, _hoisted_2$1)
@@ -1293,7 +1293,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
             _ctx.previewMode ? (openBlock(), createElementBlock("div", {
               key: 0,
               class: "n-image-mask",
-              onClick: ($event) => onPreview(index2)
+              onClick: ($event) => onPreview(index)
             }, [
               createElementVNode("div", _hoisted_4$1, [
                 _hoisted_5$1,
@@ -1305,7 +1305,7 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
               ])
             ], 8, _hoisted_3$1)) : createCommentVNode("", true)
           ], 6)), [
-            [vShow, !_ctx.album || _ctx.album && index2 === 0]
+            [vShow, !_ctx.album || _ctx.album && index === 0]
           ]);
         }), 128)),
         createVNode(Transition, { name: "mask" }, {
@@ -1367,11 +1367,11 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
                   class: "n-preview-image",
                   style: normalizeStyle(`transform: translate3d(${dragX.value}px, ${dragY.value}px, 0px);`)
                 }, [
-                  (openBlock(true), createElementBlock(Fragment, null, renderList(images.value, (image, index2) => {
+                  (openBlock(true), createElementBlock(Fragment, null, renderList(images.value, (image, index) => {
                     return withDirectives((openBlock(), createBlock(_component_n_loading, {
-                      loading: !loaded.value[index2],
+                      loading: !loaded.value[index],
                       indicator: "dynamic-circle",
-                      key: index2
+                      key: index
                     }, {
                       default: withCtx(() => [
                         createElementVNode("img", {
@@ -1380,13 +1380,13 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
                           src: image.src,
                           alt: image.name,
                           onMousedown: _cache[0] || (_cache[0] = withModifiers(($event) => onMouseDown($event), ["prevent"])),
-                          onLoad: ($event) => onLoaded(index2),
+                          onLoad: ($event) => onLoaded(index),
                           onDblclick: _cache[1] || (_cache[1] = ($event) => _ctx.resetOnDbclick ? onResetOrigin() : () => false)
                         }, null, 44, _hoisted_24)
                       ]),
                       _: 2
                     }, 1032, ["loading"])), [
-                      [vShow, previewIndex.value === index2]
+                      [vShow, previewIndex.value === index]
                     ]);
                   }), 128))
                 ], 4),
@@ -1477,8 +1477,111 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
 });
 const NMark_vue_vue_type_style_index_0_scoped_58766505_lang = "";
 const NMark = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-58766505"]]);
+const _hoisted_1$1 = { class: "text" };
+const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+  __name: "NMessage",
+  props: {
+    text: {
+      type: [String, Object],
+      default: ""
+    },
+    type: {
+      type: String,
+      default: "info"
+    },
+    icon: String,
+    textColor: String,
+    bgColor: String,
+    customClass: String
+  },
+  setup(__props) {
+    const props = __props;
+    const state = reactive({
+      style: {
+        info: {
+          icon: props.icon || "alert-circle",
+          color: "#909398",
+          backgroundColor: "#F4F4F5",
+          borderColor: "#bdbdbd"
+        },
+        warn: {
+          icon: props.icon || "alert-triangle",
+          color: "#E6A23B",
+          backgroundColor: "#FDF6EC",
+          borderColor: "#fad39d"
+        },
+        error: {
+          icon: props.icon || "meh",
+          color: "#F56C6B",
+          backgroundColor: "#FEEFF0",
+          borderColor: "#ffafb4"
+        },
+        success: {
+          icon: props.icon || "smile",
+          color: "#67C23A",
+          backgroundColor: "#F0F9EB",
+          borderColor: "#bbfc95"
+        },
+        custom: {
+          icon: props.icon,
+          color: props.textColor,
+          backgroundColor: props.bgColor,
+          borderColor: props.bgColor
+        }
+      }
+    });
+    const isShow = ref(false);
+    const { style } = state;
+    const isText = computed(() => {
+      return typeof props.text === "string";
+    });
+    onMounted(() => {
+      isShow.value = true;
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createBlock(Transition, { name: "slide-fade" }, {
+        default: withCtx(() => [
+          withDirectives(createElementVNode("div", {
+            class: normalizeClass(["nice-message", __props.customClass]),
+            style: normalizeStyle(unref(style)[__props.type])
+          }, [
+            isText.value ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
+              createVNode(unref(NIcon), {
+                type: unref(style)[__props.type].icon
+              }, null, 8, ["type"]),
+              createElementVNode("span", _hoisted_1$1, toDisplayString(__props.text), 1)
+            ], 64)) : renderSlot(_ctx.$slots, "default", { key: 1 }, void 0, true)
+          ], 6), [
+            [vShow, isShow.value]
+          ])
+        ]),
+        _: 3
+      });
+    };
+  }
+});
+const NMessage_vue_vue_type_style_index_0_scoped_ef2ef157_lang = "";
+const Message = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-ef2ef157"]]);
+const NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
+  const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
+  div.setAttribute("class", "nice-meassage-container");
+  if (typeof document !== "undefined") {
+    document.body.appendChild(div);
+  }
+  let timer = null;
+  const vnode = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
+  render(vnode, div);
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    render(vnode, div);
+    if (typeof document !== "undefined") {
+      document.body.removeChild(div);
+    }
+    clearTimeout(timer);
+  }, timeOut || 2500);
+};
 const _withScopeId = (n) => (pushScopeId("data-v-7d791723"), n = n(), popScopeId(), n);
-const _hoisted_1$1 = { class: "n-input-wrap" };
+const _hoisted_1 = { class: "n-input-wrap" };
 const _hoisted_2 = { class: "n-handler-wrap" };
 const _hoisted_3 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElementVNode("svg", {
   focusable: "false",
@@ -1504,7 +1607,7 @@ const _hoisted_5 = /* @__PURE__ */ _withScopeId(() => /* @__PURE__ */ createElem
 const _hoisted_6 = [
   _hoisted_5
 ];
-const _sfc_main$1 = /* @__PURE__ */ defineComponent({
+const _sfc_main = /* @__PURE__ */ defineComponent({
   __name: "NInputNumber",
   props: {
     width: { default: 90 },
@@ -1594,7 +1697,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
         tabindex: "1",
         style: normalizeStyle(`width: ${_ctx.width}px;`)
       }, [
-        createElementVNode("div", _hoisted_1$1, [
+        createElementVNode("div", _hoisted_1, [
           createElementVNode("span", {
             class: normalizeClass(["u-input-prefix", { mr3: _ctx.prefix }])
           }, [
@@ -1640,7 +1743,7 @@ const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   }
 });
 const NInputNumber_vue_vue_type_style_index_0_scoped_7d791723_lang = "";
-const NInputNumber = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["__scopeId", "data-v-7d791723"]]);
+const NInputNumber = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-7d791723"]]);
 const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.defineProperty({
   __proto__: null,
   NButton,
@@ -1655,112 +1758,10 @@ const components = /* @__PURE__ */ Object.freeze(/* @__PURE__ */ Object.definePr
   NInputNumber,
   NLoading,
   NMark,
+  NMessage,
   NRow,
   NSwitch
 }, Symbol.toStringTag, { value: "Module" }));
-const _hoisted_1 = { class: "text" };
-const _sfc_main = /* @__PURE__ */ defineComponent({
-  __name: "NMessage",
-  props: {
-    text: {
-      type: [String, Object],
-      default: ""
-    },
-    type: {
-      type: String,
-      default: "info"
-    },
-    icon: String,
-    textColor: String,
-    bgColor: String,
-    customClass: String
-  },
-  setup(__props) {
-    const props = __props;
-    const state = reactive({
-      style: {
-        info: {
-          icon: props.icon || "alert-circle",
-          color: "#909398",
-          backgroundColor: "#F4F4F5",
-          borderColor: "#bdbdbd"
-        },
-        warn: {
-          icon: props.icon || "alert-triangle",
-          color: "#E6A23B",
-          backgroundColor: "#FDF6EC",
-          borderColor: "#fad39d"
-        },
-        error: {
-          icon: props.icon || "meh",
-          color: "#F56C6B",
-          backgroundColor: "#FEEFF0",
-          borderColor: "#ffafb4"
-        },
-        success: {
-          icon: props.icon || "smile",
-          color: "#67C23A",
-          backgroundColor: "#F0F9EB",
-          borderColor: "#bbfc95"
-        },
-        custom: {
-          icon: props.icon,
-          color: props.textColor,
-          backgroundColor: props.bgColor,
-          borderColor: props.bgColor
-        }
-      }
-    });
-    const isShow = ref(false);
-    const { style } = state;
-    const isText = computed(() => {
-      return typeof props.text === "string";
-    });
-    onMounted(() => {
-      isShow.value = true;
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createBlock(Transition, { name: "slide-fade" }, {
-        default: withCtx(() => [
-          withDirectives(createElementVNode("div", {
-            class: normalizeClass(["nice-message", __props.customClass]),
-            style: normalizeStyle(unref(style)[__props.type])
-          }, [
-            isText.value ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
-              createVNode(unref(NIcon), {
-                type: unref(style)[__props.type].icon
-              }, null, 8, ["type"]),
-              createElementVNode("span", _hoisted_1, toDisplayString(__props.text), 1)
-            ], 64)) : renderSlot(_ctx.$slots, "default", { key: 1 }, void 0, true)
-          ], 6), [
-            [vShow, isShow.value]
-          ])
-        ]),
-        _: 3
-      });
-    };
-  }
-});
-const NMessage_vue_vue_type_style_index_0_scoped_ef2ef157_lang = "";
-const NMessage = /* @__PURE__ */ _export_sfc(_sfc_main, [["__scopeId", "data-v-ef2ef157"]]);
-const Message = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
-  const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
-  div.setAttribute("class", "nice-meassage-container");
-  if (typeof document !== "undefined") {
-    document.body.appendChild(div);
-  }
-  let timer = null;
-  const vnode = createVNode(NMessage, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
-  render(vnode, div);
-  clearTimeout(timer);
-  timer = setTimeout(() => {
-    render(vnode, div);
-    if (typeof document !== "undefined") {
-      document.body.removeChild(div);
-    }
-    clearTimeout(timer);
-  }, timeOut || 2500);
-};
 const install = (Vue) => {
   if (install.installed)
     return;
@@ -1771,7 +1772,6 @@ const install = (Vue) => {
     }
   });
 };
-const index = { install, Message };
 export {
   NButton,
   NCheckbox,
@@ -1785,6 +1785,7 @@ export {
   NInputNumber,
   NLoading,
   NMark,
+  NMessage,
   NRow,
   NSwitch,
   add,
@@ -1792,7 +1793,7 @@ export {
   cancelRaf,
   dateFormat,
   debounce,
-  index as default,
+  install as default,
   downloadFile,
   moneyFormat,
   rafTimeout,

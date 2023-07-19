@@ -33,13 +33,13 @@
 
 :::
 
-## 设置数值精度
+## 格式化数值
 
-<input-number-precision />
+<input-number-format />
 
 ::: details Show Code
 
-<<<../examples/input-number/precision.vue
+<<<../examples/input-number/format.vue
 
 :::
 

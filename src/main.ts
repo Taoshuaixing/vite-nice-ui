@@ -7,7 +7,7 @@
  * @LastEditTime: 2023-07-14 16:37:51
  */
 import { createApp } from 'vue'
-import './styles/style.less'
+import '../packages/styles/style.less'
 import App from './App.vue'
 import { createPinia } from 'pinia'
 import router from '@/router'

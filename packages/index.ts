@@ -7,6 +7,7 @@
  * @LastEditTime: 2023-07-13 12:42:39
  */
 import type { App } from 'vue'
+import './styles/var.less'
 
 // 全局 => 定义 install 方法
 import * as components from './components'

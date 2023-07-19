@@ -106,6 +106,10 @@ export default defineConfig({
               link: '/modules/input',
             },
             {
+              text: '标记 Mark',
+              link: '/modules/mark',
+            },
+            {
               text: '多选框 Checkbox',
               link: '/modules/checkbox',
             },

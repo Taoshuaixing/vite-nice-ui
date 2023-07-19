@@ -30,7 +30,7 @@ npm install  vite-nice-ui
 cnpm install  vite-nice-ui --save
 ```
 
-### 引入
+### 全局引入 <font size="3" color="#8d8d8d">(不推荐)</font>
 
 ```javascript
 import { createApp } from 'vue'
@@ -43,7 +43,7 @@ app.use(NiceUI)
 app.mount('#app')
 ```
 
-### 按需引用
+### 按需引用 <font size="3" color="#8d8d8d">(推荐)</font>
 
 ```javascript
 import { NButton, NInput } from 'vite-nice-ui'
@@ -65,16 +65,40 @@ import { NButton, NInput } from 'vite-nice-ui'
   yarn config set ignore-engines true
   ```
 
-#### 项目启动
+#### vue项目启动
 
   ```javascript
   npm run dev
   ```
 
-#### 项目打包
+#### vue项目打包
 
   ```javascript
   npm run build
+  ```
+
+#### vitepress项目启动
+
+  ```javascript
+  npm run doc:dev
+  ```
+
+#### vitepress项目打包
+
+  ```javascript
+  npm run doc:build
+  ```
+
+#### 自动发布 npm 包
+  
+  ```javascript
+  npm run pub
+  ```
+
+#### 自动部署 github pages
+  
+  ```javascript
+  npm run deploy
   ```
 
 ### 组件开发规范
@@ -84,7 +108,7 @@ import { NButton, NInput } from 'vite-nice-ui'
 - 只需将组件导出，*packages* 目录下的index文件会自动引入所有组件并注册install方法，参考代码：
 
   ```javascript
-  export { default as NButton } from './Button';
+  export { default as NButton } from './NButton';
   ```
 
 ### 问题反馈

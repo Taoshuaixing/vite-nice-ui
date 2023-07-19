@@ -36,8 +36,6 @@ function onSwitch() {
   </div>
 </template>
 <style lang="less" scoped>
-@themeColor: #9708cc;
-
 .n-switch-wrap {
   display: inline-block;
   height: 22px;
@@ -89,7 +87,7 @@ function onSwitch() {
     }
   }
   .switch-checked {
-    background: @themeColor;
+    background: var(--nice-primary-color);
   }
   .disabled {
     cursor: not-allowed;

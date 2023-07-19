@@ -18,7 +18,7 @@ version=$(jq -r .version package.json)
 # 打包构建
 npm run build
 
-# 发布到npm，pnpm(高性能的npm)
+# 发布到npm
 npm publish
 
 #更新package.json的包版本 （ncu -u 更新全部）
@@ -29,5 +29,5 @@ npm update vite-nice-ui
 
 # 提交版本更新代码到github
 git add .
-git commit -m "update $version"
+git commit -m "update v$version"
 git push

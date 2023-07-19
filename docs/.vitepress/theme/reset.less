@@ -1,8 +1,7 @@
-/**
+:root {
+  /**
  * Colors
  * -------------------------------------------------------------------------- */
-
-:root {
   --vp-c-brand: #9708cc;
   --vp-c-brand-light: #c31eff;
   --vp-c-brand-lighter: #d86efe;
@@ -12,13 +11,11 @@
   --vp-c-brand-dimm: rgba(100, 108, 255, 0.08);
   --c-brand: #9708cc;
   --c-brand-light: #d769ff;
-}
 
-/**
+  /**
  * Component: Button
  * -------------------------------------------------------------------------- */
 
-:root {
   --vp-button-brand-border: var(--vp-c-brand-light);
   --vp-button-brand-text: var(--vp-c-white);
   --vp-button-brand-bg: var(--vp-c-brand);
@@ -28,17 +25,22 @@
   --vp-button-brand-active-border: var(--vp-c-brand-light);
   --vp-button-brand-active-text: var(--vp-c-white);
   --vp-button-brand-active-bg: var(--vp-button-brand-bg);
-}
 
-/**
+  /**
  * Component: Home
  * -------------------------------------------------------------------------- */
 
-:root {
   --vp-home-hero-name-color: transparent;
   --vp-home-hero-name-background: -webkit-linear-gradient(-45deg, #43cbff 10%, #9708cc 100%);
 
   --vp-home-hero-image-background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
+
+  /**
+ * Component: Custom Block
+ * -------------------------------------------------------------------------- */
+  --vp-custom-block-tip-border: var(--vp-c-brand);
+  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
+  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
 }
 
 @media (min-width: 960px) {
@@ -48,16 +50,6 @@
   .VPHome {
     padding: 128px 0;
   }
-}
-
-/**
- * Component: Custom Block
- * -------------------------------------------------------------------------- */
-
-:root {
-  --vp-custom-block-tip-border: var(--vp-c-brand);
-  --vp-custom-block-tip-text: var(--vp-c-brand-darker);
-  --vp-custom-block-tip-bg: var(--vp-c-brand-dimm);
 }
 
 .dark {

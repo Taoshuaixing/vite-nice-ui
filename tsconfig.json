@@ -1,6 +1,6 @@
 {
   "extends": "@vue/tsconfig/tsconfig.web.json",
-  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "packages/**/*.ts", "packages/**/*.vue", "docs/**/*.ts"],
+  "include": ["env.d.ts", "src/**/*", "src/**/*.vue", "packages/**/*.ts", "packages/**/*.vue", "docs/**/*.ts", "packages"],
   "compilerOptions": {
     "ignoreDeprecations": "5.0",
     "isolatedModules": true,
@@ -10,7 +10,9 @@
       "@/*": ["./src/*"],
       "images/*": ["./src/assets"]
     },
-    "importsNotUsedAsValues": "remove"
+    "preserveValueImports": false,
+    "importsNotUsedAsValues": "remove",
+    "lib": ["dom", "esnext"]
   },
 
   "references": [

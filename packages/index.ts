@@ -11,7 +11,7 @@ import './styles/var.less'
 import { dateFormat, requestAnimationFrame, cancelAnimationFrame, rafTimeout, cancelRaf, throttle, debounce, add, downloadFile, moneyFormat } from './utils'
 // 全局 => 定义 install 方法
 import * as components from './components'
-import NMessage from './components/message'
+import { NMessage } from './components/message'
 
 export * from './components'
 

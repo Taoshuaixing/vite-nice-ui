@@ -22,6 +22,7 @@ const handleCopy = (text: string) => {
     NMessage({
       type: 'error',
       text: '您的浏览器不支持Clipboard API!',
+      timeout: 30000,
     })
     return
   }
@@ -30,6 +31,7 @@ const handleCopy = (text: string) => {
   NMessage({
     type: 'success',
     text: '复制成功!',
+    timeout: 30000,
   })
 }
 </script>

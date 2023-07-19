@@ -290,15 +290,15 @@ var _export_sfc = (sfc, props) => {
   }
   return target;
 };
-var Message = _export_sfc(_sfc_main$d, [["__scopeId", "data-v-922dd1fa"]]);
-var NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
+var Message$1 = _export_sfc(_sfc_main$d, [["__scopeId", "data-v-991199b8"]]);
+var Message = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
   const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
   div.setAttribute("class", "nice-meassage-container");
   if (typeof document !== "undefined") {
     document.body.appendChild(div);
   }
   let timer = null;
-  const vnode = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
+  const vnode = createVNode(Message$1, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
   render(vnode, div);
   clearTimeout(timer);
   timer = setTimeout(() => {
@@ -1796,8 +1796,10 @@ var install = (Vue) => {
       Vue.component(`${component.__name || component.name}`, component);
     }
   });
+  Vue.config.globalProperties.$message = Message;
 };
 export {
+  Message,
   NButton,
   NCheckbox,
   NCol,
@@ -1810,7 +1812,6 @@ export {
   NInputNumber,
   NLoading,
   NMark,
-  NMessage,
   NRow,
   NSwitch,
   add,

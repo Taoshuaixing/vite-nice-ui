@@ -10,7 +10,7 @@ import type { App } from 'vue'
 import './styles/var.less'
 import { dateFormat, requestAnimationFrame, cancelAnimationFrame, rafTimeout, cancelRaf, throttle, debounce, add, downloadFile, moneyFormat } from './utils'
 
-import Message from './components/message'
+import NMessage from './components/message'
 // 全局 => 定义 install 方法
 import * as components from './components'
 
@@ -27,7 +27,6 @@ const install: any = (Vue: App): void => {
       Vue.component(`${component.__name || component.name}`, component)
     }
   })
-  Vue.config.globalProperties.$message = Message
 }
-export { dateFormat, requestAnimationFrame, cancelAnimationFrame, rafTimeout, cancelRaf, throttle, debounce, add, downloadFile, moneyFormat, Message }
+export { dateFormat, requestAnimationFrame, cancelAnimationFrame, rafTimeout, cancelRaf, throttle, debounce, add, downloadFile, moneyFormat, NMessage }
 export default install

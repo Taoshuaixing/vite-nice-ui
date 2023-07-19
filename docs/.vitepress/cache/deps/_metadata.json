@@ -1,50 +1,32 @@
 {
-  "hash": "8282183c",
-  "browserHash": "b0c086ef",
+  "hash": "95763f93",
+  "browserHash": "f8007bd1",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "9a2a1966",
+      "fileHash": "21c1cd7d",
       "needsInterop": false
     },
     "vue-feather": {
       "src": "../../../../node_modules/vue-feather/dist/vue-feather.esm.js",
       "file": "vue-feather.js",
-      "fileHash": "6c53b178",
+      "fileHash": "6198d165",
       "needsInterop": false
-    },
-    "@vueuse/core": {
-      "src": "../../../../node_modules/@vueuse/core/index.mjs",
-      "file": "@vueuse_core.js",
-      "fileHash": "939429dd",
-      "needsInterop": false
-    },
-    "feather-icons": {
-      "src": "../../../../node_modules/feather-icons/dist/feather.js",
-      "file": "feather-icons.js",
-      "fileHash": "92fc3821",
-      "needsInterop": true
     },
     "vite-nice-ui": {
       "src": "../../../../node_modules/vite-nice-ui/dist/vite-nice-ui.js",
       "file": "vite-nice-ui.js",
-      "fileHash": "0b9b6b67",
+      "fileHash": "4fc5cbba",
       "needsInterop": false
     }
   },
   "chunks": {
-    "chunk-VBX7UX4L": {
-      "file": "chunk-VBX7UX4L.js"
+    "chunk-PH5W75RB": {
+      "file": "chunk-PH5W75RB.js"
     },
-    "chunk-WDH66KDU": {
-      "file": "chunk-WDH66KDU.js"
-    },
-    "chunk-V634PGSD": {
-      "file": "chunk-V634PGSD.js"
-    },
-    "chunk-UXIASGQL": {
-      "file": "chunk-UXIASGQL.js"
+    "chunk-HCTWQJ6V": {
+      "file": "chunk-HCTWQJ6V.js"
     }
   }
 }

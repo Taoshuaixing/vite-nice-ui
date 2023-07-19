@@ -245,7 +245,7 @@ const _sfc_main$d = /* @__PURE__ */ defineComponent({
     };
   }
 });
-const Message_vue_vue_type_style_index_0_scoped_922dd1fa_lang = "";
+const Message_vue_vue_type_style_index_0_scoped_991199b8_lang = "";
 const _export_sfc = (sfc, props) => {
   const target = sfc.__vccOpts || sfc;
   for (const [key, val] of props) {
@@ -253,7 +253,7 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const Message = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-922dd1fa"]]);
+const Message = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-991199b8"]]);
 const NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
   const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
   div.setAttribute("class", "nice-meassage-container");

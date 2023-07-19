@@ -1,7 +1,6 @@
 import {
   script
-} from "./chunk-VBX7UX4L.js";
-import "./chunk-WDH66KDU.js";
+} from "./chunk-PH5W75RB.js";
 import {
   Fragment,
   Transition,
@@ -39,8 +38,7 @@ import {
   withDirectives,
   withKeys,
   withModifiers
-} from "./chunk-V634PGSD.js";
-import "./chunk-UXIASGQL.js";
+} from "./chunk-HCTWQJ6V.js";
 
 // node_modules/vite-nice-ui/dist/vite-nice-ui.js
 function dateFormat(value = Date.now(), format = "YYYY-MM-DD HH:mm:ss") {
@@ -202,10 +200,119 @@ function moneyFormat(value, decimal = 2, split = ",") {
     return "--";
   }
 }
-var _hoisted_1$b = ["href", "target", "disabled"];
+var _hoisted_1$b = { class: "text" };
+var _sfc_main$d = defineComponent({
+  __name: "Message",
+  props: {
+    text: {
+      type: [String, Object],
+      default: ""
+    },
+    type: {
+      type: String,
+      default: "info"
+    },
+    icon: String,
+    textColor: String,
+    bgColor: String,
+    customClass: String
+  },
+  setup(__props) {
+    const props = __props;
+    const state = reactive({
+      style: {
+        info: {
+          icon: props.icon || "alert-circle",
+          color: "#909398",
+          backgroundColor: "#F4F4F5",
+          borderColor: "#bdbdbd"
+        },
+        warn: {
+          icon: props.icon || "alert-triangle",
+          color: "#E6A23B",
+          backgroundColor: "#FDF6EC",
+          borderColor: "#fad39d"
+        },
+        error: {
+          icon: props.icon || "meh",
+          color: "#F56C6B",
+          backgroundColor: "#FEEFF0",
+          borderColor: "#ffafb4"
+        },
+        success: {
+          icon: props.icon || "smile",
+          color: "#67C23A",
+          backgroundColor: "#F0F9EB",
+          borderColor: "#bbfc95"
+        },
+        custom: {
+          icon: props.icon,
+          color: props.textColor,
+          backgroundColor: props.bgColor,
+          borderColor: props.bgColor
+        }
+      }
+    });
+    const isShow = ref(false);
+    const { style } = state;
+    const isText = computed(() => {
+      return typeof props.text === "string";
+    });
+    onMounted(() => {
+      isShow.value = true;
+    });
+    return (_ctx, _cache) => {
+      return openBlock(), createBlock(Transition, { name: "slide-fade" }, {
+        default: withCtx(() => [
+          withDirectives(createBaseVNode("div", {
+            class: normalizeClass(["nice-message", __props.customClass]),
+            style: normalizeStyle(unref(style)[__props.type])
+          }, [
+            isText.value ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
+              createVNode(unref(script), {
+                type: unref(style)[__props.type].icon
+              }, null, 8, ["type"]),
+              createBaseVNode("span", _hoisted_1$b, toDisplayString(__props.text), 1)
+            ], 64)) : renderSlot(_ctx.$slots, "default", { key: 1 }, void 0, true)
+          ], 6), [
+            [vShow, isShow.value]
+          ])
+        ]),
+        _: 3
+      });
+    };
+  }
+});
+var _export_sfc = (sfc, props) => {
+  const target = sfc.__vccOpts || sfc;
+  for (const [key, val] of props) {
+    target[key] = val;
+  }
+  return target;
+};
+var Message = _export_sfc(_sfc_main$d, [["__scopeId", "data-v-922dd1fa"]]);
+var NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
+  const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
+  div.setAttribute("class", "nice-meassage-container");
+  if (typeof document !== "undefined") {
+    document.body.appendChild(div);
+  }
+  let timer = null;
+  const vnode = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
+  render(vnode, div);
+  clearTimeout(timer);
+  timer = setTimeout(() => {
+    render(vnode, div);
+    if (typeof document !== "undefined") {
+      document.body.removeChild(div);
+    }
+    clearTimeout(timer);
+  }, timeOut || 2500);
+};
+var _hoisted_1$a = ["href", "target", "disabled"];
 var _hoisted_2$6 = { class: "u-spin-circle" };
 var _hoisted_3$6 = { class: "u-text" };
-var _sfc_main$d = defineComponent({
+var _sfc_main$c = defineComponent({
   __name: "NButton",
   props: {
     name: { default: "" },
@@ -272,22 +379,15 @@ var _sfc_main$d = defineComponent({
               createTextVNode(toDisplayString(_ctx.name), 1)
             ], true)
           ])
-        ], 14, _hoisted_1$b)
+        ], 14, _hoisted_1$a)
       ], 2);
     };
   }
 });
-var _export_sfc = (sfc, props) => {
-  const target = sfc.__vccOpts || sfc;
-  for (const [key, val] of props) {
-    target[key] = val;
-  }
-  return target;
-};
-var NButton = _export_sfc(_sfc_main$d, [["__scopeId", "data-v-0e325af7"]]);
+var NButton = _export_sfc(_sfc_main$c, [["__scopeId", "data-v-0e325af7"]]);
 script.name = "NIcon";
-var _hoisted_1$a = ["type", "value", "disabled", "placeholder", "autofocus", "readonly", "form"];
-var _sfc_main$c = defineComponent({
+var _hoisted_1$9 = ["type", "value", "disabled", "placeholder", "autofocus", "readonly", "form"];
+var _sfc_main$b = defineComponent({
   __name: "NInput",
   props: {
     modelValue: { default: "" },
@@ -388,7 +488,7 @@ var _sfc_main$c = defineComponent({
             autofocus: _ctx.autofocus,
             readonly: _ctx.readonly,
             form: _ctx.form
-          }, null, 40, _hoisted_1$a),
+          }, null, 40, _hoisted_1$9),
           createVNode(Transition, { name: "slide-fade" }, {
             default: withCtx(() => [
               !_ctx.showPassword && _ctx.clearable && _ctx.modelValue != "" ? (openBlock(), createBlock(unref(script), {
@@ -417,24 +517,24 @@ var _sfc_main$c = defineComponent({
     };
   }
 });
-var NInput = _export_sfc(_sfc_main$c, [["__scopeId", "data-v-a60b1150"]]);
-var _hoisted_1$9 = { class: "nice-row-default" };
-var _sfc_main$b = defineComponent({
+var NInput = _export_sfc(_sfc_main$b, [["__scopeId", "data-v-a60b1150"]]);
+var _hoisted_1$8 = { class: "nice-row-default" };
+var _sfc_main$a = defineComponent({
   ...{
     name: "Row"
   },
   __name: "NRow",
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$9, [
+      return openBlock(), createElementBlock("div", _hoisted_1$8, [
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ]);
     };
   }
 });
-var NRow = _export_sfc(_sfc_main$b, [["__scopeId", "data-v-0f726b51"]]);
-var _hoisted_1$8 = { class: "nice-col-default" };
-var _sfc_main$a = defineComponent({
+var NRow = _export_sfc(_sfc_main$a, [["__scopeId", "data-v-0f726b51"]]);
+var _hoisted_1$7 = { class: "nice-col-default" };
+var _sfc_main$9 = defineComponent({
   __name: "NCol",
   props: {
     span: {
@@ -455,14 +555,14 @@ var _sfc_main$a = defineComponent({
     const width = ref(props.span <= 24 ? props.span % 1 == 0 ? 100 / 24 * props.span + "%" : "" : "");
     const offset = ref(props.offset <= 24 ? props.offset % 1 == 0 ? 100 / 24 * props.offset + "%" : "" : "");
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$8, [
+      return openBlock(), createElementBlock("div", _hoisted_1$7, [
         renderSlot(_ctx.$slots, "default", {}, void 0, true)
       ]);
     };
   }
 });
-var NCol = _export_sfc(_sfc_main$a, [["__scopeId", "data-v-a23fb429"]]);
-var _hoisted_1$7 = { class: "n-checkbox" };
+var NCol = _export_sfc(_sfc_main$9, [["__scopeId", "data-v-a23fb429"]]);
+var _hoisted_1$6 = { class: "n-checkbox" };
 var _hoisted_2$5 = ["onClick"];
 var _hoisted_3$5 = { class: "u-label" };
 var _hoisted_4$5 = {
@@ -470,7 +570,7 @@ var _hoisted_4$5 = {
   class: "n-checkbox-wrap"
 };
 var _hoisted_5$5 = { class: "u-label" };
-var _sfc_main$9 = defineComponent({
+var _sfc_main$8 = defineComponent({
   __name: "NCheckbox",
   props: {
     options: { default: () => [] },
@@ -520,7 +620,7 @@ var _sfc_main$9 = defineComponent({
       emits("update:checked", !props.checked);
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$7, [
+      return openBlock(), createElementBlock("div", _hoisted_1$6, [
         sum.value ? (openBlock(true), createElementBlock(Fragment, { key: 0 }, renderList(_ctx.options, (option, index) => {
           return openBlock(), createElementBlock("div", {
             class: normalizeClass(["n-checkbox-wrap", { vertical: _ctx.vertical }]),
@@ -562,9 +662,9 @@ var _sfc_main$9 = defineComponent({
     };
   }
 });
-var NCheckbox = _export_sfc(_sfc_main$9, [["__scopeId", "data-v-d795e181"]]);
+var NCheckbox = _export_sfc(_sfc_main$8, [["__scopeId", "data-v-d795e181"]]);
 var _withScopeId$3 = (n) => (pushScopeId("data-v-4d6b8648"), n = n(), popScopeId(), n);
-var _hoisted_1$6 = { class: "n-loading" };
+var _hoisted_1$5 = { class: "n-loading" };
 var _hoisted_2$4 = { class: "n-loading-box" };
 var _hoisted_3$4 = {
   key: 0,
@@ -603,7 +703,7 @@ var _hoisted_11$1 = _withScopeId$3(() => createBaseVNode("svg", {
 var _hoisted_12$1 = [
   _hoisted_11$1
 ];
-var _sfc_main$8 = defineComponent({
+var _sfc_main$7 = defineComponent({
   __name: "NLoading",
   props: {
     loading: { type: Boolean, default: true },
@@ -618,7 +718,7 @@ var _sfc_main$8 = defineComponent({
         class: normalizeClass(`n-loading-wrap ${_ctx.size}`),
         style: normalizeStyle(`--color: ${_ctx.color};`)
       }, [
-        withDirectives(createBaseVNode("div", _hoisted_1$6, [
+        withDirectives(createBaseVNode("div", _hoisted_1$5, [
           createBaseVNode("div", _hoisted_2$4, [
             _ctx.indicator === "dot" ? (openBlock(), createElementBlock("div", _hoisted_3$4, _hoisted_8$1)) : createCommentVNode("", true),
             _ctx.indicator === "static-circle" ? (openBlock(), createElementBlock("div", _hoisted_9$1)) : createCommentVNode("", true),
@@ -639,9 +739,9 @@ var _sfc_main$8 = defineComponent({
     };
   }
 });
-var NLoading = _export_sfc(_sfc_main$8, [["__scopeId", "data-v-4d6b8648"]]);
-var _hoisted_1$5 = { class: "n-switch-wrap" };
-var _sfc_main$7 = defineComponent({
+var NLoading = _export_sfc(_sfc_main$7, [["__scopeId", "data-v-4d6b8648"]]);
+var _hoisted_1$4 = { class: "n-switch-wrap" };
+var _sfc_main$6 = defineComponent({
   __name: "NSwitch",
   props: {
     checkedInfo: { default: "" },
@@ -664,7 +764,7 @@ var _sfc_main$7 = defineComponent({
       emit("change", !checked.value);
     }
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$5, [
+      return openBlock(), createElementBlock("div", _hoisted_1$4, [
         createBaseVNode("div", {
           onClick: _cache[0] || (_cache[0] = ($event) => _ctx.disabled ? () => false : onSwitch()),
           class: normalizeClass(["n-switch", { "switch-checked": checked.value, disabled: _ctx.disabled }])
@@ -682,9 +782,9 @@ var _sfc_main$7 = defineComponent({
     };
   }
 });
-var NSwitch = _export_sfc(_sfc_main$7, [["__scopeId", "data-v-52857184"]]);
+var NSwitch = _export_sfc(_sfc_main$6, [["__scopeId", "data-v-52857184"]]);
 var _withScopeId$2 = (n) => (pushScopeId("data-v-65bb8df3"), n = n(), popScopeId(), n);
-var _hoisted_1$4 = { class: "n-collapse" };
+var _hoisted_1$3 = { class: "n-collapse" };
 var _hoisted_2$3 = ["onClick"];
 var _hoisted_3$3 = {
   key: 0,
@@ -699,7 +799,7 @@ var _hoisted_5$3 = [
   _hoisted_4$3
 ];
 var _hoisted_6$3 = { class: "u-lang" };
-var _sfc_main$6 = defineComponent({
+var _sfc_main$5 = defineComponent({
   __name: "NCollapse",
   props: {
     collapseData: { default: () => [] },
@@ -770,7 +870,7 @@ var _sfc_main$6 = defineComponent({
     }
     return (_ctx, _cache) => {
       const _component_n_button = resolveComponent("n-button");
-      return openBlock(), createElementBlock("div", _hoisted_1$4, [
+      return openBlock(), createElementBlock("div", _hoisted_1$3, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(_ctx.collapseData, (data, index) => {
           return openBlock(), createElementBlock("div", {
             class: normalizeClass(["n-collapse-item", { "u-collapse-item-active": activeJudge(data.key || index) }]),
@@ -837,8 +937,8 @@ var _sfc_main$6 = defineComponent({
     };
   }
 });
-var NCollapse = _export_sfc(_sfc_main$6, [["__scopeId", "data-v-65bb8df3"]]);
-var _sfc_main$5 = defineComponent({
+var NCollapse = _export_sfc(_sfc_main$5, [["__scopeId", "data-v-65bb8df3"]]);
+var _sfc_main$4 = defineComponent({
   __name: "NDivider",
   props: {
     dashed: { type: Boolean, default: false },
@@ -911,8 +1011,8 @@ var _sfc_main$5 = defineComponent({
     };
   }
 });
-var NDivider = _export_sfc(_sfc_main$5, [["__scopeId", "data-v-6180190e"]]);
-var _hoisted_1$3 = { class: "n-empty" };
+var NDivider = _export_sfc(_sfc_main$4, [["__scopeId", "data-v-6180190e"]]);
+var _hoisted_1$2 = { class: "n-empty" };
 var _hoisted_2$2 = createStaticVNode('<g fill="none" fill-rule="evenodd" data-v-d0028f6b><g transform="translate(24 31.67)" data-v-d0028f6b><ellipse fill-opacity=".8" fill="#F5F5F7" cx="67.797" cy="106.89" rx="67.797" ry="12.668" data-v-d0028f6b></ellipse><path d="M122.034 69.674L98.109 40.229c-1.148-1.386-2.826-2.225-4.593-2.225h-51.44c-1.766 0-3.444.839-4.592 2.225L13.56 69.674v15.383h108.475V69.674z" fill="#AEB8C2" data-v-d0028f6b></path><path d="M101.537 86.214L80.63 61.102c-1.001-1.207-2.507-1.867-4.048-1.867H31.724c-1.54 0-3.047.66-4.048 1.867L6.769 86.214v13.792h94.768V86.214z" fill="url(#linearGradient-1)" transform="translate(13.56)" data-v-d0028f6b></path><path d="M33.83 0h67.933a4 4 0 0 1 4 4v93.344a4 4 0 0 1-4 4H33.83a4 4 0 0 1-4-4V4a4 4 0 0 1 4-4z" fill="#F5F5F7" data-v-d0028f6b></path><path d="M42.678 9.953h50.237a2 2 0 0 1 2 2V36.91a2 2 0 0 1-2 2H42.678a2 2 0 0 1-2-2V11.953a2 2 0 0 1 2-2zM42.94 49.767h49.713a2.262 2.262 0 1 1 0 4.524H42.94a2.262 2.262 0 0 1 0-4.524zM42.94 61.53h49.713a2.262 2.262 0 1 1 0 4.525H42.94a2.262 2.262 0 0 1 0-4.525zM121.813 105.032c-.775 3.071-3.497 5.36-6.735 5.36H20.515c-3.238 0-5.96-2.29-6.734-5.36a7.309 7.309 0 0 1-.222-1.79V69.675h26.318c2.907 0 5.25 2.448 5.25 5.42v.04c0 2.971 2.37 5.37 5.277 5.37h34.785c2.907 0 5.277-2.421 5.277-5.393V75.1c0-2.972 2.343-5.426 5.25-5.426h26.318v33.569c0 .617-.077 1.216-.221 1.789z" fill="#DCE0E6" data-v-d0028f6b></path></g><path d="M149.121 33.292l-6.83 2.65a1 1 0 0 1-1.317-1.23l1.937-6.207c-2.589-2.944-4.109-6.534-4.109-10.408C138.802 8.102 148.92 0 161.402 0 173.881 0 184 8.102 184 18.097c0 9.995-10.118 18.097-22.599 18.097-4.528 0-8.744-1.066-12.28-2.902z" fill="#DCE0E6" data-v-d0028f6b></path><g transform="translate(149.65 15.383)" fill="#FFF" data-v-d0028f6b><ellipse cx="20.654" cy="3.167" rx="2.849" ry="2.815" data-v-d0028f6b></ellipse><path d="M5.698 5.63H0L2.898.704zM9.259.704h4.985V5.63H9.259z" data-v-d0028f6b></path></g></g>', 1);
 var _hoisted_3$2 = [
   _hoisted_2$2
@@ -922,7 +1022,7 @@ var _hoisted_5$2 = [
   _hoisted_4$2
 ];
 var _hoisted_6$2 = ["src"];
-var _sfc_main$4 = defineComponent({
+var _sfc_main$3 = defineComponent({
   __name: "NEmpty",
   props: {
     description: { default: "暂无数据" },
@@ -933,7 +1033,7 @@ var _sfc_main$4 = defineComponent({
   },
   setup(__props) {
     return (_ctx, _cache) => {
-      return openBlock(), createElementBlock("div", _hoisted_1$3, [
+      return openBlock(), createElementBlock("div", _hoisted_1$2, [
         _ctx.image === "1" ? (openBlock(), createElementBlock("svg", {
           key: 0,
           class: "u-empty-1",
@@ -966,9 +1066,9 @@ var _sfc_main$4 = defineComponent({
     };
   }
 });
-var NEmpty = _export_sfc(_sfc_main$4, [["__scopeId", "data-v-d0028f6b"]]);
+var NEmpty = _export_sfc(_sfc_main$3, [["__scopeId", "data-v-d0028f6b"]]);
 var _withScopeId$1 = (n) => (pushScopeId("data-v-1ed181ee"), n = n(), popScopeId(), n);
-var _hoisted_1$2 = { class: "n-image-wrap" };
+var _hoisted_1$1 = { class: "n-image-wrap" };
 var _hoisted_2$1 = ["onLoad", "src", "alt"];
 var _hoisted_3$1 = ["onClick"];
 var _hoisted_4$1 = { class: "n-image-mask-info" };
@@ -1086,7 +1186,7 @@ var _hoisted_27 = _withScopeId$1(() => createBaseVNode("svg", {
 var _hoisted_28 = [
   _hoisted_27
 ];
-var _sfc_main$3 = defineComponent({
+var _sfc_main$2 = defineComponent({
   __name: "NImage",
   props: {
     src: { default: "" },
@@ -1299,7 +1399,7 @@ var _sfc_main$3 = defineComponent({
     }
     return (_ctx, _cache) => {
       const _component_n_loading = resolveComponent("n-loading");
-      return openBlock(), createElementBlock("div", _hoisted_1$2, [
+      return openBlock(), createElementBlock("div", _hoisted_1$1, [
         (openBlock(true), createElementBlock(Fragment, null, renderList(images.value, (image, index) => {
           return withDirectives((openBlock(), createElementBlock("div", {
             class: normalizeClass(["n-image", { "image-hover-mask": complete.value[index] }]),
@@ -1442,8 +1542,8 @@ var _sfc_main$3 = defineComponent({
     };
   }
 });
-var NImage = _export_sfc(_sfc_main$3, [["__scopeId", "data-v-1ed181ee"]]);
-var _sfc_main$2 = defineComponent({
+var NImage = _export_sfc(_sfc_main$2, [["__scopeId", "data-v-1ed181ee"]]);
+var _sfc_main$1 = defineComponent({
   __name: "NMark",
   props: {
     type: {
@@ -1505,9 +1605,9 @@ var _sfc_main$2 = defineComponent({
     };
   }
 });
-var NMark = _export_sfc(_sfc_main$2, [["__scopeId", "data-v-58766505"]]);
+var NMark = _export_sfc(_sfc_main$1, [["__scopeId", "data-v-47d87094"]]);
 var _withScopeId = (n) => (pushScopeId("data-v-7d791723"), n = n(), popScopeId(), n);
-var _hoisted_1$1 = { class: "n-input-wrap" };
+var _hoisted_1 = { class: "n-input-wrap" };
 var _hoisted_2 = { class: "n-handler-wrap" };
 var _hoisted_3 = _withScopeId(() => createBaseVNode("svg", {
   focusable: "false",
@@ -1533,7 +1633,7 @@ var _hoisted_5 = _withScopeId(() => createBaseVNode("svg", {
 var _hoisted_6 = [
   _hoisted_5
 ];
-var _sfc_main$1 = defineComponent({
+var _sfc_main = defineComponent({
   __name: "NInputNumber",
   props: {
     width: { default: 90 },
@@ -1623,7 +1723,7 @@ var _sfc_main$1 = defineComponent({
         tabindex: "1",
         style: normalizeStyle(`width: ${_ctx.width}px;`)
       }, [
-        createBaseVNode("div", _hoisted_1$1, [
+        createBaseVNode("div", _hoisted_1, [
           createBaseVNode("span", {
             class: normalizeClass(["u-input-prefix", { mr3: _ctx.prefix }])
           }, [
@@ -1668,7 +1768,7 @@ var _sfc_main$1 = defineComponent({
     };
   }
 });
-var NInputNumber = _export_sfc(_sfc_main$1, [["__scopeId", "data-v-7d791723"]]);
+var NInputNumber = _export_sfc(_sfc_main, [["__scopeId", "data-v-7d791723"]]);
 var components = Object.freeze(Object.defineProperty({
   __proto__: null,
   NButton,
@@ -1686,114 +1786,13 @@ var components = Object.freeze(Object.defineProperty({
   NRow,
   NSwitch
 }, Symbol.toStringTag, { value: "Module" }));
-var _hoisted_1 = { class: "text" };
-var _sfc_main = defineComponent({
-  __name: "NMessage",
-  props: {
-    text: {
-      type: [String, Object],
-      default: ""
-    },
-    type: {
-      type: String,
-      default: "info"
-    },
-    icon: String,
-    textColor: String,
-    bgColor: String,
-    customClass: String
-  },
-  setup(__props) {
-    const props = __props;
-    const state = reactive({
-      style: {
-        info: {
-          icon: props.icon || "alert-circle",
-          color: "#909398",
-          backgroundColor: "#F4F4F5",
-          borderColor: "#bdbdbd"
-        },
-        warn: {
-          icon: props.icon || "alert-triangle",
-          color: "#E6A23B",
-          backgroundColor: "#FDF6EC",
-          borderColor: "#fad39d"
-        },
-        error: {
-          icon: props.icon || "meh",
-          color: "#F56C6B",
-          backgroundColor: "#FEEFF0",
-          borderColor: "#ffafb4"
-        },
-        success: {
-          icon: props.icon || "smile",
-          color: "#67C23A",
-          backgroundColor: "#F0F9EB",
-          borderColor: "#bbfc95"
-        },
-        custom: {
-          icon: props.icon,
-          color: props.textColor,
-          backgroundColor: props.bgColor,
-          borderColor: props.bgColor
-        }
-      }
-    });
-    const isShow = ref(false);
-    const { style } = state;
-    const isText = computed(() => {
-      return typeof props.text === "string";
-    });
-    onMounted(() => {
-      isShow.value = true;
-    });
-    return (_ctx, _cache) => {
-      return openBlock(), createBlock(Transition, { name: "slide-fade" }, {
-        default: withCtx(() => [
-          withDirectives(createBaseVNode("div", {
-            class: normalizeClass(["nice-message", __props.customClass]),
-            style: normalizeStyle(unref(style)[__props.type])
-          }, [
-            isText.value ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
-              createVNode(unref(script), {
-                type: unref(style)[__props.type].icon
-              }, null, 8, ["type"]),
-              createBaseVNode("span", _hoisted_1, toDisplayString(__props.text), 1)
-            ], 64)) : renderSlot(_ctx.$slots, "default", { key: 1 }, void 0, true)
-          ], 6), [
-            [vShow, isShow.value]
-          ])
-        ]),
-        _: 3
-      });
-    };
-  }
-});
-var Message = _export_sfc(_sfc_main, [["__scopeId", "data-v-ef2ef157"]]);
-var NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
-  const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
-  div.setAttribute("class", "nice-meassage-container");
-  if (typeof document !== "undefined") {
-    document.body.appendChild(div);
-  }
-  let timer = null;
-  const vnode = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
-  render(vnode, div);
-  clearTimeout(timer);
-  timer = setTimeout(() => {
-    render(vnode, div);
-    if (typeof document !== "undefined") {
-      document.body.removeChild(div);
-    }
-    clearTimeout(timer);
-  }, timeOut || 2500);
-};
 var install = (Vue) => {
   if (install.installed)
     return;
   const _components = Object.keys(components).map((key) => components[key]);
   _components.forEach((component) => {
     if (component.hasOwnProperty("name") || component.hasOwnProperty("__name")) {
+      console.log(component);
       Vue.component(`${component.__name || component.name}`, component);
     }
   });

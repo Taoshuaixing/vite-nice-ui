@@ -115,4 +115,3 @@ div.slide-fade-leave-to {
   }
 }
 </style>
-../../components/icon/index

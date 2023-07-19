@@ -1,6 +1,7 @@
 import {
   script
-} from "./chunk-PH5W75RB.js";
+} from "./chunk-VBX7UX4L.js";
+import "./chunk-WDH66KDU.js";
 import {
   Fragment,
   Transition,
@@ -38,7 +39,8 @@ import {
   withDirectives,
   withKeys,
   withModifiers
-} from "./chunk-HCTWQJ6V.js";
+} from "./chunk-V634PGSD.js";
+import "./chunk-UXIASGQL.js";
 
 // node_modules/vite-nice-ui/dist/vite-nice-ui.js
 function dateFormat(value = Date.now(), format = "YYYY-MM-DD HH:mm:ss") {
@@ -290,15 +292,15 @@ var _export_sfc = (sfc, props) => {
   }
   return target;
 };
-var Message$1 = _export_sfc(_sfc_main$d, [["__scopeId", "data-v-991199b8"]]);
-var Message = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
+var Message = _export_sfc(_sfc_main$d, [["__scopeId", "data-v-991199b8"]]);
+var NMessage = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
   const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
   div.setAttribute("class", "nice-meassage-container");
   if (typeof document !== "undefined") {
     document.body.appendChild(div);
   }
   let timer = null;
-  const vnode = createVNode(Message$1, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
+  const vnode = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
   render(vnode, div);
   clearTimeout(timer);
   timer = setTimeout(() => {
@@ -1796,10 +1798,8 @@ var install = (Vue) => {
       Vue.component(`${component.__name || component.name}`, component);
     }
   });
-  Vue.config.globalProperties.$message = Message;
 };
 export {
-  Message,
   NButton,
   NCheckbox,
   NCol,
@@ -1812,6 +1812,7 @@ export {
   NInputNumber,
   NLoading,
   NMark,
+  NMessage,
   NRow,
   NSwitch,
   add,

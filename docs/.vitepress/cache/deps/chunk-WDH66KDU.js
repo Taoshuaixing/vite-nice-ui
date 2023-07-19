@@ -1,9 +1,6 @@
 import {
-  __commonJS,
-  __toESM,
-  defineComponent,
-  h
-} from "./chunk-HCTWQJ6V.js";
+  __commonJS
+} from "./chunk-UXIASGQL.js";
 
 // node_modules/feather-icons/dist/feather.js
 var require_feather = __commonJS({
@@ -1431,16 +1428,16 @@ var require_feather = __commonJS({
                 var iframe = documentCreateElement("iframe");
                 var length = enumBugKeys.length;
                 var lt = "<";
-                var script2 = "script";
+                var script = "script";
                 var gt = ">";
-                var js = "java" + script2 + ":";
+                var js = "java" + script + ":";
                 var iframeDocument;
                 iframe.style.display = "none";
                 html.appendChild(iframe);
                 iframe.src = String(js);
                 iframeDocument = iframe.contentWindow.document;
                 iframeDocument.open();
-                iframeDocument.write(lt + script2 + gt + "document.F=Object" + lt + "/" + script2 + gt);
+                iframeDocument.write(lt + script + gt + "document.F=Object" + lt + "/" + script + gt);
                 iframeDocument.close();
                 createDict = iframeDocument.F;
                 while (length--)
@@ -2631,134 +2628,8 @@ var require_feather = __commonJS({
   }
 });
 
-// node_modules/vue-feather/dist/vue-feather.esm.js
-var feather = __toESM(require_feather());
-var script = defineComponent({
-  name: "VueFeather",
-  props: {
-    animation: {
-      type: String,
-      default: void 0
-    },
-    animationSpeed: {
-      type: String,
-      default: void 0
-    },
-    fill: {
-      type: String,
-      default: "none"
-    },
-    size: {
-      type: [Number, String],
-      default: 24
-    },
-    stroke: {
-      type: String,
-      default: "currentColor"
-    },
-    strokeLinecap: {
-      type: String,
-      default: "round"
-    },
-    strokeLinejoin: {
-      type: String,
-      default: "round"
-    },
-    strokeWidth: {
-      type: [Number, String],
-      default: 2
-    },
-    tag: {
-      type: String,
-      default: "i"
-    },
-    type: {
-      type: String,
-      default: "feather",
-      validator(type) {
-        if (!feather) {
-          throw new Error("The Feather icons is required.");
-        }
-        if (!feather.icons[type]) {
-          throw new Error(`"${type}" is not an available icon type.`);
-        }
-        return true;
-      }
-    }
-  },
-  computed: {
-    isRemSize() {
-      return typeof this.size === "string" && this.size.endsWith("rem");
-    }
-  },
-  render() {
-    const { animation, animationSpeed, isRemSize, size, type } = this;
-    const icon = feather.icons[type];
-    return h(this.tag, {
-      ...this.$attrs,
-      "data-name": type,
-      "data-tags": icon.tags,
-      "data-type": type,
-      class: {
-        "vue-feather": true,
-        [`vue-feather--${type}`]: type,
-        [`vue-feather--${animation}`]: animation,
-        [`vue-feather--${animationSpeed}`]: animationSpeed
-      },
-      style: isRemSize ? {
-        height: size,
-        width: size
-      } : void 0
-    }, [
-      h(
-        "svg",
-        // XXX: The `width` and `height` attributes do not support the `rem` unit in Safari (#13).
-        {
-          ...icon.attrs,
-          fill: this.fill,
-          height: isRemSize ? void 0 : size,
-          stroke: this.stroke,
-          "stroke-linecap": this.strokeLinecap,
-          "stroke-linejoin": this.strokeLinejoin,
-          "stroke-width": this.strokeWidth,
-          width: isRemSize ? void 0 : size,
-          class: [icon.attrs.class, "vue-feather__content"],
-          innerHTML: icon.contents
-        }
-      )
-    ]);
-  }
-});
-function styleInject(css, ref) {
-  if (ref === void 0)
-    ref = {};
-  var insertAt = ref.insertAt;
-  if (!css || typeof document === "undefined") {
-    return;
-  }
-  var head = document.head || document.getElementsByTagName("head")[0];
-  var style = document.createElement("style");
-  style.type = "text/css";
-  if (insertAt === "top") {
-    if (head.firstChild) {
-      head.insertBefore(style, head.firstChild);
-    } else {
-      head.appendChild(style);
-    }
-  } else {
-    head.appendChild(style);
-  }
-  if (style.styleSheet) {
-    style.styleSheet.cssText = css;
-  } else {
-    style.appendChild(document.createTextNode(css));
-  }
-}
-var css_248z = "@keyframes vue-feather--spin{0%{transform:rotate(0)}to{transform:rotate(1turn)}}.vue-feather{display:inline-block;overflow:hidden}.vue-feather--spin{animation:vue-feather--spin 2s linear infinite}.vue-feather--pulse{animation:vue-feather--spin 2s steps(8) infinite}.vue-feather--slow{animation-duration:3s}.vue-feather--fast{animation-duration:1s}.vue-feather__content{display:block;height:inherit;width:inherit}";
-styleInject(css_248z);
-
 export {
-  script
+  require_feather
 };
 /*! Bundled license information:
 
@@ -2768,8 +2639,5 @@ feather-icons/dist/feather.js:
     Licensed under the MIT License (MIT), see
     http://jedwatson.github.io/classnames
   *)
-
-vue-feather/dist/vue-feather.esm.js:
-  (*! vue-feather v2.0.0 | (c) 2018-present Chen Fengyuan | MIT *)
 */
-//# sourceMappingURL=chunk-PH5W75RB.js.map
+//# sourceMappingURL=chunk-WDH66KDU.js.map

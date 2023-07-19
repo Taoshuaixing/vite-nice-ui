@@ -23,7 +23,7 @@ const install: any = (Vue: App): void => {
 
   _components.forEach((component: any) => {
     if (component.hasOwnProperty('name') || component.hasOwnProperty('__name')) {
-      console.log(component)
+      // console.log(component)
       Vue.component(`${component.__name || component.name}`, component)
     }
   })

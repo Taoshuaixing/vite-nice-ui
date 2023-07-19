@@ -1,7 +1,7 @@
 import { createVNode, render } from 'vue'
 import Message from './Message.vue'
 
-export function NMessage({ text, type, timeOut, icon, textColor, bgColor, customClass }: any) {
+export default ({ text, type, timeOut, icon, textColor, bgColor, customClass }: any) => {
   // 动态创建一个DOM容器
   const div: any = typeof document !== 'undefined' ? (typeof document.createElement !== 'undefined' ? document.createElement('div') : '') : ''
   div.setAttribute('class', 'nice-meassage-container')

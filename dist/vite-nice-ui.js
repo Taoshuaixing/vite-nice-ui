@@ -253,15 +253,15 @@ const _export_sfc = (sfc, props) => {
   }
   return target;
 };
-const Message = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-991199b8"]]);
-function NMessage({ text, type, timeOut, icon, textColor, bgColor, customClass }) {
+const Message$1 = /* @__PURE__ */ _export_sfc(_sfc_main$d, [["__scopeId", "data-v-991199b8"]]);
+const Message = ({ text, type, timeOut, icon, textColor, bgColor, customClass }) => {
   const div = typeof document !== "undefined" ? typeof document.createElement !== "undefined" ? document.createElement("div") : "" : "";
   div.setAttribute("class", "nice-meassage-container");
   if (typeof document !== "undefined") {
     document.body.appendChild(div);
   }
   let timer = null;
-  const vnode = createVNode(Message, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
+  const vnode = createVNode(Message$1, { text, type, timeOut, icon, textColor, bgColor, customClass }, [text]);
   render(vnode, div);
   clearTimeout(timer);
   timer = setTimeout(() => {
@@ -271,7 +271,7 @@ function NMessage({ text, type, timeOut, icon, textColor, bgColor, customClass }
     }
     clearTimeout(timer);
   }, timeOut || 2500);
-}
+};
 const _hoisted_1$a = ["href", "target", "disabled"];
 const _hoisted_2$6 = { class: "u-spin-circle" };
 const _hoisted_3$6 = { class: "u-text" };
@@ -1772,8 +1772,10 @@ const install = (Vue) => {
       Vue.component(`${component.__name || component.name}`, component);
     }
   });
+  Vue.config.globalProperties.$message = Message;
 };
 export {
+  Message,
   NButton,
   NCheckbox,
   NCol,
@@ -1786,7 +1788,6 @@ export {
   NInputNumber,
   NLoading,
   NMark,
-  NMessage,
   NRow,
   NSwitch,
   add,

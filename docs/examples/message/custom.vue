@@ -14,7 +14,7 @@ const openMsg2 = () => {
   NMessage({
     text: '5秒后消失！',
     icon: 'clock',
-    timeout: 5000,
+    timeOut: 3000,
   })
 }
 </script>

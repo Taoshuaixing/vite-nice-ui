@@ -8,7 +8,7 @@ onMounted(() => {
   Message({
     type:'warn',
     text: '功能开发中，敬请期待！',
-    timeOut: 5000,
+    timeOut: 3000,
   })
 })
 </script>

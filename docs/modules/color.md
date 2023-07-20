@@ -3,20 +3,20 @@
 ## 主要颜色
 
 <div class="color-itembox">
-  <li style="background:#0e80eb">
+  <li style="background:var(--nice-primary-color)">
     <span class="title">主要颜色</span>
-    <span class="color">#0e80eb</span>
-    <span>rgba(14,128,235,1)</span>
+    <span class="color">#9708cc</span>
+    <span>rgba(151,8,204,1)</span>
   </li>
-  <span class="outherColor" style="background:rgba(14,128,235,.9)"></span>
-  <span class="outherColor" style="background:rgba(14,128,235,.8)"></span>
-  <span class="outherColor" style="background:rgba(14,128,235,.7)"></span>
-  <span class="outherColor" style="background:rgba(14,128,235,.6)"></span>
-  <span class="outherColor" style="background:rgba(14,128,235,.5)"></span>
-  <span class="outherColor" style="background:rgba(14,128,235,.4)"></span>
-  <span class="outherColor" style="background:rgba(14,128,235,.3)"></span>
-  <span class="outherColor" style="background:rgba(14,128,235,.2)"></span>
-  <span class="outherColor" style="background:rgba(14,128,235,.1)"></span>
+  <span class="outherColor" style="background:rgba(151,8,204,.9)"></span>
+  <span class="outherColor" style="background:rgba(151,8,204,.8)"></span>
+  <span class="outherColor" style="background:rgba(151,8,204,.7)"></span>
+  <span class="outherColor" style="background:rgba(151,8,204,.6)"></span>
+  <span class="outherColor" style="background:rgba(151,8,204,.5)"></span>
+  <span class="outherColor" style="background:rgba(151,8,204,.4)"></span>
+  <span class="outherColor" style="background:rgba(151,8,204,.3)"></span>
+  <span class="outherColor" style="background:rgba(151,8,204,.2)"></span>
+  <span class="outherColor" style="background:rgba(151,8,204,.1)"></span>
 </div>
 
 <br/>
@@ -30,20 +30,20 @@
 ## 成功状态
 
 <div class="color-itembox">
-  <li style="background:#09b63d">
+  <li style="background:#31C48D">
     <span class="title">成功状态</span>
-    <span class="color">#09b63d</span>
-    <span>rgba(9,182,61,1)</span>
+    <span class="color">#31C48D</span>
+    <span>rgb(49, 196, 141,1)</span>
   </li>
-  <span class="outherColor" style="background:rgba(9,182,61,.9)"></span>
-  <span class="outherColor" style="background:rgba(9,182,61,.8)"></span>
-  <span class="outherColor" style="background:rgba(9,182,61,.7)"></span>
-  <span class="outherColor" style="background:rgba(9,182,61,.6)"></span>
-  <span class="outherColor" style="background:rgba(9,182,61,.5)"></span>
-  <span class="outherColor" style="background:rgba(9,182,61,.4)"></span>
-  <span class="outherColor" style="background:rgba(9,182,61,.3)"></span>
-  <span class="outherColor" style="background:rgba(9,182,61,.2)"></span>
-  <span class="outherColor" style="background:rgba(9,182,61,.1)"></span>
+  <span class="outherColor" style="background:rgb(49, 196, 141,.9)"></span>
+  <span class="outherColor" style="background:rgb(49, 196, 141,.8)"></span>
+  <span class="outherColor" style="background:rgb(49, 196, 141,.7)"></span>
+  <span class="outherColor" style="background:rgb(49, 196, 141,.6)"></span>
+  <span class="outherColor" style="background:rgb(49, 196, 141,.5)"></span>
+  <span class="outherColor" style="background:rgb(49, 196, 141,.4)"></span>
+  <span class="outherColor" style="background:rgb(49, 196, 141,.3)"></span>
+  <span class="outherColor" style="background:rgb(49, 196, 141,.2)"></span>
+  <span class="outherColor" style="background:rgb(49, 196, 141,.1)"></span>
 </div>
 <br/>
 <br/>
@@ -55,20 +55,20 @@
 ## 危险状态
 
 <div class="color-itembox">
-  <li style="background:#ec3437">
+  <li style="background:#F98080">
     <span class="title">危险状态</span>
-    <span class="color">#ec3437</span>
-    <span>rgba(236,52,55,1)</span>
+    <span class="color">#F98080</span>
+    <span>rgb(249, 128, 128,1)</span>
   </li>
-  <span class="outherColor" style="background:rgba(236,52,55,.9)"></span>
-  <span class="outherColor" style="background:rgba(236,52,55,.8)"></span>
-  <span class="outherColor" style="background:rgba(236,52,55,.7)"></span>
-  <span class="outherColor" style="background:rgba(236,52,55,.6)"></span>
-  <span class="outherColor" style="background:rgba(236,52,55,.5)"></span>
-  <span class="outherColor" style="background:rgba(236,52,55,.4)"></span>
-  <span class="outherColor" style="background:rgba(236,52,55,.3)"></span>
-  <span class="outherColor" style="background:rgba(236,52,55,.2)"></span>
-  <span class="outherColor" style="background:rgba(236,52,55,.1)"></span>
+  <span class="outherColor" style="background:rgb(249, 128, 128,.9)"></span>
+  <span class="outherColor" style="background:rgb(249, 128, 128,.8)"></span>
+  <span class="outherColor" style="background:rgb(249, 128, 128,.7)"></span>
+  <span class="outherColor" style="background:rgb(249, 128, 128,.6)"></span>
+  <span class="outherColor" style="background:rgb(249, 128, 128,.5)"></span>
+  <span class="outherColor" style="background:rgb(249, 128, 128,.4)"></span>
+  <span class="outherColor" style="background:rgb(249, 128, 128,.3)"></span>
+  <span class="outherColor" style="background:rgb(249, 128, 128,.2)"></span>
+  <span class="outherColor" style="background:rgb(249, 128, 128,.1)"></span>
 </div>
 <br/>
 <br/>
@@ -80,20 +80,20 @@
 ## 警告状态
 
 <div class="color-itembox">
-  <li style="background:#f57b29">
+  <li style="background:#E3B344">
     <span class="title">警告状态</span>
-    <span class="color">#f57b29</span>
-    <span>rgba(245,123,41,1)</span>
+    <span class="color">#E3B344</span>
+    <span>rgb(227, 179, 68,1)</span>
   </li>
-  <span class="outherColor" style="background:rgba(245,123,41,.9)"></span>
-  <span class="outherColor" style="background:rgba(245,123,41,.8)"></span>
-  <span class="outherColor" style="background:rgba(245,123,41,.7)"></span>
-  <span class="outherColor" style="background:rgba(245,123,41,.6)"></span>
-  <span class="outherColor" style="background:rgba(245,123,41,.5)"></span>
-  <span class="outherColor" style="background:rgba(245,123,41,.4)"></span>
-  <span class="outherColor" style="background:rgba(245,123,41,.3)"></span>
-  <span class="outherColor" style="background:rgba(245,123,41,.2)"></span>
-  <span class="outherColor" style="background:rgba(245,123,41,.1)"></span>
+  <span class="outherColor" style="background:rgb(227, 179, 68,.9)"></span>
+  <span class="outherColor" style="background:rgb(227, 179, 68,.8)"></span>
+  <span class="outherColor" style="background:rgb(227, 179, 68,.7)"></span>
+  <span class="outherColor" style="background:rgb(227, 179, 68,.6)"></span>
+  <span class="outherColor" style="background:rgb(227, 179, 68,.5)"></span>
+  <span class="outherColor" style="background:rgb(227, 179, 68,.4)"></span>
+  <span class="outherColor" style="background:rgb(227, 179, 68,.3)"></span>
+  <span class="outherColor" style="background:rgb(227, 179, 68,.2)"></span>
+  <span class="outherColor" style="background:rgb(227, 179, 68,.1)"></span>
 </div>
 <br/>
 <br/>

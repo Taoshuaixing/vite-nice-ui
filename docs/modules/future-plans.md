@@ -2,9 +2,10 @@
 
 ## 新组件开发
 
+- ✅ Modal 模态框
+- ✅ InputNumber 数字输入框
 - **Card 卡片**
 - Table 表格
-- InputNumber 数字输入框
 - Step 步骤
 - Upload 上传
 - TextScroll 文字滚动
@@ -17,6 +18,7 @@
 - *Input: 不支持输入历史*
 - *Button: 自定义图标*
 - *Message: 图标添加loading状态*
+- *Modal: 迭代为指令组件*
 
 ## bug修复
 

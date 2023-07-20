@@ -167,6 +167,10 @@ export default defineConfig({
               text: '模态框 Modal',
               link: '/modules/modal',
             },
+            {
+              text: '回到顶部 BackTop',
+              link: '/modules/back-top',
+            },
           ],
         },
         {

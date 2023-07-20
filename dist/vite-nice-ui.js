@@ -631,32 +631,32 @@ const _sfc_main$c = /* @__PURE__ */ defineComponent({
 });
 const NCheckbox_vue_vue_type_style_index_0_scoped_d795e181_lang = "";
 const NCheckbox = /* @__PURE__ */ _export_sfc(_sfc_main$c, [["__scopeId", "data-v-d795e181"]]);
-const _withScopeId$4 = (n) => (pushScopeId("data-v-4d6b8648"), n = n(), popScopeId(), n);
+const _withScopeId$3 = (n) => (pushScopeId("data-v-4d6b8648"), n = n(), popScopeId(), n);
 const _hoisted_1$9 = { class: "n-loading" };
 const _hoisted_2$7 = { class: "n-loading-box" };
 const _hoisted_3$7 = {
   key: 0,
   class: "n-loading-dot"
 };
-const _hoisted_4$5 = /* @__PURE__ */ _withScopeId$4(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_5$5 = /* @__PURE__ */ _withScopeId$4(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_6$5 = /* @__PURE__ */ _withScopeId$4(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_7$2 = /* @__PURE__ */ _withScopeId$4(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_8$2 = [
+const _hoisted_4$5 = /* @__PURE__ */ _withScopeId$3(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_5$5 = /* @__PURE__ */ _withScopeId$3(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_6$5 = /* @__PURE__ */ _withScopeId$3(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_7$1 = /* @__PURE__ */ _withScopeId$3(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
+const _hoisted_8$1 = [
   _hoisted_4$5,
   _hoisted_5$5,
   _hoisted_6$5,
-  _hoisted_7$2
+  _hoisted_7$1
 ];
-const _hoisted_9$2 = {
+const _hoisted_9$1 = {
   key: 1,
   class: "u-spin-circle"
 };
-const _hoisted_10$2 = {
+const _hoisted_10$1 = {
   key: 2,
   class: "n-dynamic-circle"
 };
-const _hoisted_11$2 = /* @__PURE__ */ _withScopeId$4(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_11$1 = /* @__PURE__ */ _withScopeId$3(() => /* @__PURE__ */ createElementVNode("svg", {
   class: "circular",
   viewBox: "0 0 50 50"
 }, [
@@ -668,8 +668,8 @@ const _hoisted_11$2 = /* @__PURE__ */ _withScopeId$4(() => /* @__PURE__ */ creat
     fill: "none"
   })
 ], -1));
-const _hoisted_12$2 = [
-  _hoisted_11$2
+const _hoisted_12$1 = [
+  _hoisted_11$1
 ];
 const _sfc_main$b = /* @__PURE__ */ defineComponent({
   __name: "NLoading",
@@ -688,9 +688,9 @@ const _sfc_main$b = /* @__PURE__ */ defineComponent({
       }, [
         withDirectives(createElementVNode("div", _hoisted_1$9, [
           createElementVNode("div", _hoisted_2$7, [
-            _ctx.indicator === "dot" ? (openBlock(), createElementBlock("div", _hoisted_3$7, _hoisted_8$2)) : createCommentVNode("", true),
-            _ctx.indicator === "static-circle" ? (openBlock(), createElementBlock("div", _hoisted_9$2)) : createCommentVNode("", true),
-            _ctx.indicator === "dynamic-circle" ? (openBlock(), createElementBlock("div", _hoisted_10$2, _hoisted_12$2)) : createCommentVNode("", true),
+            _ctx.indicator === "dot" ? (openBlock(), createElementBlock("div", _hoisted_3$7, _hoisted_8$1)) : createCommentVNode("", true),
+            _ctx.indicator === "static-circle" ? (openBlock(), createElementBlock("div", _hoisted_9$1)) : createCommentVNode("", true),
+            _ctx.indicator === "dynamic-circle" ? (openBlock(), createElementBlock("div", _hoisted_10$1, _hoisted_12$1)) : createCommentVNode("", true),
             withDirectives(createElementVNode("p", { class: "u-tip" }, toDisplayString(_ctx.tip), 513), [
               [vShow, _ctx.tip]
             ])
@@ -753,7 +753,7 @@ const _sfc_main$a = /* @__PURE__ */ defineComponent({
 });
 const NSwitch_vue_vue_type_style_index_0_scoped_52857184_lang = "";
 const NSwitch = /* @__PURE__ */ _export_sfc(_sfc_main$a, [["__scopeId", "data-v-52857184"]]);
-const _withScopeId$3 = (n) => (pushScopeId("data-v-65bb8df3"), n = n(), popScopeId(), n);
+const _withScopeId$2 = (n) => (pushScopeId("data-v-65bb8df3"), n = n(), popScopeId(), n);
 const _hoisted_1$7 = { class: "n-collapse" };
 const _hoisted_2$6 = ["onClick"];
 const _hoisted_3$6 = {
@@ -764,7 +764,7 @@ const _hoisted_3$6 = {
   "aria-hidden": "true",
   viewBox: "64 64 896 896"
 };
-const _hoisted_4$4 = /* @__PURE__ */ _withScopeId$3(() => /* @__PURE__ */ createElementVNode("path", { d: "M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z" }, null, -1));
+const _hoisted_4$4 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("path", { d: "M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z" }, null, -1));
 const _hoisted_5$4 = [
   _hoisted_4$4
 ];
@@ -1040,12 +1040,12 @@ const _sfc_main$7 = /* @__PURE__ */ defineComponent({
 });
 const NEmpty_vue_vue_type_style_index_0_scoped_d0028f6b_lang = "";
 const NEmpty = /* @__PURE__ */ _export_sfc(_sfc_main$7, [["__scopeId", "data-v-d0028f6b"]]);
-const _withScopeId$2 = (n) => (pushScopeId("data-v-1ed181ee"), n = n(), popScopeId(), n);
+const _withScopeId$1 = (n) => (pushScopeId("data-v-1ed181ee"), n = n(), popScopeId(), n);
 const _hoisted_1$5 = { class: "n-image-wrap" };
 const _hoisted_2$4 = ["onLoad", "src", "alt"];
 const _hoisted_3$4 = ["onClick"];
 const _hoisted_4$2 = { class: "n-image-mask-info" };
-const _hoisted_5$2 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_5$2 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("svg", {
   class: "u-eye",
   focusable: "false",
   "data-icon": "eye",
@@ -1055,12 +1055,12 @@ const _hoisted_5$2 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ create
   /* @__PURE__ */ createElementVNode("path", { d: "M942.2 486.2C847.4 286.5 704.1 186 512 186c-192.2 0-335.4 100.5-430.2 300.3a60.3 60.3 0 000 51.5C176.6 737.5 319.9 838 512 838c192.2 0 335.4-100.5 430.2-300.3 7.7-16.2 7.7-35 0-51.5zM512 766c-161.3 0-279.4-81.8-362.7-254C232.6 339.8 350.7 258 512 258c161.3 0 279.4 81.8 362.7 254C791.5 684.2 673.4 766 512 766zm-4-430c-97.2 0-176 78.8-176 176s78.8 176 176 176 176-78.8 176-176-78.8-176-176-176zm0 288c-61.9 0-112-50.1-112-112s50.1-112 112-112 112 50.1 112 112-50.1 112-112 112z" })
 ], -1));
 const _hoisted_6$2 = { class: "u-pre" };
-const _hoisted_7$1 = { class: "n-preview-mask" };
-const _hoisted_8$1 = ["onClick", "onWheel"];
-const _hoisted_9$1 = { class: "n-preview-body" };
-const _hoisted_10$1 = { class: "n-preview-operations" };
-const _hoisted_11$1 = ["title"];
-const _hoisted_12$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_7 = { class: "n-preview-mask" };
+const _hoisted_8 = ["onClick", "onWheel"];
+const _hoisted_9 = { class: "n-preview-body" };
+const _hoisted_10 = { class: "n-preview-operations" };
+const _hoisted_11 = ["title"];
+const _hoisted_12 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("svg", {
   class: "u-icon",
   focusable: "false",
   "data-icon": "close",
@@ -1069,10 +1069,10 @@ const _hoisted_12$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ creat
 }, [
   /* @__PURE__ */ createElementVNode("path", { d: "M563.8 512l262.5-312.9c4.4-5.2.7-13.1-6.1-13.1h-79.8c-4.7 0-9.2 2.1-12.3 5.7L511.6 449.8 295.1 191.7c-3-3.6-7.5-5.7-12.3-5.7H203c-6.8 0-10.5 7.9-6.1 13.1L459.4 512 196.9 824.9A7.95 7.95 0 00203 838h79.8c4.7 0 9.2-2.1 12.3-5.7l216.5-258.1 216.5 258.1c3 3.6 7.5 5.7 12.3 5.7h79.8c6.8 0 10.5-7.9 6.1-13.1L563.8 512z" })
 ], -1));
-const _hoisted_13$1 = [
-  _hoisted_12$1
+const _hoisted_13 = [
+  _hoisted_12
 ];
-const _hoisted_14$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_14 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("svg", {
   class: "u-icon",
   focusable: "false",
   "data-icon": "zoom-in",
@@ -1081,10 +1081,10 @@ const _hoisted_14$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ creat
 }, [
   /* @__PURE__ */ createElementVNode("path", { d: "M637 443H519V309c0-4.4-3.6-8-8-8h-60c-4.4 0-8 3.6-8 8v134H325c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h118v134c0 4.4 3.6 8 8 8h60c4.4 0 8-3.6 8-8V519h118c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8zm284 424L775 721c122.1-148.9 113.6-369.5-26-509-148-148.1-388.4-148.1-537 0-148.1 148.6-148.1 389 0 537 139.5 139.6 360.1 148.1 509 26l146 146c3.2 2.8 8.3 2.8 11 0l43-43c2.8-2.7 2.8-7.8 0-11zM696 696c-118.8 118.7-311.2 118.7-430 0-118.7-118.8-118.7-311.2 0-430 118.8-118.7 311.2-118.7 430 0 118.7 118.8 118.7 311.2 0 430z" })
 ], -1));
-const _hoisted_15$1 = [
-  _hoisted_14$1
+const _hoisted_15 = [
+  _hoisted_14
 ];
-const _hoisted_16$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_16 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("svg", {
   class: "u-icon",
   focusable: "false",
   "data-icon": "zoom-out",
@@ -1093,10 +1093,10 @@ const _hoisted_16$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ creat
 }, [
   /* @__PURE__ */ createElementVNode("path", { d: "M637 443H325c-4.4 0-8 3.6-8 8v60c0 4.4 3.6 8 8 8h312c4.4 0 8-3.6 8-8v-60c0-4.4-3.6-8-8-8zm284 424L775 721c122.1-148.9 113.6-369.5-26-509-148-148.1-388.4-148.1-537 0-148.1 148.6-148.1 389 0 537 139.5 139.6 360.1 148.1 509 26l146 146c3.2 2.8 8.3 2.8 11 0l43-43c2.8-2.7 2.8-7.8 0-11zM696 696c-118.8 118.7-311.2 118.7-430 0-118.7-118.8-118.7-311.2 0-430 118.8-118.7 311.2-118.7 430 0 118.7 118.8 118.7 311.2 0 430z" })
 ], -1));
-const _hoisted_17$1 = [
-  _hoisted_16$1
+const _hoisted_17 = [
+  _hoisted_16
 ];
-const _hoisted_18$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_18 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("svg", {
   class: "u-icon",
   focusable: "false",
   "data-icon": "expand",
@@ -1105,10 +1105,10 @@ const _hoisted_18$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ creat
 }, [
   /* @__PURE__ */ createElementVNode("path", { d: "M342 88H120c-17.7 0-32 14.3-32 32v224c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16V168h174c8.8 0 16-7.2 16-16v-48c0-8.8-7.2-16-16-16zm578 576h-48c-8.8 0-16 7.2-16 16v176H682c-8.8 0-16 7.2-16 16v48c0 8.8 7.2 16 16 16h222c17.7 0 32-14.3 32-32V680c0-8.8-7.2-16-16-16zM342 856H168V680c0-8.8-7.2-16-16-16h-48c-8.8 0-16 7.2-16 16v224c0 17.7 14.3 32 32 32h222c8.8 0 16-7.2 16-16v-48c0-8.8-7.2-16-16-16zM904 88H682c-8.8 0-16 7.2-16 16v48c0 8.8 7.2 16 16 16h174v176c0 8.8 7.2 16 16 16h48c8.8 0 16-7.2 16-16V120c0-17.7-14.3-32-32-32z" })
 ], -1));
-const _hoisted_19$1 = [
-  _hoisted_18$1
+const _hoisted_19 = [
+  _hoisted_18
 ];
-const _hoisted_20$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_20 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("svg", {
   class: "u-icon",
   focusable: "false",
   "data-icon": "rotate-right",
@@ -1118,10 +1118,10 @@ const _hoisted_20$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ creat
   /* @__PURE__ */ createElementVNode("path", { d: "M480.5 251.2c13-1.6 25.9-2.4 38.8-2.5v63.9c0 6.5 7.5 10.1 12.6 6.1L660 217.6c4-3.2 4-9.2 0-12.3l-128-101c-5.1-4-12.6-.4-12.6 6.1l-.2 64c-118.6.5-235.8 53.4-314.6 154.2A399.75 399.75 0 00123.5 631h74.9c-.9-5.3-1.7-10.7-2.4-16.1-5.1-42.1-2.1-84.1 8.9-124.8 11.4-42.2 31-81.1 58.1-115.8 27.2-34.7 60.3-63.2 98.4-84.3 37-20.6 76.9-33.6 119.1-38.8z" }),
   /* @__PURE__ */ createElementVNode("path", { d: "M880 418H352c-17.7 0-32 14.3-32 32v414c0 17.7 14.3 32 32 32h528c17.7 0 32-14.3 32-32V450c0-17.7-14.3-32-32-32zm-44 402H396V494h440v326z" })
 ], -1));
-const _hoisted_21$1 = [
-  _hoisted_20$1
+const _hoisted_21 = [
+  _hoisted_20
 ];
-const _hoisted_22$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_22 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("svg", {
   class: "u-icon",
   focusable: "false",
   "data-icon": "rotate-left",
@@ -1131,11 +1131,11 @@ const _hoisted_22$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ creat
   /* @__PURE__ */ createElementVNode("path", { d: "M672 418H144c-17.7 0-32 14.3-32 32v414c0 17.7 14.3 32 32 32h528c17.7 0 32-14.3 32-32V450c0-17.7-14.3-32-32-32zm-44 402H188V494h440v326z" }),
   /* @__PURE__ */ createElementVNode("path", { d: "M819.3 328.5c-78.8-100.7-196-153.6-314.6-154.2l-.2-64c0-6.5-7.6-10.1-12.6-6.1l-128 101c-4 3.1-3.9 9.1 0 12.3L492 318.6c5.1 4 12.7.4 12.6-6.1v-63.9c12.9.1 25.9.9 38.8 2.5 42.1 5.2 82.1 18.2 119 38.7 38.1 21.2 71.2 49.7 98.4 84.3 27.1 34.7 46.7 73.7 58.1 115.8a325.95 325.95 0 016.5 140.9h74.9c14.8-103.6-11.3-213-81-302.3z" })
 ], -1));
-const _hoisted_23$1 = [
-  _hoisted_22$1
+const _hoisted_23 = [
+  _hoisted_22
 ];
-const _hoisted_24$1 = ["src", "alt", "onLoad"];
-const _hoisted_25$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_24 = ["src", "alt", "onLoad"];
+const _hoisted_25 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("svg", {
   focusable: "false",
   class: "u-switch",
   "data-icon": "left",
@@ -1144,10 +1144,10 @@ const _hoisted_25$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ creat
 }, [
   /* @__PURE__ */ createElementVNode("path", { d: "M724 218.3V141c0-6.7-7.7-10.4-12.9-6.3L260.3 486.8a31.86 31.86 0 000 50.3l450.8 352.1c5.3 4.1 12.9.4 12.9-6.3v-77.3c0-4.9-2.3-9.6-6.1-12.6l-360-281 360-281.1c3.8-3 6.1-7.7 6.1-12.6z" })
 ], -1));
-const _hoisted_26$1 = [
-  _hoisted_25$1
+const _hoisted_26 = [
+  _hoisted_25
 ];
-const _hoisted_27$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ createElementVNode("svg", {
+const _hoisted_27 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("svg", {
   focusable: "false",
   class: "u-switch",
   "data-icon": "right",
@@ -1156,8 +1156,8 @@ const _hoisted_27$1 = /* @__PURE__ */ _withScopeId$2(() => /* @__PURE__ */ creat
 }, [
   /* @__PURE__ */ createElementVNode("path", { d: "M765.7 486.8L314.9 134.7A7.97 7.97 0 00302 141v77.3c0 4.9 2.3 9.6 6.1 12.6l360 281.1-360 281.1c-3.9 3-6.1 7.7-6.1 12.6V883c0 6.7 7.7 10.4 12.9 6.3l450.8-352.1a31.96 31.96 0 000-50.4z" })
 ], -1));
-const _hoisted_28$1 = [
-  _hoisted_27$1
+const _hoisted_28 = [
+  _hoisted_27
 ];
 const _sfc_main$6 = /* @__PURE__ */ defineComponent({
   __name: "NImage",
@@ -1414,7 +1414,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
         }), 128)),
         createVNode(Transition, { name: "mask" }, {
           default: withCtx(() => [
-            withDirectives(createElementVNode("div", _hoisted_7$1, null, 512), [
+            withDirectives(createElementVNode("div", _hoisted_7, null, 512), [
               [vShow, showPreview.value]
             ])
           ]),
@@ -1427,12 +1427,12 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
               onClick: withModifiers(onClose, ["self"]),
               onWheel: withModifiers(onWheel, ["prevent"])
             }, [
-              createElementVNode("div", _hoisted_9$1, [
-                createElementVNode("div", _hoisted_10$1, [
+              createElementVNode("div", _hoisted_9, [
+                createElementVNode("div", _hoisted_10, [
                   createElementVNode("p", {
                     class: "u-name",
                     title: getImageName(images.value[previewIndex.value])
-                  }, toDisplayString(getImageName(images.value[previewIndex.value])), 9, _hoisted_11$1),
+                  }, toDisplayString(getImageName(images.value[previewIndex.value])), 9, _hoisted_11),
                   withDirectives(createElementVNode("p", { class: "u-preview-progress" }, toDisplayString(previewIndex.value + 1) + " / " + toDisplayString(imageCount.value), 513), [
                     [vShow, Array.isArray(_ctx.src)]
                   ]),
@@ -1440,32 +1440,32 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
                     class: "u-preview-operation",
                     title: "关闭",
                     onClick: onClose
-                  }, _hoisted_13$1),
+                  }, _hoisted_13),
                   createElementVNode("div", {
                     class: normalizeClass(["u-preview-operation", { "u-operation-disabled": scale.value === _ctx.maxZoomScale }]),
                     title: "放大",
                     onClick: onZoomin
-                  }, _hoisted_15$1, 2),
+                  }, _hoisted_15, 2),
                   createElementVNode("div", {
                     class: normalizeClass(["u-preview-operation", { "u-operation-disabled": scale.value === _ctx.minZoomScale }]),
                     title: "缩小",
                     onClick: onZoomout
-                  }, _hoisted_17$1, 2),
+                  }, _hoisted_17, 2),
                   createElementVNode("div", {
                     class: "u-preview-operation",
                     title: "还原",
                     onClick: onResetOrigin
-                  }, _hoisted_19$1),
+                  }, _hoisted_19),
                   createElementVNode("div", {
                     class: "u-preview-operation",
                     title: "向右旋转",
                     onClick: onClockwiseRotate
-                  }, _hoisted_21$1),
+                  }, _hoisted_21),
                   createElementVNode("div", {
                     class: "u-preview-operation",
                     title: "向左旋转",
                     onClick: onAnticlockwiseRotate
-                  }, _hoisted_23$1)
+                  }, _hoisted_23)
                 ]),
                 createElementVNode("div", {
                   class: "n-preview-image",
@@ -1486,7 +1486,7 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
                           onMousedown: _cache[0] || (_cache[0] = withModifiers(($event) => onMouseDown($event), ["prevent"])),
                           onLoad: ($event) => onLoaded(index),
                           onDblclick: _cache[1] || (_cache[1] = ($event) => _ctx.resetOnDbclick ? onResetOrigin() : () => false)
-                        }, null, 44, _hoisted_24$1)
+                        }, null, 44, _hoisted_24)
                       ]),
                       _: 2
                     }, 1032, ["loading"])), [
@@ -1498,14 +1498,14 @@ const _sfc_main$6 = /* @__PURE__ */ defineComponent({
                   createElementVNode("div", {
                     class: normalizeClass(["n-switch-left", { "u-switch-disabled": previewIndex.value === 0 && !_ctx.loop }]),
                     onClick: onSwitchLeft
-                  }, _hoisted_26$1, 2),
+                  }, _hoisted_26, 2),
                   createElementVNode("div", {
                     class: normalizeClass(["n-switch-right", { "u-switch-disabled": previewIndex.value === imageCount.value - 1 && !_ctx.loop }]),
                     onClick: onSwitchRight
-                  }, _hoisted_28$1, 2)
+                  }, _hoisted_28, 2)
                 ], 64)) : createCommentVNode("", true)
               ])
-            ], 40, _hoisted_8$1), [
+            ], 40, _hoisted_8), [
               [vShow, showPreview.value]
             ])
           ]),
@@ -1774,86 +1774,12 @@ const _sfc_main$3 = /* @__PURE__ */ defineComponent({
 });
 const NTabs_vue_vue_type_style_index_0_scoped_597a4cf9_lang = "";
 const NTabs = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["__scopeId", "data-v-597a4cf9"]]);
-const _withScopeId$1 = (n) => (pushScopeId("data-v-ad6caba6"), n = n(), popScopeId(), n);
 const _hoisted_1$2 = ["onClick"];
-const _hoisted_2$1 = { class: "n-spin-dot" };
-const _hoisted_3$1 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_4$1 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_5$1 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_6$1 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("span", { class: "u-dot-item" }, null, -1));
-const _hoisted_7 = [
-  _hoisted_3$1,
-  _hoisted_4$1,
-  _hoisted_5$1,
-  _hoisted_6$1
-];
-const _hoisted_8 = { class: "n-body" };
-const _hoisted_9 = { class: "n-title" };
-const _hoisted_10 = {
-  key: 0,
-  focusable: "false",
-  class: "u-icon confirm",
-  "data-icon": "exclamation-circle",
-  "aria-hidden": "true",
-  viewBox: "64 64 896 896"
-};
-const _hoisted_11 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("path", { d: "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm0 820c-205.4 0-372-166.6-372-372s166.6-372 372-372 372 166.6 372 372-166.6 372-372 372z" }, null, -1));
-const _hoisted_12 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("path", { d: "M464 688a48 48 0 1096 0 48 48 0 10-96 0zm24-112h48c4.4 0 8-3.6 8-8V296c0-4.4-3.6-8-8-8h-48c-4.4 0-8 3.6-8 8v272c0 4.4 3.6 8 8 8z" }, null, -1));
-const _hoisted_13 = [
-  _hoisted_11,
-  _hoisted_12
-];
-const _hoisted_14 = {
-  key: 1,
-  focusable: "false",
-  class: "u-icon info",
-  "data-icon": "info-circle",
-  "aria-hidden": "true",
-  viewBox: "64 64 896 896"
-};
-const _hoisted_15 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("path", { d: "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm32 664c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V456c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272zm-32-344a48.01 48.01 0 010-96 48.01 48.01 0 010 96z" }, null, -1));
-const _hoisted_16 = [
-  _hoisted_15
-];
-const _hoisted_17 = {
-  key: 2,
-  focusable: "false",
-  class: "u-icon success",
-  "data-icon": "check-circle",
-  "aria-hidden": "true",
-  viewBox: "64 64 896 896"
-};
-const _hoisted_18 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("path", { d: "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm193.5 301.7l-210.6 292a31.8 31.8 0 01-51.7 0L318.5 484.9c-3.8-5.3 0-12.7 6.5-12.7h46.9c10.2 0 19.9 4.9 25.9 13.3l71.2 98.8 157.2-218c6-8.3 15.6-13.3 25.9-13.3H699c6.5 0 10.3 7.4 6.5 12.7z" }, null, -1));
-const _hoisted_19 = [
-  _hoisted_18
-];
-const _hoisted_20 = {
-  key: 3,
-  focusable: "false",
-  class: "u-icon error",
-  "data-icon": "close-circle",
-  "aria-hidden": "true",
-  viewBox: "64 64 896 896"
-};
-const _hoisted_21 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("path", { d: "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm165.4 618.2l-66-.3L512 563.4l-99.3 118.4-66.1.3c-4.4 0-8-3.5-8-8 0-1.9.7-3.7 1.9-5.2l130.1-155L340.5 359a8.32 8.32 0 01-1.9-5.2c0-4.4 3.6-8 8-8l66.1.3L512 464.6l99.3-118.4 66-.3c4.4 0 8 3.5 8 8 0 1.9-.7 3.7-1.9 5.2L553.5 514l130 155c1.2 1.5 1.9 3.3 1.9 5.2 0 4.4-3.6 8-8 8z" }, null, -1));
-const _hoisted_22 = [
-  _hoisted_21
-];
-const _hoisted_23 = {
-  key: 4,
-  focusable: "false",
-  class: "u-icon warn",
-  "data-icon": "exclamation-circle",
-  "aria-hidden": "true",
-  viewBox: "64 64 896 896"
-};
-const _hoisted_24 = /* @__PURE__ */ _withScopeId$1(() => /* @__PURE__ */ createElementVNode("path", { d: "M512 64C264.6 64 64 264.6 64 512s200.6 448 448 448 448-200.6 448-448S759.4 64 512 64zm-32 232c0-4.4 3.6-8 8-8h48c4.4 0 8 3.6 8 8v272c0 4.4-3.6 8-8 8h-48c-4.4 0-8-3.6-8-8V296zm32 440a48.01 48.01 0 010-96 48.01 48.01 0 010 96z" }, null, -1));
-const _hoisted_25 = [
-  _hoisted_24
-];
-const _hoisted_26 = { class: "u-title" };
-const _hoisted_27 = { class: "u-content" };
-const _hoisted_28 = { class: "n-btns" };
+const _hoisted_2$1 = { class: "n-body" };
+const _hoisted_3$1 = { class: "n-title" };
+const _hoisted_4$1 = { class: "u-title" };
+const _hoisted_5$1 = { class: "u-content" };
+const _hoisted_6$1 = { class: "n-btns" };
 const _sfc_main$2 = /* @__PURE__ */ defineComponent({
   __name: "NModal",
   props: {
@@ -1915,93 +1841,113 @@ const _sfc_main$2 = /* @__PURE__ */ defineComponent({
       emits("know");
     }
     return (_ctx, _cache) => {
+      const _component_n_icon = resolveComponent("n-icon");
       const _component_n_button = resolveComponent("n-button");
+      const _component_n_loading = resolveComponent("n-loading");
       return openBlock(), createBlock(Transition, null, {
-        default: withCtx(() => {
-          var _a, _b;
-          return [
-            withDirectives(createElementVNode("div", {
-              class: "n-modal-mask",
-              onClick: withModifiers(onBlur, ["self"])
+        default: withCtx(() => [
+          withDirectives(createElementVNode("div", {
+            class: "n-modal-mask",
+            onClick: withModifiers(onBlur, ["self"])
+          }, [
+            createElementVNode("div", {
+              class: normalizeClass(["n-modal", _ctx.center ? "relative-hv-center" : "top-center"]),
+              style: normalizeStyle(`width: ${_ctx.width}px; top: ${!_ctx.center ? _ctx.top + "px" : "50%"};`)
             }, [
-              createElementVNode("div", {
-                class: normalizeClass(["n-modal", _ctx.center ? "relative-hv-center" : "top-center"]),
-                style: normalizeStyle(`width: ${_ctx.width}px; top: ${!_ctx.center ? _ctx.top + "px" : "50%"};`)
-              }, [
-                createElementVNode("div", {
-                  class: normalizeClass(["n-modal-body", { loading: _ctx.loading }])
-                }, [
-                  withDirectives(createElementVNode("div", _hoisted_2$1, _hoisted_7, 512), [
-                    [vShow, _ctx.loading]
-                  ]),
-                  createElementVNode("div", _hoisted_8, [
-                    createElementVNode("div", _hoisted_9, [
-                      mode.value === "confirm" || mode.value === "erase" ? (openBlock(), createElementBlock("svg", _hoisted_10, _hoisted_13)) : createCommentVNode("", true),
-                      mode.value === "info" ? (openBlock(), createElementBlock("svg", _hoisted_14, _hoisted_16)) : createCommentVNode("", true),
-                      mode.value === "success" ? (openBlock(), createElementBlock("svg", _hoisted_17, _hoisted_19)) : createCommentVNode("", true),
-                      mode.value === "error" ? (openBlock(), createElementBlock("svg", _hoisted_20, _hoisted_22)) : createCommentVNode("", true),
-                      mode.value === "warn" ? (openBlock(), createElementBlock("svg", _hoisted_23, _hoisted_25)) : createCommentVNode("", true),
-                      createElementVNode("div", _hoisted_26, toDisplayString((_a = desc.value) == null ? void 0 : _a.title), 1)
+              createVNode(_component_n_loading, {
+                loading: _ctx.loading,
+                class: "n-modal-body"
+              }, {
+                default: withCtx(() => {
+                  var _a, _b;
+                  return [
+                    createElementVNode("div", _hoisted_2$1, [
+                      createElementVNode("div", _hoisted_3$1, [
+                        mode.value === "confirm" || mode.value === "erase" ? (openBlock(), createBlock(_component_n_icon, {
+                          key: 0,
+                          class: "u-icon confirm",
+                          type: "alert-circle"
+                        })) : createCommentVNode("", true),
+                        mode.value === "info" ? (openBlock(), createBlock(_component_n_icon, {
+                          key: 1,
+                          type: "alert-circle",
+                          class: "u-icon info"
+                        })) : createCommentVNode("", true),
+                        mode.value === "success" ? (openBlock(), createBlock(_component_n_icon, {
+                          key: 2,
+                          type: "smile",
+                          class: "u-icon success"
+                        })) : createCommentVNode("", true),
+                        mode.value === "error" ? (openBlock(), createBlock(_component_n_icon, {
+                          key: 3,
+                          type: "meh",
+                          class: "u-icon error"
+                        })) : createCommentVNode("", true),
+                        mode.value === "warn" ? (openBlock(), createBlock(_component_n_icon, {
+                          key: 4,
+                          type: "alert-octagon",
+                          class: "u-icon warn"
+                        })) : createCommentVNode("", true),
+                        createElementVNode("div", _hoisted_4$1, toDisplayString((_a = desc.value) == null ? void 0 : _a.title), 1)
+                      ]),
+                      createElementVNode("div", _hoisted_5$1, toDisplayString((_b = desc.value) == null ? void 0 : _b.content), 1)
                     ]),
-                    createElementVNode("div", _hoisted_27, toDisplayString((_b = desc.value) == null ? void 0 : _b.content), 1)
-                  ]),
-                  createElementVNode("div", _hoisted_28, [
-                    mode.value === "confirm" || mode.value === "erase" ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
-                      createVNode(_component_n_button, {
-                        type: "primary",
-                        onClick: onCancel
-                      }, {
-                        default: withCtx(() => [
-                          createTextVNode(toDisplayString(_ctx.cancelText), 1)
-                        ]),
-                        _: 1
-                      }),
-                      mode.value === "confirm" ? (openBlock(), createBlock(_component_n_button, {
-                        key: 0,
-                        type: "primary",
-                        onClick: onConfirm
-                      }, {
-                        default: withCtx(() => [
-                          createTextVNode(toDisplayString(_ctx.okText), 1)
-                        ]),
-                        _: 1
-                      })) : createCommentVNode("", true),
-                      mode.value === "erase" ? (openBlock(), createBlock(_component_n_button, {
+                    createElementVNode("div", _hoisted_6$1, [
+                      mode.value === "confirm" || mode.value === "erase" ? (openBlock(), createElementBlock(Fragment, { key: 0 }, [
+                        createVNode(_component_n_button, { onClick: onCancel }, {
+                          default: withCtx(() => [
+                            createTextVNode(toDisplayString(_ctx.cancelText), 1)
+                          ]),
+                          _: 1
+                        }),
+                        mode.value === "confirm" ? (openBlock(), createBlock(_component_n_button, {
+                          key: 0,
+                          type: "primary",
+                          onClick: onConfirm
+                        }, {
+                          default: withCtx(() => [
+                            createTextVNode(toDisplayString(_ctx.okText), 1)
+                          ]),
+                          _: 1
+                        })) : createCommentVNode("", true),
+                        mode.value === "erase" ? (openBlock(), createBlock(_component_n_button, {
+                          key: 1,
+                          type: "primary",
+                          onClick: onConfirm
+                        }, {
+                          default: withCtx(() => [
+                            createTextVNode(toDisplayString(_ctx.okText), 1)
+                          ]),
+                          _: 1
+                        })) : createCommentVNode("", true)
+                      ], 64)) : createCommentVNode("", true),
+                      ["info", "success", "error", "warn"].includes(mode.value) ? (openBlock(), createBlock(_component_n_button, {
                         key: 1,
-                        type: "error",
-                        onClick: onConfirm
+                        type: "primary",
+                        onClick: onKnow
                       }, {
                         default: withCtx(() => [
-                          createTextVNode(toDisplayString(_ctx.okText), 1)
+                          createTextVNode(toDisplayString(_ctx.noticeText), 1)
                         ]),
                         _: 1
                       })) : createCommentVNode("", true)
-                    ], 64)) : createCommentVNode("", true),
-                    ["info", "success", "error", "warn"].includes(mode.value) ? (openBlock(), createBlock(_component_n_button, {
-                      key: 1,
-                      type: "primary",
-                      onClick: onKnow
-                    }, {
-                      default: withCtx(() => [
-                        createTextVNode(toDisplayString(_ctx.noticeText), 1)
-                      ]),
-                      _: 1
-                    })) : createCommentVNode("", true)
-                  ])
-                ], 2)
-              ], 6)
-            ], 8, _hoisted_1$2), [
-              [vShow, _ctx.visible]
-            ])
-          ];
-        }),
+                    ])
+                  ];
+                }),
+                _: 1
+              }, 8, ["loading"])
+            ], 6)
+          ], 8, _hoisted_1$2), [
+            [vShow, _ctx.visible]
+          ])
+        ]),
         _: 1
       });
     };
   }
 });
-const NModal_vue_vue_type_style_index_0_scoped_ad6caba6_lang = "";
-const NModal = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-ad6caba6"]]);
+const NModal_vue_vue_type_style_index_0_scoped_bd7077eb_lang = "";
+const NModal = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["__scopeId", "data-v-bd7077eb"]]);
 const _hoisted_1$1 = { class: "n-arrow" };
 const _sfc_main$1 = /* @__PURE__ */ defineComponent({
   __name: "NTooltip",

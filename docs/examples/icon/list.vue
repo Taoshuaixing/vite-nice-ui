@@ -12,7 +12,7 @@
 <script setup lang="ts">
 import { useClipboard } from '@vueuse/core'
 import feather from 'feather-icons'
-import { NMessage } from 'vite-nice-ui'
+import { NMessage } from '../../../packages/components/message'
 
 const { copy, isSupported } = useClipboard()
 const icons = Object.keys(feather.icons)

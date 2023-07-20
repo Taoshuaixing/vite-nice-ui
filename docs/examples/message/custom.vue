@@ -3,7 +3,7 @@
   <n-button @click="openMsg2">5秒后消失</n-button>
 </template>
 <script setup lang="ts">
-import { NMessage } from 'vite-nice-ui'
+import { NMessage } from '../../../packages/components/message'
 const openMsg1 = () => {
   NMessage({
     text: '自定义Icon！',

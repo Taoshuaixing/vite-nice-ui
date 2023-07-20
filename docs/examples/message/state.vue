@@ -7,7 +7,7 @@
 </template>
 
 <script setup lang="ts">
-import { NMessage } from 'vite-nice-ui' //此处为本地示例，请使用import {NMessage} from "vite-nice-ui";引入
+import { NMessage } from '../../../packages/components/message' //此处为本地示例，请使用import {NMessage} from "vite-nice-ui";引入
 
 const openInfo = () => {
   NMessage({

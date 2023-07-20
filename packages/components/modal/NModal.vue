@@ -146,6 +146,7 @@ function onKnow() {
   height: 100%;
   z-index: 1000;
   background: rgba(0, 0, 0, 0.45);
+  margin: 0 !important;
   .n-modal {
     width: 420px;
     margin: 0 auto;

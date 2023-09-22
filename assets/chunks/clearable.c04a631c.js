@@ -1,0 +1,1 @@
+import{b as t,H as r,o as s,D as c}from"./framework.9d0920f0.js";const _={__name:"clearable",setup(u){const e=t(""),l=()=>{console.log("清空")};return(p,o)=>{const a=r("n-input");return s(),c(a,{modelValue:e.value,"onUpdate:modelValue":o[0]||(o[0]=n=>e.value=n),clearable:"",onClear:l,placeholder:"可清空"},null,8,["modelValue"])}}};export{_ as default};

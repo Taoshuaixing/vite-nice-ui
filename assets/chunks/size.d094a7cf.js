@@ -1,0 +1,1 @@
+import{_ as o,H as c,o as t,c as l,J as n,F as a}from"./framework.9d0920f0.js";const s={};function r(p,_){const e=c("n-input");return t(),l(a,null,[n(e,{size:"small",placeholder:"小",leftIcon:"codepen"}),n(e,{size:"default",placeholder:"中",leftIcon:"codepen"}),n(e,{size:"large",placeholder:"大",leftIcon:"codepen"})],64)}const f=o(s,[["render",r]]);export{f as default};

@@ -1,0 +1,1 @@
+import{d as n,b as t,H as a,o as s,c,J as l}from"./framework.9d0920f0.js";const r={class:"n-box-flex"},m=n({__name:"custom-text",setup(_){const e=t(!0);return(d,i)=>{const o=a("n-loading");return s(),c("div",r,[l(o,{tip:"加载中...",loading:e.value},null,8,["loading"])])}}});export{m as default};

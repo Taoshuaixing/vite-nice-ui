@@ -1,0 +1,1 @@
+import{b as n,H as t,o as s,D as u}from"./framework.9d0920f0.js";const m={__name:"disabled",setup(p){const e=n("");return(r,o)=>{const l=t("n-input");return s(),u(l,{modelValue:e.value,"onUpdate:modelValue":o[0]||(o[0]=a=>e.value=a),disabled:"",placeholder:"禁用状态"},null,8,["modelValue"])}}};export{m as default};

@@ -1,0 +1,1 @@
+import{_ as t,H as o,o as n,D as a,E as r,a as s}from"./framework.9d0920f0.js";const c={};function d(_,i){const e=o("n-divider");return n(),a(e,{dashed:""},{default:r(()=>[s("Center Text")]),_:1})}const p=t(c,[["render",d]]);export{p as default};

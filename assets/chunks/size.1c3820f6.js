@@ -1,0 +1,1 @@
+import{_ as s,H as n,o,c as r,J as t,F as a}from"./framework.9d0920f0.js";const c={};function p(_,i){const e=n("n-icon");return o(),r(a,null,[t(e,{type:"star"}),t(e,{type:"star",size:"36"}),t(e,{type:"star",size:"48"}),t(e,{type:"star",size:"36px"}),t(e,{type:"star",size:"1.5rem"})],64)}const l=s(c,[["render",p]]);export{l as default};

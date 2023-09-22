@@ -1,0 +1,1 @@
+import{b as n,H as t,o as l,D as p}from"./framework.9d0920f0.js";const m={__name:"password",setup(r){const o=n("");return(u,e)=>{const s=t("n-input");return l(),p(s,{modelValue:o.value,"onUpdate:modelValue":e[0]||(e[0]=a=>o.value=a),type:"password",showPassword:"",placeholder:"请输入密码"},null,8,["modelValue"])}}};export{m as default};

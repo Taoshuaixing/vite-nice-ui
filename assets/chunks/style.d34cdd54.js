@@ -1,0 +1,1 @@
+import{d as n,H as s,o as a,D as c,E as r,C as _}from"./framework.9d0920f0.js";const i=_("p",{style:{"font-size":"18px"}},"自定义样式",-1),u=n({__name:"style",setup(l){function e(o){console.log("click")}return(o,p)=>{const t=s("n-button");return a(),c(t,{width:120,height:40,"border-radius":8,size:"large",onClick:e},{default:r(()=>[i]),_:1})}}});export{u as default};

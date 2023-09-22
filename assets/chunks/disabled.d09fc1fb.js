@@ -1,0 +1,1 @@
+import{d as c,b as t,H as a,o as d,D as l}from"./framework.9d0920f0.js";const i=c({__name:"disabled",setup(r){const e=t(!1);return(p,n)=>{const o=a("n-switch");return d(),l(o,{checked:e.value,"onUpdate:checked":n[0]||(n[0]=s=>e.value=s),disabled:""},null,8,["checked"])}}});export{i as default};

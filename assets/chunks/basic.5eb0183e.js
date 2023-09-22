@@ -1,0 +1,1 @@
+import{_ as c,H as e,o as s,D as _,E as t,a as o,J as r}from"./framework.9d0920f0.js";const p={};function i(l,d){const n=e("n-button"),a=e("n-tooltip");return s(),_(a,{maxWidth:240},{title:t(()=>[o("我是提示内容")]),default:t(()=>[r(n,{type:"primary"},{default:t(()=>[o("悬浮")]),_:1})]),_:1})}const m=c(p,[["render",i]]);export{m as default};

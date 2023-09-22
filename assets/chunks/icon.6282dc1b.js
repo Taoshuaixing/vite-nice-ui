@@ -1,0 +1,1 @@
+import{d as t,b as u,m as l,H as s,o as r,D as p}from"./framework.9d0920f0.js";const v=t({__name:"icon",setup(c){const e=u(3);return l(()=>{console.log("value:",e.value)}),(m,n)=>{const o=s("n-input-number");return r(),p(o,{prefix:"$",value:e.value,"onUpdate:value":n[0]||(n[0]=a=>e.value=a)},null,8,["value"])}}});export{v as default};

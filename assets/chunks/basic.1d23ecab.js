@@ -1,0 +1,1 @@
+import{d as l,b as t,H as s,o as p,D as u}from"./framework.9d0920f0.js";const _=l({__name:"basic",setup(r){const e=t("");return(m,o)=>{const n=s("n-input");return p(),u(n,{modelValue:e.value,"onUpdate:modelValue":o[0]||(o[0]=a=>e.value=a),placeholder:"基本使用"},null,8,["modelValue"])}}});export{_ as default};

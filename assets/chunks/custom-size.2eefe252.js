@@ -1,0 +1,1 @@
+import{d as t,b as u,m as s,H as l,o as m,D as r}from"./framework.9d0920f0.js";const v=t({__name:"custom-size",setup(p){const e=u(3);return s(()=>{console.log("value:",e.value)}),(c,n)=>{const o=l("n-input-number");return m(),r(o,{min:0,max:10,value:e.value,"onUpdate:value":n[0]||(n[0]=a=>e.value=a)},null,8,["value"])}}});export{v as default};

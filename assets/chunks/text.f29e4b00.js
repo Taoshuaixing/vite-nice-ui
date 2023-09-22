@@ -1,0 +1,1 @@
+import{d as t,b as s,m as a,H as l,o as d,D as r}from"./framework.9d0920f0.js";const k=t({__name:"text",setup(f){const e=s(!1);return a(()=>{console.log("checked:",e.value)}),(p,c)=>{const o=l("n-switch");return d(),r(o,{checked:e.value,"onUpdate:checked":c[0]||(c[0]=n=>e.value=n),checkedInfo:"开",uncheckedInfo:"关"},null,8,["checked"])}}});export{k as default};

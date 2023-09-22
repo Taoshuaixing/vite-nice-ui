@@ -1,0 +1,1 @@
+import{_ as t,H as o,o as s,D as c,E as r,C as n}from"./framework.9d0920f0.js";const a={},i=n("p",{class:"u-pre"},"preview",-1);function _(p,m){const e=o("n-image");return s(),c(e,{previewMode:"",width:300,height:300,fit:"cover",src:"http://img63.ddimg.cn/upload_img/00890/tsx/tsx-1-1689673034.jpg"},{preview:r(()=>[i]),_:1})}const f=t(a,[["render",_]]);export{f as default};

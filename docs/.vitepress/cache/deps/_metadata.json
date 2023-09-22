@@ -1,23 +1,23 @@
 {
-  "hash": "5fc1d046",
-  "browserHash": "4c9cb41c",
+  "hash": "8579f2fe",
+  "browserHash": "179683a4",
   "optimized": {
     "vue": {
       "src": "../../../../node_modules/vue/dist/vue.runtime.esm-bundler.js",
       "file": "vue.js",
-      "fileHash": "c5ec55d1",
+      "fileHash": "08208a4c",
       "needsInterop": false
     },
     "vue-feather": {
       "src": "../../../../node_modules/vue-feather/dist/vue-feather.esm.js",
       "file": "vue-feather.js",
-      "fileHash": "71e1b572",
+      "fileHash": "54ad3f90",
       "needsInterop": false
     },
     "vite-nice-ui": {
       "src": "../../../../node_modules/vite-nice-ui/dist/vite-nice-ui.js",
       "file": "vite-nice-ui.js",
-      "fileHash": "efc4d958",
+      "fileHash": "93899c7e",
       "needsInterop": false
     }
   },

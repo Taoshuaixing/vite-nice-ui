@@ -20,7 +20,10 @@ export default defineConfig({
       text: '源码 · 文档',
     },
     // 默认支持icon包括：'discord'|'facebook'|'github'|'instagram'|'linkedin'|'mastodon'|'slack'|'twitter'|'youtube'
-    socialLinks: [{ icon: 'github', link: 'https://github.com/Taoshuaixing/vite-nice-ui' }],
+    socialLinks: [
+      { icon: 'github', link: 'https://github.com/Taoshuaixing/vite-nice-ui' },
+      // { icon: 'slack', link: 'https://github.com/Taoshuaixing/vite-nice-ui' },
+    ],
     // vitepress 内置 search
     search: {
       provider: 'local',

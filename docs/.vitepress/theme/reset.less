@@ -34,6 +34,7 @@
   --vp-home-hero-name-background: -webkit-linear-gradient(-45deg, #43cbff 10%, #9708cc 100%);
 
   --vp-home-hero-image-background-image: linear-gradient(135deg, #43cbff 10%, #9708cc 100%);
+  --vp-home-hero-image-filter: blur(72px);
 
   /**
  * Component: Custom Block
@@ -130,12 +131,10 @@ summary {
   display: inline-block;
   vertical-align: top;
 }
-.image-src {
-  position: static !important;
-  max-width: 256px !important;
-  max-height: 256px !important;
-  animation: moveUpDown 5s ease-in-out infinite;
-}
+// .image-src {
+//   animation: moveUpDown 5s ease-in-out infinite;
+// }
+
 @keyframes moveUpDown {
   0% {
     transform: translate(0px, 0px);
